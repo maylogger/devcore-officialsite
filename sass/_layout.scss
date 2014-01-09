@@ -1,17 +1,84 @@
-// basic for susy
+// 基本設定
 $total-columns  : 6;
-$column-width   : 5em;
+$column-width   : 4em;
 $gutter-width   : 1em;
 $grid-padding   : $gutter-width;
 
 // add media
-$phone          : $total-columns;
-$pad            : 8;
-$desktop        : 12;
+$pad-columns  : 8;
+$pad-break    : 500px;
+$pad: $pad-break $pad-columns;
+$desktop-columns  : 12;
+$desktop-break    : 860px;
+$desktop: $desktop-break $desktop-columns;
+
 
 // debug
-@import "layout-debug";
+// @import "layout-debug";
+
+html {
+  height: 100%;
+}
+
+// off-canvas 開啟時的設定
+body {
+  background-color: #f7f7f3;
+  &.open-menu {
+    height: 100%;
+  }
+}
+
+.page {
+  position: relative;
+  max-width: 1360px;
+  margin: 0 auto;
+  overflow: hidden;
+  .open-menu & { // 防止 off-canvas 啟動時，能夠隨意滾動
+    height: 100%;
+  }
+}
 
 #{$page-container} {
-  @include container($phone, $pad, $desktop);
+  @include container($total-columns, $pad);
+}
+
+$off-canvas-menu-width: 260px;
+.off-canvas-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: $off-canvas-menu-width;
+}
+.off-canvas-content {
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  position: relative;
+  min-height: 100%;
+  z-index: 100;
+  left: 0;
+  background-color: white;
+  @include transition(transform .3s ease-out);
+  @include backface-visibility(hidden); // 解決 translate 在最後結束時會閃爍的 bug
+  .open-menu & {
+    // left: $off-canvas-menu-width;
+    // 改為 css3 動起來更順暢... 但是不知道不支援 css3 的會怎樣...
+    // 或許可以套一下 modernizr 改為 .css3 .open-menu & {} 來下指令
+    @include translateX( $off-canvas-menu-width);
+  }
+}
+
+
+@include at-breakpoint($pad) {
+  .page {
+    .open-menu & {
+      overflow: visible;
+    }
+  }
+  .off-canvas-content {
+    .open-menu & {
+      @include translateX(0px);
+    }
+  }
 }

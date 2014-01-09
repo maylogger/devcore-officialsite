@@ -4,6 +4,13 @@ html lang="zh-TW"
     = render "/layout_head"
     = render "/layout_og"
   body
-    = yield
+    .page
+      .off-canvas-menu
+        .mobile data-set="move-nav"
+          = render "/partials/main-nav"
+      .off-canvas-content
+        = render "/partials/header"
+        = yield
+        = render "/partials/footer"
     = render "/layout_foot"
     = render "/layout_livereload"

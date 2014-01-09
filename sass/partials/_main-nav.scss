@@ -1,0 +1,26 @@
+.main-nav {
+  @include reset-box-model;
+  list-style: none;
+  padding: 0 24px;
+  @include pie-clearfix;
+
+  @include at-breakpoint($pad) {
+    text-align: center;
+  }
+  li {
+    padding: 6px;
+    @include at-breakpoint($pad) {
+      display: inline-block;
+      margin: 0 .5em;
+    }
+  }
+  a {
+    color: #333;
+    font-weight: bold;
+    @include adjust-font-size-to(16px);
+    &:hover {
+      color: #555;
+      text-decoration: none;
+    }
+  }
+}

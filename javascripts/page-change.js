@@ -1,4 +1,5 @@
 var pageChange = angular.module("pageChange", ["ngAnimate", "ngRoute"], function($routeProvider, $locationProvider){
+  // $locationProvider.html5Mode(true);
   $routeProvider.when('/', {
     templateUrl: '/templates/home.html'
   }).when('/about', {

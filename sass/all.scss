@@ -17,7 +17,7 @@ $page-container: ".container";
 @import "normalize";
 @include establish-baseline;
 
-@import "colors";
+@import "variables";
 @import "typography";
 @import "layout";
 @import "partials";

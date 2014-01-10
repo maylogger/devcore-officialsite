@@ -1,0 +1,81 @@
+$off-canvas-menu-width: 260px;
+$off-canvas-main-bg-color: white;
+
+.off-canvas {
+  position: relative;
+  overflow: hidden;
+  .open-menu & {
+    height: 100%;
+  }
+}
+
+.off-canvas-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: $off-canvas-menu-width;
+  overflow: auto;
+  @include at-breakpoint($pad) {
+    display: none;
+  }
+}
+
+.off-canvas-main {
+  position: relative;
+  min-height: 100%;
+  z-index: 100;
+  left: 0;
+  background-color: $off-canvas-main-bg-color;
+  @include transition(transform .3s ease-out);
+  @include backface-visibility(hidden); // 解決 translate 在最後結束時會閃爍的 bug
+  .open-menu & {
+    @include translateX( $off-canvas-menu-width);
+    @include at-breakpoint($pad) {
+      @include translateX(0);
+    }
+  }
+  // 不支援 transform 的情況下，改成使用 left 移動 canvas
+  .no-csstransforms3d .open-menu & {
+    left: $off-canvas-menu-width;
+    @include at-breakpoint($pad) {
+      left: 0;
+    }
+  }
+}
+
+.off-canvas-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 16px;
+  padding: 12px 16px;
+  @include adjust-font-size-to(22px, 1);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #333;
+  @include transition(color .3s);
+  &:hover {
+    color: #aaa;
+  }
+}
+
+.off-canvas-mask {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+  @include transition(opacity .5s);
+  .open-menu & {
+    z-index: 110;
+    visibility: visible;
+    opacity: .5;
+    @include at-breakpoint($pad) {
+      visibility: hidden;
+    }
+  }
+}

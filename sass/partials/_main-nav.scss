@@ -1,17 +1,22 @@
 .main-nav {
   @include reset-box-model;
   list-style: none;
-  padding: 0 24px;
+  padding: 36px;
   @include pie-clearfix;
-
   @include at-breakpoint($pad) {
+    padding: 0 24px;
     text-align: center;
   }
   li {
-    padding: 6px;
     @include at-breakpoint($pad) {
       display: inline-block;
       margin: 0 .5em;
+    }
+  }
+  li + li {
+    padding-top: 12px;
+    @include at-breakpoint($pad) {
+      padding-top: 0;
     }
   }
   a {

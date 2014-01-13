@@ -1,11 +1,17 @@
 .header {
-  padding: rhythm(1);
+  margin: 0 (-$grid-padding);
+  background-color: white;
+  @include at-breakpoint($pad) {
+    margin: 0 auto;
+  }
 }
 .logo {
+  padding: 12px 0;
   @include adjust-font-size-to(22px, 1);
   font-weight: bold;
   text-align: center;
   @include at-breakpoint($pad) {
+    padding: 24px 0 12px;
     @include adjust-font-size-to(32px);
   }
   a {
@@ -18,9 +24,13 @@
 }
 
 .menu-btn {
+  height: 48px;
+  width: 48px;
+  background-color: #aaa;
   position: absolute;
-  left: $grid-padding;
-  background-color: transparent;
+  z-index: 99;
+  top: 0;
+  left: 0;
   border: none;
   outline: none;
   @include adjust-font-size-to(14px, 1);

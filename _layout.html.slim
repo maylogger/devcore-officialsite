@@ -21,16 +21,9 @@ html lang="zh-TW" ng-app="pageChange" class="no-js "
               li: a href="/#/shop" Shop
               li: a href="/#/portfolio" Protfolio
               li: a href="/#/contact" Contact
-              li: a href="/#/about" About
-              li: a href="/#/shop" Shop
-              li: a href="/#/portfolio" Protfolio
-              li: a href="/#/contact" Contact
-              li: a href="/#/about" About
-              li: a href="/#/shop" Shop
-              li: a href="/#/portfolio" Protfolio
-              li: a href="/#/contact" Contact
-      = render "/partials/header"
+
       .page
+        = render "/partials/header"
         .main= yield
         .off-canvas-mask
     = render "/layout_foot"

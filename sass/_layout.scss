@@ -16,17 +16,8 @@ $desktop: $desktop-break $desktop-columns;
 // debug
 // @import "layout-debug";
 
-html {
+html, body {
   height: 100%;
-}
-
-body {
-  height: 100%;
-}
-
-.page {
-  max-width: 1360px;
-  margin: 0 auto;
 }
 
 #{$page-container} {

@@ -3,15 +3,35 @@ html lang="zh-TW" ng-app="pageChange" class="no-js "
   head
     = render "/layout_head"
     = render "/layout_og"
-  body
-    .page.off-canvas
-      .off-canvas-menu
-        button.off-canvas-close-btn ✕
-        .mobile data-set="move-nav"
-          = render "/partials/main-nav"
-      .off-canvas-main
-        = render "/partials/header"
-        = yield
+  body.off-canvas
+    .wrapper
+      .outside
+        .outside-inner
+          .main-nav data-set="main-nav"
+            ul
+              li: a href="/#/about" About
+              li: a href="/#/shop" Shop
+              li: a href="/#/portfolio" Protfolio
+              li: a href="/#/contact" Contact
+              li: a href="/#/about" About
+              li: a href="/#/shop" Shop
+              li: a href="/#/portfolio" Protfolio
+              li: a href="/#/contact" Contact
+              li: a href="/#/about" About
+              li: a href="/#/shop" Shop
+              li: a href="/#/portfolio" Protfolio
+              li: a href="/#/contact" Contact
+              li: a href="/#/about" About
+              li: a href="/#/shop" Shop
+              li: a href="/#/portfolio" Protfolio
+              li: a href="/#/contact" Contact
+              li: a href="/#/about" About
+              li: a href="/#/shop" Shop
+              li: a href="/#/portfolio" Protfolio
+              li: a href="/#/contact" Contact
+      = render "/partials/header"
+      .page
+        .main= yield
         .off-canvas-mask
     = render "/layout_foot"
     = render "/layout_livereload"

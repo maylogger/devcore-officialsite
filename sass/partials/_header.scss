@@ -1,40 +1,59 @@
 .header {
-  margin: 0 (-$grid-padding);
+  position: relative;
   background-color: white;
-  @include at-breakpoint($pad) {
-    margin: 0 auto;
-  }
-}
-.logo {
-  padding: 12px 0;
-  @include adjust-font-size-to(22px, 1);
-  font-weight: bold;
-  text-align: center;
-  @include at-breakpoint($pad) {
-    padding: 24px 0 12px;
-    @include adjust-font-size-to(32px);
-  }
-  a {
-    color: black;
-    &:hover {
-      text-decoration: none;
-      color: #333;
+
+
+  .logo {
+    padding: 12px 0;
+    @include adjust-font-size-to(22px, 1);
+    font-weight: bold;
+    text-align: center;
+    a {
+      color: black;
+      &:hover {
+        text-decoration: none;
+        color: #333;
+      }
     }
   }
+
+  .menu-btn {
+    height: 48px;
+    width: 48px;
+    background-color: #aaa;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    @include adjust-font-size-to(14px, 1);
+  }
+
+
+
+
+  @include at-breakpoint($pad) {
+    margin: 0 auto rhythm(1);
+
+    .logo {
+      float: left;
+    }
+
+    .main-nav {
+      float: right;
+      padding: 12px 0 0 0;
+    }
+
+
+    .menu-btn {
+      display: none;
+    }
+
+
+  }
+
+
+
 }
 
-.menu-btn {
-  height: 48px;
-  width: 48px;
-  background-color: #aaa;
-  position: absolute;
-  z-index: 99;
-  top: 0;
-  left: 0;
-  border: none;
-  outline: none;
-  @include adjust-font-size-to(14px, 1);
-  @include at-breakpoint($pad) {
-    display: none;
-  }
-}

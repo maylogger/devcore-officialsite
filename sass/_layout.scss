@@ -20,6 +20,15 @@ html, body {
   height: 100%;
 }
 
-#{$page-container} {
-  @include container($total-columns, $pad);
+#{$page-container}, .header-inner {
+  @include container();
 }
+
+
+@include at-breakpoint($pad) {
+  #{$page-container}, .header-inner {
+    max-width: 768px;
+    width: 90%;
+  }
+}
+

@@ -3,31 +3,121 @@
   font-weight: 300;
 }
 
+%subpixel {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
 body {
   @extend %helvetica-light;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  color: $global-color;
 }
 
-.hide {
-  display: none;
-}
-
+// heading
 #{headings()} {
   @include reset-box-model;
-  @include adjust-font-size-to(32px);
-  @extend %helvetica-light;
+  font-weight: normal;
 }
-
-a {
-  @include link-colors(blue);
-  @include hover-link;
+h1 {
+  @include adjust-font-size-to($font-size-xxl);
+}
+h2 {
+  @include adjust-font-size-to($font-size-xl);
+}
+h3 {
+  @include adjust-font-size-to($font-size-l);
+}
+h4 {
+  @include adjust-font-size-to($font-size-m);
+}
+h5 {
+  @include adjust-font-size-to($font-size-s);
+}
+h6 {
+  @include adjust-font-size-to($font-size-xs);
 }
 
 p {
-  @include reset-box-model;
-  @include adjust-font-size-to(13px);
   @include leader(1);
   @include trailer(1);
+  @include adjust-font-size-to($base-font-size);
+}
+
+
+// 引用他處文獻
+blockquote {
+  @include reset-box-model;
+  @include leader(1);
+  @include trailer(1);
+  border-left: 3px solid $global-divider;
+  padding-left: rhythm(1);
+  @include adjust-font-size-to($base-font-size);
+  cite {
+    display: block;
+    color: $global-muted-color;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+
+// code 示範區
+pre {
+  code {
+    font-family: "Monaco", MonoSpace, sans-serif;
+    display: block;
+    @include leader(1);
+    @include trailer(1);
+    border: 1px solid $global-divider;
+    padding: rhythm(1);
+    background-color: $global-spectail-block;
+    @include adjust-font-size-to( $base-font-size * 0.75 );
+  }
+}
+
+
+// list
+ol, ul {
+  @include leader(1);
+  @include trailer(1);
+  ol, ul {
+    margin: 0;
+  }
+}
+
+dl {
+  @include leader(1);
+  @include trailer(1);
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin: 0;
+
+  }
+}
+
+
+// inline style
+a {
+  @include link-colors($global-link-color, $global-link-hover-color);
+  @include hover-link;
+  img {
+    border: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  @include trailer(1);
+}
+
+// divider
+hr, .divider {
+  @include leader(1);
+  @include trailer(1);
+  border-top: 1px solid $global-divider;
 }

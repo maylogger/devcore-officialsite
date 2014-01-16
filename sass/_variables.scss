@@ -1,2 +1,36 @@
+// layout-debug
 $grid-background-column-color: rgba(#f15a14,.2);
 $grid-background-baseline-color: rgba(#009a8e,.3);
+
+
+// color
+$color-black: #252525;
+$color-gray: #999;
+$color-lighter-gray: #eee;
+$color-blue: #369;
+$color-red: #ae3941;
+
+
+// Global ==============================
+
+// text
+$global-color: #444;
+$global-muted-color: lighten($global-color, 50%);
+
+$global-link-color: $color-blue;
+$global-link-hover-color: darken($color-blue, 20%);
+
+// background & border
+$global-background: white;
+$global-spectail-block: #fafafa;
+$global-divider: $color-lighter-gray;
+
+
+// Typography ======================
+// font-size
+$font-size-xxl: $base-font-size * 2;
+$font-size-xl: $base-font-size * 1.5;
+$font-size-l: $base-font-size * 1.25;
+$font-size-m: $base-font-size * 1;
+$font-size-s: $base-font-size * .875;
+$font-size-xs: $base-font-size * .75;

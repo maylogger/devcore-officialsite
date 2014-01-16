@@ -1,0 +1,15 @@
+.center-title-block {
+  margin: 0 auto;
+  max-width: 260px;
+  text-align: center;
+
+  @include at-breakpoint($pad) {
+    max-width: 400px;
+  }
+
+  @include at-breakpoint($desktop) {
+    max-width: 560px;
+  }
+
+
+}

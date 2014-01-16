@@ -1,0 +1,56 @@
+.block {
+  padding: rhythm(2) 0;
+
+  h2 {
+    font-size: 24px;
+    line-height: 1em;
+    @include trailer(.5);
+    color: $color-black;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.5em;
+    @include leader(0);
+  }
+
+  .image {
+    text-align: center;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+
+
+  & + & {
+    border-top: 1px solid $global-divider;
+  }
+
+  @include at-breakpoint($pad) {
+    padding: rhythm(5) 0;
+
+    h2 {
+      font-size: 28px;
+      @include trailer(.75);
+    }
+    p {
+      font-size: 18px;
+    }
+
+  }
+
+  @include at-breakpoint($desktop) {
+
+    h2 {
+      font-size: 32px;
+      @include trailer(1);
+    }
+    p {
+      font-size: 20px;
+    }
+
+  }
+
+
+}

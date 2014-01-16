@@ -27,8 +27,15 @@ html, body {
 
 @include at-breakpoint($pad) {
   #{$page-container}, .header-inner {
-    max-width: 768px;
+    @include container();
     width: 90%;
+  }
+}
+
+@include at-breakpoint($desktop) {
+  #{$page-container}, .header-inner {
+    @include container();
+    width: 80%;
   }
 }
 

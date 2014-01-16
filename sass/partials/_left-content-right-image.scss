@@ -1,0 +1,20 @@
+.left-content-right-image {
+  @include pie-clearfix;
+  .content {
+
+  }
+
+  img {
+    width: 100%;
+  }
+
+
+  @include at-breakpoint($pad) {
+    .content {
+      @include span-columns(4);
+    }
+    .image {
+      @include span-columns(4 omega);
+    }
+  }
+}

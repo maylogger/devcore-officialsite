@@ -17,7 +17,8 @@ html lang="zh-TW" class="no-js "
 
       .page
         = render "/partials/header"
-        .main= yield
+        .main
+          .container= yield
         .off-canvas-mask
 
     = render "/layout_foot"

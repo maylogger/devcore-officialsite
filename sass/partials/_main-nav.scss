@@ -7,6 +7,9 @@
     padding: 0 24px;
     text-align: center;
   }
+  ul {
+    @include reset-box-model;
+  }
   li {
     @include at-breakpoint($pad) {
       display: inline-block;

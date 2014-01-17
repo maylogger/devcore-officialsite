@@ -1,10 +1,20 @@
-.block
-  = render "/partials/center-title-block"
-.block
-  = render "/partials/left-content-right-image"
-.block
-  = render "/partials/right-content-left-image"
-.block
-.block
-.block
+.block.center-title-block
+  .block-content
+    .intro
+      h2= zh_lorem_words( rand(3) + 5 )
+      p= zh_lorem_words( rand(5) + 40 )
+  = image_tag lorem_image("400x300")
 
+.block.left-content-right-image
+  .block-content
+    .intro
+      h3= zh_lorem_words( rand(3) + 5 )
+      p= zh_lorem_words( rand(5) + 40 )
+  .block-image= image_tag lorem_image("400x300")
+
+.block.right-content-left-image
+  .block-content
+    .intro
+      h3= zh_lorem_words( rand(3) + 5 )
+      p= zh_lorem_words( rand(5) + 40 )
+  .block-image= image_tag lorem_image("400x300")

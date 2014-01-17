@@ -1,56 +1,92 @@
 .block {
+  @include pie-clearfix;
   padding: rhythm(2) 0;
-
-  h2 {
-    font-size: 24px;
-    line-height: 1em;
-    @include trailer(.5);
-    color: $color-black;
-  }
-  p {
-    font-size: 16px;
-    line-height: 1.5em;
-    @include leader(0);
-  }
-
-  .image {
-    text-align: center;
-    img {
-      display: block;
-      margin: 0 auto;
-    }
-  }
-
-
 
   & + & {
     border-top: 1px solid $global-divider;
   }
 
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .block-image {
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  // 特殊排版區塊
+  &.center-title-block {
+    .intro {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 260px;
+    }
+  }
+
+  &.left-content-right-image {
+    .block-content {
+
+    }
+    .block-image {
+
+    }
+  }
+
+  &.right-content-left-image {
+    .block-content {
+
+    }
+    .block-image {
+
+    }
+  }
+
+
+
   @include at-breakpoint($pad) {
     padding: rhythm(5) 0;
 
-    h2 {
-      font-size: 28px;
-      @include trailer(.75);
-    }
-    p {
-      font-size: 18px;
+    &.center-title-block {
+      .intro {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 440px;
+      }
     }
 
-  }
+    &.left-content-right-image {
+      .block-content {
+        @include span-columns($total_columns / 2, $total_columns);
+      }
+      .block-image {
+        @include span-columns($total_columns / 2 omega, $total_columns);
+      }
+    }
+
+    &.right-content-left-image {
+      .block-content {
+        @include span-columns($total_columns / 2 omega, $total_columns);
+      }
+      .block-image {
+        @include span-columns($total_columns / 2, $total_columns);
+      }
+    }
+
+  } // end pad
 
   @include at-breakpoint($desktop) {
-
-    h2 {
-      font-size: 32px;
-      @include trailer(1);
+    &.center-title-block {
+      .intro {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 560px;
+      }
     }
-    p {
-      font-size: 20px;
-    }
 
-  }
-
+  } // end desktop
 
 }

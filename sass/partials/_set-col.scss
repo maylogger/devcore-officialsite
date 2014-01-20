@@ -1,0 +1,51 @@
+// phone
+@mixin set-col($phone-columns: 1, $pad-columns: $phone-columns, $desktop-columns: $pad-columns){
+
+  .col-#{$phone-columns}-#{$pad-columns}-#{$desktop-columns} {
+    @include trailer(1);
+    @if $phone-columns > 1 {
+      @include span-columns( $total_columns / $phone-columns, $total_columns );
+      @include nth-omega($phone-columns + n);
+    }
+
+    @include at-breakpoint($pad) {
+      @if $pad-columns == 3 {
+        @include span-columns($pad-columns, 9 );
+      } @else {
+        @include span-columns( $total_columns / $pad-columns, $total_columns );
+      }
+      @if $phone-columns > 1 {
+        @include remove-nth-omega($phone-columns + n, child, $total_columns);
+      }
+      @include nth-omega($pad-columns + n);
+    }
+
+    @include at-breakpoint($desktop) {
+      @if $pad-columns != 3 {
+        @include span-columns( $total_columns / $desktop-columns, $total_columns);
+        @include remove-nth-omega($pad-columns + n, child, $total_columns);
+        @include nth-omega( $desktop-columns + n );
+      }
+    }
+
+  }
+
+}
+
+.row {
+  @include pie-clearfix;
+  @include trailer(1);
+  background-color: #f3f3f3;
+}
+
+
+
+@include set-col(1, 2);
+
+@include set-col(1, 3);
+
+@include set-col(1, 4);
+
+@include set-col(1, 2, 4);
+
+@include set-col(2, 2, 4);

@@ -1,20 +1,24 @@
 @mixin set-block-grid ($left-grid: $total_columns / 2, $right-grid: $total_columns / 2, $total-grid: $left-grid + $right-grid) {
 
+  $left-columns: ($left-grid /  $total-grid) * $total_columns;
+  $right-columns: ($right-grid /  $total-grid) * $total_columns;
+
   &.content-#{$left-grid}-image-#{$right-grid} {
+
     .block-content {
-      @include span-columns($left-grid, $total-grid);
+      @include span-columns($left-columns, $total_columns);
     }
     .block-image {
-      @include span-columns($right-grid omega, $total-grid);
+      @include span-columns($right-columns omega, $total_columns);
     }
   }
 
   &.image-#{$left-grid}-content-#{$right-grid} {
     .block-content {
-      @include span-columns($right-grid omega, $total-grid);
+      @include span-columns($right-columns omega, $total_columns);
     }
     .block-image {
-      @include span-columns($left-grid, $total-grid);
+      @include span-columns($left-columns, $total_columns);
     }
   }
 
@@ -28,20 +32,15 @@
     border-top: 1px solid $global-divider;
   }
 
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-
   .block-image {
-    text-align: center;
     img {
-      width: 100%;
+      margin: 0 auto;
+      display: block;
     }
   }
 
   // 特殊排版區塊
-  &.center-title-block {
+  &.center {
     .intro {
       text-align: center;
       margin: 0 auto;
@@ -49,37 +48,17 @@
     }
   }
 
-  &.left-content-right-image {
-    .block-content {
-
-    }
-    .block-image {
-
-    }
-  }
-
-  &.right-content-left-image {
-    .block-content {
-
-    }
-    .block-image {
-
-    }
-  }
-
-
 
   @include at-breakpoint($pad) {
     padding: rhythm(5) 0;
 
-    &.center-title-block {
+    &.center {
       .intro {
-        text-align: center;
-        margin: 0 auto;
         max-width: 440px;
       }
     }
 
+    // 設定 block-content 與 block-image 的 layout
     @include set-block-grid(1, 1);
     @include set-block-grid(1, 2);
     @include set-block-grid(2, 1);
@@ -87,10 +66,8 @@
   } // end pad
 
   @include at-breakpoint($desktop) {
-    &.center-title-block {
+    &.center {
       .intro {
-        text-align: center;
-        margin: 0 auto;
         max-width: 560px;
       }
     }

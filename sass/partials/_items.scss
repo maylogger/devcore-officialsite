@@ -1,0 +1,105 @@
+.items {
+  @include pie-clearfix;
+  .item {
+    @include pie-clearfix;
+    display: block;
+    position: relative;
+    @include trailer(2);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .item-image {
+    @include trailer(.5);
+    img {
+      margin: 0;
+      display: block;
+    }
+  }
+  .item-content {
+
+  }
+  .item-title {
+    @include trailer(.5);
+    @include adjust-font-size-to(17px);
+    color: $color-black;
+  }
+  .item-text {
+    color: $global-color;
+    @include adjust-font-size-to(14px, 3/4);
+    margin: 0 auto;
+  }
+
+  // 所有內容置中
+  &.center {
+    .item-image {
+      img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .item-content {
+      text-align: center;
+    }
+  }
+
+  // 左縮圖右內容
+  &.image-left {
+    .item-image {
+      float: left;
+      margin: 0 gutter() 0 0;
+    }
+    .item-content {
+      overflow: hidden;
+    }
+  }
+
+  // 圖片置於標題左側
+  &.title-with-image {
+    .item-image {
+      float: left;
+      margin: 0 1em 1em 0;
+    }
+    .item-content {
+    }
+    .item-title {
+      $item-image-height: 36px;
+      font-size: 17px;
+      line-height: $item-image-height;
+      @include trailer(.5);
+      float: left;
+    }
+    .item-text {
+      clear: both;
+    }
+  }
+
+  @include at-breakpoint($pad) {
+    .item {
+
+    }
+    .item-icon {
+      img {
+
+      }
+    }
+    .item-content {
+
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+    .item {
+
+    }
+    .item-icon {
+      img {
+
+      }
+    }
+    .item-content {
+
+    }
+  }
+
+}

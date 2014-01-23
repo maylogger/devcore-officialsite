@@ -2,7 +2,7 @@
 // 注意事項：若設定 columns 值不能給 susy 的 total_columns 整除，將無法正常顯示
 @mixin set-grid($phone-columns: 1, $pad-columns: $phone-columns, $desktop-columns: $pad-columns){
 
-  &.grid-s#{$phone-columns}m#{$pad-columns}l#{$desktop-columns} .grid{
+  .grid-#{$phone-columns}-#{$pad-columns}-#{$desktop-columns} .col{
 
     @include trailer(1);
 
@@ -17,11 +17,7 @@
     @include at-breakpoint($pad) {
 
       // set span-columns
-      @if $pad-columns == 3 {
-        @include span-columns($pad-columns, 9 );
-      } @else {
-        @include span-columns( $total_columns / $pad-columns, $total_columns );
-      }
+      @include span-columns( $total_columns / $pad-columns, $total_columns );
 
       // remove-nth-omega
       @if $phone-columns > 1 {
@@ -56,19 +52,17 @@
 
 }
 
-.row {
+@include set-grid(1, 2);
+@include set-grid(1, 3);
+@include set-grid(1, 4);
+@include set-grid(1, 2, 4);
+@include set-grid(2, 2, 4);
+@include set-grid(2, 4, 4);
 
+
+.row {
   @include pie-clearfix;
   @include trailer(1);
-  background-color: #f3f3f3;
-
-  // 控制 .row 底下 .col 的排版
-  @include set-grid(1, 2);
-  @include set-grid(1, 3);
-  @include set-grid(1, 4);
-  @include set-grid(1, 2, 4);
-  @include set-grid(2, 2, 4);
-
 }
 
 

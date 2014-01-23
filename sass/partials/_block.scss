@@ -26,13 +26,18 @@
 
 .block {
   @include pie-clearfix;
-  padding: rhythm(2) 0;
+  padding: rhythm(2) 0 0;
 
-  & + & {
-    border-top: 1px solid $global-divider;
+  &:nth-child(2n+1) {
+    background-color: #f9f9f7;
+  }
+
+  .block-content {
+    @include trailer(1);
   }
 
   .block-image {
+    @include trailer(2);
     img {
       margin: 0 auto;
       display: block;
@@ -50,7 +55,10 @@
 
 
   @include at-breakpoint($pad) {
-    padding: rhythm(5) 0;
+    padding: rhythm(3) 0 rhythm(1);
+    .block-content {
+      @include trailer(2);
+    }
 
     &.center {
       .intro {
@@ -66,6 +74,7 @@
   } // end pad
 
   @include at-breakpoint($desktop) {
+    padding: rhythm(4) 0 rhythm(2);
     &.center {
       .intro {
         max-width: 560px;

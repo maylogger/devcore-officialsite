@@ -12,7 +12,7 @@ $off-canvas-main-bg-color: white;
   .outside {
     position: absolute;
     top: 0px;
-    left: 0;
+    right: 0;
     z-index: 10;
     width: $off-canvas-menu-width;
     height: 100%;
@@ -24,9 +24,9 @@ $off-canvas-main-bg-color: white;
     position: relative;
     z-index: 100;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: $off-canvas-main-bg-color;
-    @include transition(transform .3s ease-out);
+    @include transition(transform .3s ease-out, max-width .5s);
     @include backface-visibility(hidden); // 解決 translate 在最後結束時會閃爍的 bug
     -webkit-overflow-scrolling: touch;
   }
@@ -57,7 +57,7 @@ $off-canvas-main-bg-color: white;
       height: 100%;
       // overflow: auto; 目前無 javascript 控制，暫時取消滾動。
       overflow: hidden;
-      @include translateX( $off-canvas-menu-width);
+      @include translateX( -$off-canvas-menu-width);
     }
 
     .header {

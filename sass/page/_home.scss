@@ -1,0 +1,57 @@
+#summary {
+
+  .intro {
+    max-width: columns(4);
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+
+
+
+  }
+
+  @include at-breakpoint($pad) {
+    .intro {
+      max-width: columns(8);
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+    .intro {
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+
+}
+
+
+#services {
+  .items.title-with-image {
+    .item-image {
+
+    }
+    .item-title {
+      $item-image-height: 24px;
+      font-size: 18px;
+      line-height: $item-image-height;
+      @include trailer(.5);
+      float: left;
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+    .items.title-with-image {
+      .item-title {
+        font-size: 20px;
+      }
+    }
+  }
+
+}

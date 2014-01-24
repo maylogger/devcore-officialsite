@@ -4,8 +4,7 @@
 
 
   .logo {
-    padding: 12px 0;
-    @include adjust-font-size-to(22px, 1);
+    @include adjust-font-size-to(22px, 2);
     font-weight: bold;
     text-align: center;
     a {
@@ -54,6 +53,10 @@
 
   @include at-breakpoint($desktop) {
     padding: rhythm(1) 0;
+    .logo {
+      padding: 0;
+      @include adjust-font-size-to(28px);
+    }
   }
 
 

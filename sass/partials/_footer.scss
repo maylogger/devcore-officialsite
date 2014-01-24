@@ -1,0 +1,82 @@
+.footer {
+
+  background-color: #555;
+  padding: rhythm(2) 0 rhythm(1);
+
+  .footer-info-group {
+    @include pie-clearfix;
+  }
+
+  .footer-title {
+    @include adjust-font-size-to(20px);
+    line-height: 1em;
+    @include trailer(1);
+    color: white;
+    @extend %subpixel;
+  }
+  .footer-text {
+    @include trailer(1);
+    color: #eee;
+    @include adjust-font-size-to(14px);
+  }
+
+  .footer-list {
+    @include reset-box-model;
+    @include trailer(1);
+    list-style: none;
+    li {
+      @include trailer(.5);
+      @include adjust-font-size-to(14px, 3/4);
+      color: white;
+    }
+    a {
+      color: white;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .title {
+      @include ellipsis;
+    }
+    .meta {
+      @include leader(.125);
+      color: #aaa;
+    }
+  }
+
+  .copyright {
+    @include adjust-font-size-to(13px, 3/4);
+    color: #999;
+    @include trailer(1);
+  }
+
+  .footer-links {
+    @include reset-box-model;
+    list-style: none;
+    @include pie-clearfix;
+    @include trailer(1);
+    li {
+      @include adjust-font-size-to(13px, 3/4);
+      float: left;
+      margin-right: 1em;
+    }
+    a {
+      color: #999;
+      &:hover {
+        text-decoration: none;
+        color: #ccc;
+      }
+    }
+  }
+
+
+  @include at-breakpoint($pad) {
+    .copyright {
+      float: right;
+    }
+    .footer-links {
+      float: left;
+    }
+  }
+
+}

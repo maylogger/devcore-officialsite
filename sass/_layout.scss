@@ -1,7 +1,7 @@
 // 基本設定
 $total-columns  : 6;
-$column-width   : 4.5em;
-$gutter-width   : 1.5em;
+$column-width   : 72px;
+$gutter-width   : 24px;
 $grid-padding   : $gutter-width;
 
 // add media
@@ -31,20 +31,20 @@ html, body {
   // @include transition(max-width 1s);
 }
 
-#{$page-container}, .header-inner {
+#{$page-container}, .header-inner, .footer-inner {
   $container-style: fluid;
   @include container();
 }
 
 
 @include at-breakpoint($pad) {
-  #{$page-container}, .header-inner {
+  #{$page-container}, .header-inner, .footer-inner {
     width: 85%;
   }
 }
 
 @include at-breakpoint($desktop) {
-  #{$page-container}, .header-inner {
+  #{$page-container}, .header-inner, .footer-inner {
     @include set-container-width;
     width: 75%;
   }

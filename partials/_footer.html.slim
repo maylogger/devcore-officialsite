@@ -1,0 +1,27 @@
+.footer
+  .footer-inner
+    .footer-info-group.grid-1-3-3.wide-gutter
+      .footer-info.col
+        .footer-title About Us
+        .footer-text 戴夫寇爾 (DEVCORE Co., Ltd) 擁有豐富的主機及網站開發經驗，並且針對資訊安全有著深入的研究。成員皆具備資訊安全及駭客經歷，了解攻擊者的思維出發點及技術，並針對其行為做出偵測及防禦。
+      .footer-info.col
+        .footer-title Latest News
+        ul.footer-list
+          - 3.times do
+            li: a href="#"
+              .title href="#"= zh_lorem_sentences(2)
+              .meta= lorem_date("%Y/%m/%d")
+      .footer-info.col
+        .footer-title Contact Info
+        ul.footer-list
+          li 地址：台北市內湖區瑞光路583巷32號
+          li 電話：02-8751-6287
+          li email：contact@devco.re
+
+
+    ul.footer-links
+      li: a href="/services" Services
+      li: a href="/news" News
+      li: a href="/about" About
+      li: a href="/contact" Contact
+    .copyright ©2013 DEVCORE Co., LTD. / contact [at] devco.re

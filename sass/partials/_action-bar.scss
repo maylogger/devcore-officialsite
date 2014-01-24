@@ -3,9 +3,6 @@
   padding: rhythm(2) 0 rhythm(1);
   background-color: $color-green;
 
-  .action-bar-inner {
-    @include trailer(1);
-  }
   .content {
     @include trailer(1);
   }
@@ -38,6 +35,7 @@
 
   @include at-breakpoint($pad) {
     .action-bar-inner {
+      @include trailer(1);
       width: 100%;
       display: table;
     }
@@ -49,7 +47,7 @@
       text-align: left;
     }
     .action {
-      padding: 48px;
+      padding-left: 48px;
       text-align: right;
       display: table-cell;
       vertical-align: middle;

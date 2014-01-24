@@ -429,16 +429,15 @@ html, body { height: 100%; }
 
 .action-bar { padding: 48px 0 24px; background-color: #8ec032; }
 .action-bar:after { content: ""; display: table; clear: both; }
-.action-bar .action-bar-inner { margin-bottom: 24px; }
 .action-bar .content { margin-bottom: 24px; }
 .action-bar .action { margin-bottom: 24px; text-align: center; }
 .action-bar .title { font-size: 20px; line-height: 24px; color: white; text-align: center; }
 .action-bar .btn { display: inline-block; min-width: 5em; text-align: center; padding: 12px 18px; font-size: 18px; line-height: 1em; border: 2px solid white; color: white; }
 .action-bar .btn:hover { text-decoration: none; }
-@media (min-width: 640px) { .action-bar .action-bar-inner { width: 100%; display: table; }
+@media (min-width: 640px) { .action-bar .action-bar-inner { margin-bottom: 24px; width: 100%; display: table; }
   .action-bar .content { display: table-cell; vertical-align: middle; }
   .action-bar .title { text-align: left; }
-  .action-bar .action { padding: 48px; text-align: right; display: table-cell; vertical-align: middle; } }
+  .action-bar .action { padding-left: 48px; text-align: right; display: table-cell; vertical-align: middle; } }
 
 #summary .intro { max-width: 82.6087%; margin-left: auto; margin-right: auto; }
 #summary .intro p { font-size: 16px; }

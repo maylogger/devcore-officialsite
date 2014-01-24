@@ -1,15 +1,12 @@
 #summary {
 
   .intro {
-    max-width: columns(4);
+    max-width: columns(5);
     margin-left: auto;
     margin-right: auto;
-
-
-
-
-
-
+    p {
+      font-size: 16px;
+    }
   }
 
   @include at-breakpoint($pad) {

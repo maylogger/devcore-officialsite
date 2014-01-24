@@ -1,8 +1,8 @@
 // 基本設定
 $total-columns  : 6;
 $column-width   : 4.5em;
-$gutter-width   : 5em;
-$grid-padding   : 2em;
+$gutter-width   : 1.5em;
+$grid-padding   : $gutter-width;
 
 // add media
 $pad-columns  : 12;
@@ -44,7 +44,6 @@ html, body {
 }
 
 @include at-breakpoint($desktop) {
-  $container-style: magic;
   #{$page-container}, .header-inner {
     @include set-container-width;
     width: 75%;

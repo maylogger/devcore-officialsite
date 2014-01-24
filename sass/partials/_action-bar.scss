@@ -1,0 +1,60 @@
+.action-bar {
+  @include pie-clearfix;
+  padding: rhythm(2) 0 rhythm(1);
+  background-color: $color-green;
+
+  .action-bar-inner {
+    @include trailer(1);
+  }
+  .content {
+    @include trailer(1);
+  }
+  .action {
+    @include trailer(1);
+    text-align: center;
+  }
+
+  .title {
+    @include adjust-font-size-to(20px);
+    @extend %subpixel;
+    color: white;
+    text-align: center;
+  }
+
+  .btn {
+    display: inline-block;
+    min-width: 5em;
+    text-align: center;
+    padding: rhythm(.5) rhythm(.75);
+    font-size: 18px;
+    line-height: 1em;
+    border: 2px solid white;
+    color: white;
+    @extend %subpixel;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include at-breakpoint($pad) {
+    .action-bar-inner {
+      width: 100%;
+      display: table;
+    }
+    .content {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .title {
+      text-align: left;
+    }
+    .action {
+      padding: 48px;
+      text-align: right;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+  }
+
+}

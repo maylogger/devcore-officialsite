@@ -1,7 +1,7 @@
 .hero {
   border-top: 1px solid #eee;
   padding: rhythm(1) 0 0;
-  .intro {
+  .headline {
     margin-bottom: 0;
     text-align: center;
     h2 {
@@ -20,8 +20,8 @@
     @include adjust-font-size-to(13px);
   }
   @include at-breakpoint($pad) {
-    padding: rhythm(3) 0 rhythm(1);
-    .intro {
+    padding: rhythm(2) 0 rhythm(1);
+    .headline {
       p { font-size: 18px; }
     }
     .summary {
@@ -32,7 +32,7 @@
   }
   @include at-breakpoint($desktop) {
     padding: rhythm(2) 0 rhythm(2);
-    .intro {
+    .headline {
       text-align: center;
       h2 {
         @include adjust-font-size-to(40px);

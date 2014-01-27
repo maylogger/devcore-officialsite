@@ -1,0 +1,43 @@
+.page-content {
+  padding: rhythm(2) 0 rhythm(0);
+
+  & + & {
+    background-color: #f9f9f7;
+  }
+
+  .page-content-title {
+    @include trailer(1);
+    font-size: 20px;
+    @include padding-trailer(.25);
+    border-bottom: 1px solid #aaa;
+  }
+
+  .article {
+    @include trailer(2);
+  }
+
+  .penetration-test-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .penetration-test-list {
+    @include reset-box-model;
+    list-style: none;
+    margin: rhythm(.25) 0 rhythm(0);
+    @include adjust-font-size-to(14px, 3/4);
+    li + li {
+      @include leader(.25);
+    }
+  }
+
+
+  @include at-breakpoint($pad) {
+    .page-content-title {
+      font-size: 24px;
+      @include padding-trailer(.5);
+    }
+  }
+
+}
+

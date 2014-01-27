@@ -37,15 +37,25 @@ html, body {
   max-width: 85%; // 限制 conntainer 寬度，並且預留左右留白空間
 }
 
+.container-inner {
+
+}
+
 
 @include at-breakpoint($pad) {
   #{$page-container}, .header-inner, .footer-inner {
 
+  }
+  .container-inner {
+    margin: 0 auto;
+    max-width: 600px;
   }
 }
 
 @include at-breakpoint($desktop) {
   #{$page-container}, .header-inner, .footer-inner {
 
+  }
+  .container-inner {
   }
 }

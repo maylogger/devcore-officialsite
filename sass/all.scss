@@ -1,7 +1,9 @@
 @import "starter";
 
 // style for special partials
-// @import "partials/some-partial-name";
+@import "partials/article";
+@import "partials/page-header";
+@import "partials/page-content";
 
 // style for special pages
 @import "pages/home";

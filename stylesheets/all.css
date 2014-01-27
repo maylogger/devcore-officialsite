@@ -465,3 +465,8 @@ html, body { height: 100%; }
 @media (min-width: 940px) { #services .items.title-with-image .item-title { font-size: 20px; } }
 
 #contact-us { background-color: #8ec032; }
+
+.header .main-nav { display: none; }
+
+@media (min-width: 640px) { .outside .main-nav { display: none; }
+  .header .main-nav { display: block; } }

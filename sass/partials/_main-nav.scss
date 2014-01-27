@@ -1,34 +1,65 @@
 .main-nav {
   @include reset-box-model;
-  list-style: none;
   padding: 36px;
   @include pie-clearfix;
-  @include at-breakpoint($pad) {
-    padding: 0 24px;
-    text-align: center;
-  }
+
   ul {
     @include reset-box-model;
+    list-style: none;
   }
   li {
-    @include at-breakpoint($pad) {
-      display: inline-block;
-      margin: 0 .5em;
-    }
+
   }
   li + li {
     padding-top: 12px;
-    @include at-breakpoint($pad) {
-      padding-top: 0;
-    }
+
   }
   a {
-    color: #333;
+    color: $main-nav-color;
     font-weight: bold;
     @include adjust-font-size-to(16px);
     &:hover {
-      color: #555;
+      color: lighten($main-nav-color, 20%);
       text-decoration: none;
     }
   }
+
+  // append-around
+  .header & {
+    display: none;
+  }
+
+
+  @include at-breakpoint($pad) {
+    padding: 0 24px;
+    text-align: center;
+
+    ul {
+
+    }
+    li {
+      display: inline-block;
+      margin: 0 .5em;
+    }
+    li + li {
+      padding-top: 0;
+    }
+    a {
+
+    }
+
+    // append-around
+    .outside & {
+      display: none;
+    }
+    .header & {
+      display: block;
+    }
+
+  }
+
+
 }
+
+
+

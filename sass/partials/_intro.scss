@@ -6,19 +6,14 @@
     @include trailer(.75);
     font-size: 24px;
     line-height: 1em;
-    color: $color-black;
-
+    color: $intro-title-color;
   }
 
   h3 {
     @include trailer(.75);
     font-size: 20px;
     line-height: 1.1em;
-    color: $color-black;
-    small {
-      display: block;
-      color: $global-muted-color;
-    }
+    color: $intro-title-color;
   }
 
   p {

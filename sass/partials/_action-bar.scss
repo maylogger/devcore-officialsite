@@ -13,7 +13,7 @@
   .slogan {
     @include adjust-font-size-to(20px);
     @extend %subpixel;
-    color: white;
+    color: $action-bar-color;
     text-align: center;
   }
 
@@ -24,8 +24,8 @@
     padding: rhythm(.5) rhythm(.75);
     font-size: 18px;
     line-height: 1em;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid $action-bar-color;
+    color: $action-bar-color;
     @extend %subpixel;
     &:hover {
       text-decoration: none;

@@ -24,16 +24,4 @@ $page-container: ".container";
 @import "pages";
 
 
-// append-around
-.header .main-nav {
-  display: none;
-}
 
-@include at-breakpoint($pad) {
-  .outside .main-nav {
-    display: none;
-  }
-  .header .main-nav {
-    display: block;
-  }
-}

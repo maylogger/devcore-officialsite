@@ -22,17 +22,17 @@
   .item-title {
     font-size: 18px;
     line-height: 1.125em;
-    color: $color-black;
+    color: $item-title-color;
     small {
       display: block;
-      color: $global-color;
+      color: lighten($item-title-color, 30%);
     }
   }
   .item-title + .item-text {
     @include leader(.5);
   }
   .item-text {
-    color: $global-color;
+    color: $item-color;
     font-size: 14px;
     line-height: 1.5em;
     margin: 0 auto;

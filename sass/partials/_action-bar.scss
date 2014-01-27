@@ -1,6 +1,6 @@
 .action-bar {
   @include pie-clearfix;
-  padding: rhythm(2) 0 rhythm(1);
+  padding: rhythm(1.5) 0 rhythm(.5);
 
   .content {
     @include trailer(1);
@@ -33,22 +33,17 @@
   }
 
   @include at-breakpoint($pad) {
-    padding: rhythm(2) 0 rhythm(2);
     width: 100%;
-    display: table;
-
-    .content {
-      display: table-cell;
-      vertical-align: middle;
-    }
     .slogan {
       text-align: left;
+      br {display: none}
+    }
+    .content {
+      @include leader(.5);
+      float: left;
     }
     .action {
-      padding-left: 48px;
-      text-align: right;
-      display: table-cell;
-      vertical-align: middle;
+      float: right;
     }
 
   }

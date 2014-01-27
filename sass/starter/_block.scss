@@ -46,7 +46,7 @@
 
   // 特殊排版區塊
   &.center {
-    .intro {
+    .headline {
       text-align: center;
       margin: 0 auto;
       max-width: 260px;
@@ -61,7 +61,7 @@
     }
 
     &.center {
-      .intro {
+      .headline {
         max-width: 440px;
       }
     }
@@ -76,7 +76,7 @@
   @include at-breakpoint($desktop) {
     padding: rhythm(4) 0 rhythm(2);
     &.center {
-      .intro {
+      .headline {
         max-width: 560px;
       }
     }

@@ -1,7 +1,7 @@
 .hero {
   border-top: 1px solid #eee;
   padding: rhythm(1) 0 0;
-  .intro {
+  .headline {
     margin-bottom: 0;
     text-align: center;
     h2 {
@@ -20,8 +20,8 @@
     @include adjust-font-size-to(13px);
   }
   @include at-breakpoint($pad) {
-    padding: rhythm(3) 0 rhythm(1);
-    .intro {
+    padding: rhythm(2) 0 rhythm(1);
+    .headline {
       p { font-size: 18px; }
     }
     .summary {
@@ -32,7 +32,7 @@
   }
   @include at-breakpoint($desktop) {
     padding: rhythm(2) 0 rhythm(2);
-    .intro {
+    .headline {
       text-align: center;
       h2 {
         @include adjust-font-size-to(40px);
@@ -44,50 +44,6 @@
     }
     .summary {
       @include adjust-font-size-to(16px, 1.25);
-    }
-  }
-}
-
-
-
-
-
-.services {
-  background: #f0f2f0;
-  .items.title-with-image {
-    .item-image {
-
-    }
-    .item-title {
-      $item-image-height: 24px;
-      font-size: 18px;
-      line-height: $item-image-height;
-      @include trailer(.5);
-      float: left;
-    }
-  }
-
-  @include at-breakpoint($desktop) {
-    .items.title-with-image {
-      .item-title {
-        font-size: 20px;
-      }
-    }
-  }
-
-}
-
-
-
-.contact-us {
-  background-color: $color-green;
-  .action-bar {
-    @include at-breakpoint($pad) {
-      width: 90%;
-      margin: 0 auto;
-    }
-    @include at-breakpoint($desktop) {
-      width: 70%;
     }
   }
 }

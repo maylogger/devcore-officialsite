@@ -1,0 +1,12 @@
+.contact-us {
+  background-color: $color-green;
+  .action-bar {
+    @include at-breakpoint($pad) {
+      width: 90%;
+      margin: 0 auto;
+    }
+    @include at-breakpoint($desktop) {
+      width: 70%;
+    }
+  }
+}

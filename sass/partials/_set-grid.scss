@@ -56,50 +56,55 @@
   .grid-#{$phone-columns}-#{$pad-columns}-#{$desktop-columns}.wide-gutter .col {
 
     @include box-sizing(border-box);
-    @if $phone-columns > 1 {
-      padding: 0 gutter() / 2;
-      &:first-child {
-        padding-left: 0;
-      }
-      &:nth-child(#{$phone-columns}n) {
-        padding-right: 0;
-      }
-    }
-
+    padding: 0 gutter();
     @include at-breakpoint($pad) {
-      padding: 0 gutter() / 2;
-      &:first-child {
-        padding-left: 0;
-      }
-      @if $phone-columns > 1 {
-        &:nth-child(#{$phone-columns}n) {
-          padding-right: gutter() / 2;
-        }
-      }
-      @if $pad-columns > 1 {
-
-        &:nth-child(#{$pad-columns}n) {
-          padding-right: 0;
-        }
-      }
+      padding: 0 gutter();
     }
 
-    @include at-breakpoint($desktop) {
-      padding: 0 gutter() / 2;
-      &:first-child {
-        padding-left: 0;
-      }
-      @if $pad-columns > 1 {
-        &:nth-child(#{$pad-columns}n) {
-          padding-right: gutter() / 2;
-        }
-      }
-      @if $desktop-columns > 1 {
-        &:nth-child(#{$desktop-columns}n) {
-          padding-right: 0;
-        }
-      }
-    }
+    // @if $phone-columns > 1 {
+    //   padding: 0 gutter() / 2;
+    //   &:first-child {
+    //     padding-left: 0;
+    //   }
+    //   &:nth-child(#{$phone-columns}n) {
+    //     padding-right: 0;
+    //   }
+    // }
+
+    // @include at-breakpoint($pad) {
+    //   padding: 0 gutter() / 2;
+    //   &:first-child {
+    //     padding-left: 0;
+    //   }
+    //   @if $phone-columns > 1 {
+    //     &:nth-child(#{$phone-columns}n) {
+    //       padding-right: gutter() / 2;
+    //     }
+    //   }
+    //   @if $pad-columns > 1 {
+
+    //     &:nth-child(#{$pad-columns}n) {
+    //       padding-right: 0;
+    //     }
+    //   }
+    // }
+
+    // @include at-breakpoint($desktop) {
+    //   padding: 0 gutter() / 2;
+    //   &:first-child {
+    //     padding-left: 0;
+    //   }
+    //   @if $pad-columns > 1 {
+    //     &:nth-child(#{$pad-columns}n) {
+    //       padding-right: gutter() / 2;
+    //     }
+    //   }
+    //   @if $desktop-columns > 1 {
+    //     &:nth-child(#{$desktop-columns}n) {
+    //       padding-right: 0;
+    //     }
+    //   }
+    // }
 
   }
   // wide-gutter end

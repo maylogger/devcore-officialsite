@@ -30,8 +30,8 @@ preferred_syntax = :scss
 the_hold_options = {
   :login => "evenwu", # 你的帳號
   :token => "229f2b40d4f17f98f142318250a75f20", # 你的密碼
-  :project => "devcore-officialsite", # 專案名稱, 會變成 http://your-project-name.evenwu.the-hold.handlino.com/
-  # :project_site_password => "rgdesign", # 密碼，這一行拿掉的話就沒有密碼
+  :project => "devcore", # 專案名稱, 會變成 http://your-project-name.evenwu.the-hold.handlino.com/
+  :project_site_password => "123456", # 密碼，這一行拿掉的話就沒有密碼
   :host => "http://the-hold.handlino.com/",
-  :cname => "devcore-officialsite.evendesign.tw"
+  :cname => "devcore.evendesign.tw"
 }

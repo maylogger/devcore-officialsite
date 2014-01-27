@@ -1,7 +1,6 @@
 .action-bar {
   @include pie-clearfix;
   padding: rhythm(2) 0 rhythm(1);
-  background-color: $color-green;
 
   .content {
     @include trailer(1);
@@ -11,7 +10,7 @@
     text-align: center;
   }
 
-  .title {
+  .slogan {
     @include adjust-font-size-to(20px);
     @extend %subpixel;
     color: white;
@@ -34,16 +33,15 @@
   }
 
   @include at-breakpoint($pad) {
-    .action-bar-inner {
-      @include trailer(1);
-      width: 100%;
-      display: table;
-    }
+    padding: rhythm(2) 0 rhythm(2);
+    width: 100%;
+    display: table;
+
     .content {
       display: table-cell;
       vertical-align: middle;
     }
-    .title {
+    .slogan {
       text-align: left;
     }
     .action {

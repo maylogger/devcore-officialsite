@@ -1,0 +1,24 @@
+.services {
+  background: #f0f2f0;
+  .items.title-with-image {
+    .item-image {
+
+    }
+    .item-title {
+      $item-image-height: 24px;
+      font-size: 18px;
+      line-height: $item-image-height;
+      @include trailer(.5);
+      float: left;
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+    .items.title-with-image {
+      .item-title {
+        font-size: 20px;
+      }
+    }
+  }
+
+}

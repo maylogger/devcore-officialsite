@@ -1,27 +1,9 @@
-// vertical rhythm
-$base-font-size: 16px;
-$base-line-height: 24px;
-$relative-font-sizing: false;
+@import "starter";
 
-// compass
-$legacy-support-for-ie: false;
-$grid-background-baseline-height: $base-line-height;
+// style for special partials
+// @import "partials/some-partial-name";
 
-// class variable
-$page-container: ".container";
-
-// import all things
-@import "compass";
-@import "susy";
-
-@import "normalize";
-@include establish-baseline;
-
-@import "variables";
-@import "typography";
-@import "layout";
-@import "partials";
-@import "pages";
-
+// style for special pages
+@import "pages/home";
 
 

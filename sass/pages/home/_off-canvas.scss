@@ -1,105 +1,132 @@
 .wrapper {
 	@include transform-style(preserve-3d);
 	@include perspective(1000px);
-	@include transition(.5s ease-in);
+	@include transition(.5s);
 }
 
 .header {
-	.menu-btn {
-		color: $color-gray;
-		letter-spacing: -5px;
-		background-color: transparent;
-		@include at-breakpoint($pad) {
-		  display: block;
-		  top: auto;
-		  right: 7.5%;
-		}
-	}
 	.main-nav {
-		@include at-breakpoint($pad) {
-		  padding-right: 48px;
-		}
-	}
-}
-
-.off-canvas .outside {
-	width: 100%;
-	background-color: transparent;
-	opacity: 0;
-	@include transition(.5s);
-	@include at-breakpoint($pad) {
-	  display: block;
-	  // left: 50%;
-	  // margin-left: -25%;
-	}
-}
-.off-canvas.open-menu .outside {
-	z-index: 1000;
-	opacity: 1;
-	@include background-image(
-		linear-gradient(to bottom, rgba(white, .75), rgba(white, 0) )
-	);
-}
-
-.outside .main-nav {
-	position: relative;
-	width: 100%;
-	max-width: 1088px;
-	margin: 0 auto;
-	padding: rhythm(1) 0;
-	text-align: left;
-	@include text-shadow(0 0 10px white);
-	@include at-breakpoint($pad) {
-	  display: block;
-	  padding: rhythm(1) 0;
-	}
-	ul {
-		width: 80%;
-		margin: 0 auto;
-		@include at-breakpoint($pad) {
-		  width: 50%;
-		}
-	}
-	li {
 		display: block;
-		a {
-			@include adjust-font-size-to($font-size-l);
-		}
-		ul {
-			width: 100%;
-			margin-top: rhythm(.5);
-			padding: rhythm(.25) rhythm(.5);
-			border-left: 1px solid $color-black;
-			li a {
-				@include adjust-font-size-to($font-size-m);
+		float: right;
+		margin-top: -#{rhythm(2)};
+		padding: 0;
+		li {
+			display: none;
+			&.menu-button {
+				position: relative;
+				display: inline-block;
+				color: $color-gray;
+				letter-spacing: -5px;
+				background-color: transparent;
 			}
 		}
 	}
-	& li + li {
-		padding-top: rhythm(.5);
-	}
-	.close {
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: 1000;
-		width: 48px;
-		height: 48px;
-		text-align: center;
-		@include adjust-font-size-to($font-size-xxl);
-		cursor: pointer;
-		@include at-breakpoint($pad) {
-		  top: 24px;
+	@include at-breakpoint($pad) {
+		.main-nav {
+			margin: 0;
+			padding-top: rhythm(.5);
+		  li {
+				display: inline-block;
+			}
 		}
 	}
 }
 
-.off-canvas .page {
-	@include transform-origin(center, bottom);
+// basic
+.off-canvas {
+	.outside-inner {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+	.outside {
+		display: block;
+		width: 100%;
+		@include background-image(
+			linear-gradient(to bottom, rgba($color-lighter-gray, 1) 10%, rgba($color-lighter-gray, 0) 50%, rgba($color-lighter-gray, 0) 100%)
+		);
+		@include background-size(100% 200%);
+		background-position: 0 100%;
+		@include transition(.5s);
+		.main-nav {
+			position: relative;
+			display: block;
+			$container-style: fluid;
+		  @include container();
+		  max-width: 85%;
+			text-align: left;
+			@include text-shadow(0 0 10px white);
+			ul {
+				@include padding-leader(2);
+				li {
+					display: block;
+					a {
+						@include adjust-font-size-to($font-size-l);
+					}
+					ul {
+						margin-top: rhythm(.5);
+						padding: rhythm(.25) rhythm(.5);
+						border-left: 1px solid $color-black;
+						li a {
+							@include adjust-font-size-to($font-size-m);
+						}
+					}
+				}
+				li + li {
+					padding-top: rhythm(.5);
+				}
+			}
+			.close {
+				position: absolute;
+				top: 0;
+				right: 24px;
+				z-index: 1000;
+				text-align: center;
+				@include adjust-font-size-to($font-size-xxl);
+				cursor: pointer;
+			}
+		}
+	}
+	.page {
+		@include transform-origin(center, bottom);
+	}
+	.off-canvas-mask {
+		background-color: rgba(black,0);
+		@include transition( background-color .5s);
+	}
+	@include at-breakpoint($desktop) {
+		.main-nav .close {
+		  top: 24px;
+		  padding: 0 rhythm(.5);
+		}
+	}
 }
 
-.off-canvas.open-menu .page {
-	@include translateZ(-1000px);
-	@include rotateX(45deg);
-	@include filter(blur(2px));
+// layout
+.off-canvas.model {
+	.wrapper {
+		height: 100%;
+	}
+	.page {
+		height: 100%;
+	}
+	.off-canvas-mask {
+		height: 100%;
+	}
+}
+
+// animate
+.off-canvas.open-menu {
+	.outside {
+		z-index: 1000;
+		background-position: 0 0;
+	}
+	.page {
+		@include translateZ(-1000px);
+		@include rotateX(45deg);
+		// @include filter(blur(2px));
+	}
+	.off-canvas-mask {
+		background-color: rgba($color-lighter-gray,.7);
+	}
 }

@@ -66,8 +66,10 @@
       @include adjust-font-size-to(16px, 1.25);
     }
 
-    .page-content-title-with-line {
+    .page-content-title {
       @include adjust-font-size-to(24px, 1);
+    }
+    .page-content-title-with-line {
       span {
         padding: 0 1em;
       }

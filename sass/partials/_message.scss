@@ -1,0 +1,49 @@
+.message {
+  border-top: 1px solid #eee;
+  text-align: center;
+  padding: rhythm(2) 0 rhythm(0);
+
+  .headline {
+    h2 {
+      font-size: 22px;
+      line-height: 1.25em;
+      small {
+        font-size: 14px;
+        line-height: 1em;
+      }
+    }
+
+  }
+
+  .action {
+
+  }
+
+  .button {
+    padding: rhythm(.25) rhythm(.75);
+    color: invert($global-color);
+    background-color: $global-color;
+    margin-right: 1em;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+
+  @include at-breakpoint($pad) {
+
+    padding: rhythm(4) 0 rhythm(2);
+
+    .headline {
+      max-width: 35em;
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        @include adjust-font-size-to(16px);
+      }
+    }
+
+  }
+
+}

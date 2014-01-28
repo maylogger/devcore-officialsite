@@ -474,7 +474,7 @@ button.active, a.button.active { background-color: #f0f2f0; color: #333; cursor:
 .page-content .penetration-test-icon { width: 72px; height: 72px; }
 @media (min-width: 640px) { .page-content p { font-size: 16px; line-height: 24px; }
   .page-content .page-content-summary { font-size: 16px; line-height: 30px; }
-  .page-content .page-content-title-with-line { font-size: 24px; line-height: 24px; }
+  .page-content .page-content-title { font-size: 24px; line-height: 24px; }
   .page-content .page-content-title-with-line span { padding: 0 1em; } }
 
 .members { margin: 0; padding: 0; border: 0; list-style: none; text-align: justify; font-size: 0; font-size: 12px\9; /* IE6-9 only hack */ }
@@ -484,6 +484,16 @@ button.active, a.button.active { background-color: #f0f2f0; color: #333; cursor:
 .members .member-name { font-size: 14px; line-height: 24px; }
 .members .member-role { font-size: 12px; line-height: 16px; color: #c4c4c4; }
 @media (min-width: 640px) { .members .member { width: 18%; } }
+
+.message { border-top: 1px solid #eee; text-align: center; padding: 48px 0 0px; }
+.message .headline h2 { font-size: 22px; line-height: 1.25em; }
+.message .headline h2 small { font-size: 14px; line-height: 1em; }
+.message .button { padding: 6px 18px; color: #bbbbbb; background-color: #444444; margin-right: 1em; }
+.message .button:hover { text-decoration: none; }
+@media (min-width: 640px) { .message { padding: 96px 0 48px; }
+  .message .headline { max-width: 35em; }
+  .message .headline h2 { font-size: 28px; }
+  .message .headline p { font-size: 16px; line-height: 24px; } }
 
 .hero { border-top: 1px solid #eee; padding: 24px 0 0; }
 .hero .headline { margin-bottom: 0; text-align: center; }

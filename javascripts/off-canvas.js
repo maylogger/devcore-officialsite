@@ -5,15 +5,15 @@ var off_canvas = function (){
     event.preventDefault;
   });
 
-  $(".outside a, .off-canvas-mask").on("click", function(){
+  $(".outside a, .off-canvas-mask, .outside .close").on("click", function(){
     $("body").removeClass("open-menu");
   });
 
 };
 
 off_canvas();
-$( window ).resize(function() {
-  $('body').removeClass('open-menu');
-});
+// $( window ).resize(function() {
+//   $('body').removeClass('open-menu');
+// });
 
 

@@ -1,27 +1,48 @@
 .page-content {
   padding: rhythm(2) 0 rhythm(0);
 
-  & + & {
-    background-color: #f9f9f7;
+  p {
+    @include adjust-font-size-to(14px, 4/5);
   }
 
-  .page-content-title {
-    @include trailer(1);
-    font-size: 20px;
-    @include padding-trailer(.25);
-    border-bottom: 1px solid #aaa;
+  .page-content-summary {
+    @include adjust-font-size-to(14px);
   }
 
-  .article {
+  .page-content-inner {
+    max-width: 35em;
+    margin-left: auto;
+    margin-right: auto;
     @include trailer(2);
   }
 
-  .penetration-test-icon {
-    width: 72px;
-    height: 72px;
+  .page-content-title {
+    position: relative;
+    @include trailer(1);
+    @include adjust-font-size-to(20px);
+    color: $color-darken-black;
   }
 
-  .penetration-test-list {
+  .page-content-title-with-line {
+    text-align: center;
+    span {
+      position: relative;
+      padding: 0 .5em;
+      background-color: #fff;
+      z-index: 1;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: darken($global-divider, 10%);
+      height: 1px;
+      width: 100%;
+    }
+  }
+
+  .page-content-list {
     @include reset-box-model;
     list-style: none;
     margin: rhythm(.25) 0 rhythm(0);
@@ -31,11 +52,25 @@
     }
   }
 
+  .penetration-test-icon {
+    width: 72px;
+    height: 72px;
+  }
 
   @include at-breakpoint($pad) {
-    .page-content-title {
-      font-size: 24px;
-      @include padding-trailer(.5);
+    p {
+      @include adjust-font-size-to(16px);
+    }
+
+    .page-content-summary {
+      @include adjust-font-size-to(16px, 1.25);
+    }
+
+    .page-content-title-with-line {
+      @include adjust-font-size-to(24px, 1);
+      span {
+        padding: 0 1em;
+      }
     }
   }
 

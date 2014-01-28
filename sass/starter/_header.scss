@@ -7,7 +7,16 @@
     font-weight: bold;
     text-align: center;
     a {
+      display: block;
+      margin: 0 auto;
       color: black;
+      @include replace-text-with-dimensions("logo-small.png");
+      background-image: none, image-url("logo-small.svg");
+      @include at-breakpoint($desktop) {
+        margin: auto;
+        @include replace-text-with-dimensions("logo.png");
+        background-image: none, image-url("logo.svg");
+      }
       &:hover {
         text-decoration: none;
         color: #333;

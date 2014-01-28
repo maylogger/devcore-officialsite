@@ -1,2 +1,2 @@
 // 移動 dom
-$( ".main-nav ul" ).appendAround();
+// $( ".main-nav ul" ).appendAround();

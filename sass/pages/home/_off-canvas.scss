@@ -1,0 +1,105 @@
+.wrapper {
+	@include transform-style(preserve-3d);
+	@include perspective(1000px);
+	@include transition(.5s ease-in);
+}
+
+.header {
+	.menu-btn {
+		color: $color-gray;
+		letter-spacing: -5px;
+		background-color: transparent;
+		@include at-breakpoint($pad) {
+		  display: block;
+		  top: auto;
+		  right: 7.5%;
+		}
+	}
+	.main-nav {
+		@include at-breakpoint($pad) {
+		  padding-right: 48px;
+		}
+	}
+}
+
+.off-canvas .outside {
+	width: 100%;
+	background-color: transparent;
+	opacity: 0;
+	@include transition(.5s);
+	@include at-breakpoint($pad) {
+	  display: block;
+	  // left: 50%;
+	  // margin-left: -25%;
+	}
+}
+.off-canvas.open-menu .outside {
+	z-index: 1000;
+	opacity: 1;
+	@include background-image(
+		linear-gradient(to bottom, rgba(white, .75), rgba(white, 0) )
+	);
+}
+
+.outside .main-nav {
+	position: relative;
+	width: 100%;
+	max-width: 1088px;
+	margin: 0 auto;
+	padding: rhythm(1) 0;
+	text-align: left;
+	@include text-shadow(0 0 10px white);
+	@include at-breakpoint($pad) {
+	  display: block;
+	  padding: rhythm(1) 0;
+	}
+	ul {
+		width: 80%;
+		margin: 0 auto;
+		@include at-breakpoint($pad) {
+		  width: 50%;
+		}
+	}
+	li {
+		display: block;
+		a {
+			@include adjust-font-size-to($font-size-l);
+		}
+		ul {
+			width: 100%;
+			margin-top: rhythm(.5);
+			padding: rhythm(.25) rhythm(.5);
+			border-left: 1px solid $color-black;
+			li a {
+				@include adjust-font-size-to($font-size-m);
+			}
+		}
+	}
+	& li + li {
+		padding-top: rhythm(.5);
+	}
+	.close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1000;
+		width: 48px;
+		height: 48px;
+		text-align: center;
+		@include adjust-font-size-to($font-size-xxl);
+		cursor: pointer;
+		@include at-breakpoint($pad) {
+		  top: 24px;
+		}
+	}
+}
+
+.off-canvas .page {
+	@include transform-origin(center, bottom);
+}
+
+.off-canvas.open-menu .page {
+	@include translateZ(-1000px);
+	@include rotateX(45deg);
+	@include filter(blur(2px));
+}

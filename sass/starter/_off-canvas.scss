@@ -103,7 +103,7 @@ $off-canvas-main-bg-color: white;
       }
 
       .page {
-        height: auto;
+        // height: auto; for devcore only
         overflow: visible;
         @include translateX(0);
       }

@@ -1,0 +1,48 @@
+.members {
+  @include reset-box-model;
+  list-style: none;
+  text-align: justify;
+  font-size: 0;
+  font-size: 12px\9; /* IE6-9 only hack */
+
+  &:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+
+  .member {
+    width: 46%;
+    @include trailer(1);
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+
+  .avatar {
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  .member-name {
+    @include adjust-font-size-to(14px);
+
+  }
+  .member-role {
+    @include adjust-font-size-to(12px, 2/3);
+    color: $global-muted-color;
+  }
+
+  @include at-breakpoint($pad) {
+    .member {
+      width: 18%;
+    }
+  }
+
+
+}

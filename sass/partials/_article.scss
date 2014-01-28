@@ -16,18 +16,27 @@
   }
 
   p {
-    @include leader(0);
     font-size: 14px;
     line-height: 1.5em;
   }
+
   .lead {
-    @include leader(0);
+    margin-top: 0;
   }
+
+
 
   @include at-breakpoint($pad) {
     p {
       @include adjust-font-size-to(16px);
     }
+
+    & .lead {
+      p {
+        @include adjust-font-size-to(18px);
+      }
+    }
+
   }
 
 }

@@ -17,7 +17,7 @@ $off-canvas-main-bg-color: white;
     width: $off-canvas-menu-width;
     height: 100%;
     -webkit-overflow-scrolling: touch;
-    background-color: white;
+    // background-color: white; for devcore only
   }
 
   .page {
@@ -67,7 +67,7 @@ $off-canvas-main-bg-color: white;
 
     .off-canvas-mask {
       height: 100%;
-      z-index: 9999;
+      z-index: 10001; // for devcore only
     }
 
   }
@@ -109,7 +109,7 @@ $off-canvas-main-bg-color: white;
       }
 
       .off-canvas-mask {
-        height: 0;
+        // height: 0; for devcore only
       }
 
     }

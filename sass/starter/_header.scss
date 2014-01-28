@@ -25,16 +25,18 @@
   }
 
   .menu-btn {
-    height: 48px;
-    width: 48px;
     background-color: #aaa;
+    width: 48px;
+    height: 48px;
     position: absolute;
     z-index: 99;
     top: 0;
     right: 0;
+    padding: 0;
+    text-align: center;
     border: none;
     outline: none;
-    @include adjust-font-size-to(14px, 1);
+    @include adjust-font-size-to(14px, 2);
   }
 
 

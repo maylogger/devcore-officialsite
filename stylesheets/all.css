@@ -196,7 +196,8 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 
 .header { position: relative; background-color: white; }
 .header .logo { font-size: 22px; line-height: 48px; font-weight: bold; text-align: center; }
-.header .logo a { color: black; }
+.header .logo a { display: block; margin: 0 auto; color: black; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo-small.png?1390894446'); background-repeat: no-repeat; background-position: 50% 50%; width: 122px; height: 48px; background-image: none, url('/images/logo-small.svg?1390894139'); }
+@media (min-width: 940px) { .header .logo a { margin: auto; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1390894461'); background-repeat: no-repeat; background-position: 50% 50%; width: 156px; height: 48px; background-image: none, url('/images/logo.svg?1390893994'); } }
 .header .logo a:hover { text-decoration: none; color: #333; }
 .header .menu-btn { height: 48px; width: 48px; background-color: #aaa; position: absolute; z-index: 99; top: 0; right: 0; border: none; outline: none; font-size: 14px; line-height: 24px; }
 @media (min-width: 640px) { .header { padding: 6px 0; }

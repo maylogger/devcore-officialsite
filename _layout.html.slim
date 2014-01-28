@@ -9,11 +9,33 @@ html lang="zh-TW" class="no-js "
       .outside
         .outside-inner
           .main-nav data-set="main-nav"
+            .close ×
             ul
-              li: a href="/" Services
-              li: a href="/news" News
-              li: a href="/about" About
-              li: a href="/contact" Contact
+              li: a href="/"
+                .ch-name 服務
+                | Services
+                ul
+                  li: a href="/"
+                    .ch-name 滲透測試
+                    | Penetration Test
+                  li: a href="/"
+                    .ch-name 資安事件處理
+                    | Emergency Response Services
+                  li: a href="/"
+                    .ch-name 教育訓練
+                    | Security Training
+                  li: a href="/"
+                    .ch-name 資安顧問服務
+                    | Security Consulting
+              li: a href="/news"
+                .ch-name 教育訓練
+                | News
+              li: a href="/about"
+                .ch-name 關於
+                | About
+              li: a href="/contact"
+                .ch-name 聯絡
+                | Contact
 
       .page
         = render "/partials/header"

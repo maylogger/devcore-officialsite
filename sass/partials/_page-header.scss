@@ -1,11 +1,11 @@
 .page-header {
   background-color: $color-green;
-  // background-color: lighten($color-green, 10%);
   padding: rhythm(1) 0;
   color: $page-header-color;
   text-align: center;
+
   .page-header-title {
-    // text-align: center;
+    text-align: center;
     font-size: 20px;
     line-height: 24px;
     @extend %subpixel;
@@ -14,13 +14,21 @@
     }
   }
 
+  .page-header-text {
+    @include adjust-font-size-to(14px, 4/5);
+    max-width: 30em;
+    margin: rhythm(.5) auto 0;
+  }
+
   @include at-breakpoint($pad) {
     padding: rhythm(2) 0 rhythm(2);
     .page-header-title {
       font-size: 24px;
       line-height: 1em;
       @extend %subpixel;
-
+    }
+    .page-header-text {
+      @include adjust-font-size-to(16px);
     }
 
   }

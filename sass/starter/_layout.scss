@@ -22,9 +22,6 @@ html, body {
 
 .wrapper {
   background-color: #e9e9e7;
-  @include background-image(
-    linear-gradient(to top, #e9e9e7, darken(#e9e9e7, 10%) )
-  );
 }
 
 .page {

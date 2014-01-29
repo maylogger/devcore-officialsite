@@ -16,6 +16,8 @@
         margin: auto;
         @include replace-text-with-dimensions("logo.png");
         background-image: none, image-url("logo.svg");
+        // @include replace-text-with-dimensions("logo2.png");
+        // background-image: none, image-url("logo2.svg");
       }
       &:hover {
         text-decoration: none;

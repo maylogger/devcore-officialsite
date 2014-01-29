@@ -56,11 +56,12 @@
   .grid-#{$phone-columns}-#{$pad-columns}-#{$desktop-columns}.wide-gutter .col {
 
     @include box-sizing(border-box);
-    padding: 0 gutter();
+    // padding: 0 gutter(); //暫時取消在 phone 時候的 padding
     @include at-breakpoint($pad) {
       padding: 0 gutter();
     }
 
+    // 無內縮版本
     // @if $phone-columns > 1 {
     //   padding: 0 gutter() / 2;
     //   &:first-child {

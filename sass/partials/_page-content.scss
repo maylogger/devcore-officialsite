@@ -1,19 +1,26 @@
 .page-content {
   padding: rhythm(2) 0 rhythm(0);
 
+  .page-content-inner {
+    max-width: 35em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   p {
     @include adjust-font-size-to(14px, 4/5);
   }
 
   .page-content-summary {
-    @include adjust-font-size-to(14px);
+    @include padding-trailer(1);
+    p {
+      @include adjust-font-size-to(14px);
+    }
+
   }
 
-  .page-content-inner {
-    max-width: 35em;
-    margin-left: auto;
-    margin-right: auto;
-    @include trailer(2);
+  .page-content-article {
+    @include padding-trailer(1);
   }
 
   .page-content-title {
@@ -52,18 +59,15 @@
     }
   }
 
-  .penetration-test-icon {
-    width: 72px;
-    height: 72px;
-  }
-
   @include at-breakpoint($pad) {
     p {
       @include adjust-font-size-to(16px);
     }
 
     .page-content-summary {
-      @include adjust-font-size-to(16px, 1.25);
+      p {
+        @include adjust-font-size-to(16px, 1.25);
+      }
     }
 
     .page-content-title {

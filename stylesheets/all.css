@@ -197,7 +197,7 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 .header { position: relative; background-color: white; }
 .header .logo { font-size: 22px; line-height: 48px; font-weight: bold; text-align: center; }
 .header .logo a { display: block; margin: 0 auto; color: black; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo-small.png?1390920597'); background-repeat: no-repeat; background-position: 50% 50%; width: 122px; height: 48px; background-image: none, url('/images/logo-small.svg?1390920597'); }
-@media (min-width: 940px) { .header .logo a { margin: auto; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1390920597'); background-repeat: no-repeat; background-position: 50% 50%; width: 156px; height: 48px; background-image: none, url('/images/logo.svg?1390920597'); } }
+@media (min-width: 940px) { .header .logo a { margin: auto; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1390989488'); background-repeat: no-repeat; background-position: 50% 50%; width: 332px; height: 48px; background-image: none, url('/images/logo.svg?1390989488'); } }
 .header .logo a:hover { text-decoration: none; color: #333; }
 .header .menu-btn { background-color: #aaa; width: 48px; height: 48px; position: absolute; z-index: 99; top: 0; right: 0; padding: 0; text-align: center; border: none; outline: none; font-size: 14px; line-height: 48px; }
 @media (min-width: 640px) { .header { padding: 6px 0; }
@@ -541,33 +541,31 @@ button + button, a.button + a.button { margin-left: 1em; }
 .certified .certified-block .certified-list { font-size: 16px; }
 @media (min-width: 940px) { .certified .certified-block .list li { font-size: 16px; line-height: 24px; } }
 
-.post .post-main, .post .post-sidebar { margin-bottom: 24px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.post .post-main { margin-bottom: 24px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.post .post-main .post-switch { margin-bottom: 12px; padding: 0 3px; border-bottom: 1px solid #f0f2f0; }
+.post .post-main .post-switch:after { content: ""; display: table; clear: both; }
+.post .post-main .post-switch .prev { float: left; font-size: 14px; line-height: 24px; text-decoration: none; }
+.post .post-main .post-switch .prev:before { content: "«"; padding-right: 6px; font-size: 20px; line-height: 1em; }
+.post .post-main .post-switch .next { float: right; font-size: 14px; line-height: 24px; text-decoration: none; }
+.post .post-main .post-switch .next:after { content: "»"; padding-left: 6px; font-size: 20px; line-height: 1em; }
+.post .post-main .post-content.preview { margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid #f0f2f0; }
+.post .post-main .post-content.preview:last-child { border-bottom: none; }
+.post .post-main .post-content .post-title { font-size: 32px; line-height: 48px; margin-bottom: 12px; }
+.post .post-main .post-content .post-title a { color: #444444; text-decoration: none; }
+.post .post-main .post-content .post-title a:hover { color: #8fbe3e; }
+.post .post-main .post-content .post-info { margin-bottom: 12px; font-size: 14px; line-height: 24px; background-color: #f0f2f0; }
+.post .post-main .post-content .post-info .poster, .post .post-main .post-content .post-info .post-time, .post .post-main .post-content .post-info .post-category { padding: 0 6px; }
+.post .post-main .post-content h1 { font-size: 28px; line-height: 48px; }
+.post .post-main .post-content h2 { font-size: 24px; line-height: 48px; }
+.post .post-main .post-content h3 { font-size: 20px; line-height: 48px; }
+.post .post-main .post-content h4 { font-size: 16px; line-height: 24px; }
+.post .post-main .post-content img { display: block; margin: 24px auto; }
+.post .post-main .post-content ul { padding-left: 24px; }
+.post .post-main .post-content ul li { padding: 3px 0; }
+.post .post-sidebar { margin-bottom: 24px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.post .post-sidebar .widget { margin-bottom: 48px; }
+.post .post-sidebar .widget .widget-title { font-size: 18px; line-height: 24px; }
+.post .post-sidebar .widget .widget-list { margin: 12px 0; padding-left: 0; list-style: none; }
+.post .post-sidebar .widget .widget-list li { padding: 3px 0; }
 @media (min-width: 640px) { .post .post-main { width: 65.95745%; float: left; margin-right: 2.12766%; }
   .post .post-sidebar { width: 31.91489%; float: right; margin-right: 0; } }
-
-.post-switch { margin-bottom: 12px; padding: 0 3px; border-bottom: 1px solid #f0f2f0; }
-.post-switch:after { content: ""; display: table; clear: both; }
-.post-switch .prev { float: left; font-size: 14px; line-height: 24px; text-decoration: none; }
-.post-switch .prev:before { content: "«"; padding-right: 6px; font-size: 20px; line-height: 1em; }
-.post-switch .next { float: right; font-size: 14px; line-height: 24px; text-decoration: none; }
-.post-switch .next:after { content: "»"; padding-left: 6px; font-size: 20px; line-height: 1em; }
-
-.post-content.preview { margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid #f0f2f0; }
-.post-content.preview:last-child { border-bottom: none; }
-.post-content .post-title { font-size: 32px; line-height: 48px; margin-bottom: 12px; }
-.post-content .post-title a { color: #444444; text-decoration: none; }
-.post-content .post-title a:hover { color: #8fbe3e; }
-.post-content .post-info { margin-bottom: 12px; font-size: 14px; line-height: 24px; background-color: #f0f2f0; }
-.post-content .post-info .poster, .post-content .post-info .post-time, .post-content .post-info .post-category { padding: 0 6px; }
-.post-content h1 { font-size: 28px; line-height: 48px; }
-.post-content h2 { font-size: 24px; line-height: 48px; }
-.post-content h3 { font-size: 20px; line-height: 48px; }
-.post-content h4 { font-size: 16px; line-height: 24px; }
-.post-content img { display: block; margin: 24px auto; }
-.post-content ul { padding-left: 24px; }
-.post-content ul li { padding: 3px 0; }
-
-.widget { margin-bottom: 48px; }
-.widget .widget-title { font-size: 18px; line-height: 24px; }
-.widget .widget-list { margin: 12px 0; padding-left: 0; list-style: none; }
-.widget .widget-list li { padding: 3px 0; }

@@ -41,7 +41,7 @@
 				.readmore {}
 			}
 			.post-title {
-				@include adjust-font-size-to(32px);
+				@include adjust-font-size-to(24px, 1);
 				@include trailer(.5);
 				a {
 					color: $color-black;
@@ -106,6 +106,9 @@
 	}
 
 	@include at-breakpoint($pad) {
+    .post-title {
+      @include adjust-font-size-to(32px);
+    }
 	  .post-main {
 	  	@include span-columns(8);
 	  }

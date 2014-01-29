@@ -1,5 +1,5 @@
 .page-content {
-  padding: rhythm(2) 0 rhythm(0);
+  padding: rhythm(1) 0 rhythm(0);
 
   .page-content-inner {
     max-width: 35em;
@@ -60,6 +60,7 @@
   }
 
   @include at-breakpoint($pad) {
+    padding: rhythm(2) 0 rhythm(0);
     p {
       @include adjust-font-size-to(16px);
     }

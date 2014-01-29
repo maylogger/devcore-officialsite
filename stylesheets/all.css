@@ -482,7 +482,7 @@ button + button, a.button + a.button { margin-left: 1em; }
   .page-header .page-header-title { font-size: 24px; line-height: 1em; }
   .page-header .page-header-text { font-size: 16px; line-height: 24px; } }
 
-.page-content { padding: 48px 0 0px; }
+.page-content { padding: 24px 0 0px; }
 .page-content .page-content-inner { max-width: 35em; margin-left: auto; margin-right: auto; }
 .page-content p { font-size: 14px; line-height: 19px; }
 .page-content .page-content-summary { padding-bottom: 24px; }
@@ -494,7 +494,8 @@ button + button, a.button + a.button { margin-left: 1em; }
 .page-content .page-content-title-with-line:before { content: ''; position: absolute; top: 50%; left: 0; background-color: #d5dad5; height: 1px; width: 100%; }
 .page-content .page-content-list { margin: 0; padding: 0; border: 0; list-style: none; margin: 6px 0 0px; font-size: 14px; line-height: 18px; }
 .page-content .page-content-list li + li { margin-top: 6px; }
-@media (min-width: 640px) { .page-content p { font-size: 16px; line-height: 24px; }
+@media (min-width: 640px) { .page-content { padding: 48px 0 0px; }
+  .page-content p { font-size: 16px; line-height: 24px; }
   .page-content .page-content-summary p { font-size: 16px; line-height: 30px; }
   .page-content .page-content-title { font-size: 24px; line-height: 24px; }
   .page-content .page-content-title-with-line span { padding: 0 1em; } }
@@ -594,7 +595,7 @@ button + button, a.button + a.button { margin-left: 1em; }
 .post .post-main .post-switch .next:after { content: "»"; padding-left: 6px; font-size: 20px; line-height: 1em; }
 .post .post-main .post-content.preview { margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid #f0f2f0; }
 .post .post-main .post-content.preview:last-child { border-bottom: none; }
-.post .post-main .post-content .post-title { font-size: 32px; line-height: 48px; margin-bottom: 12px; }
+.post .post-main .post-content .post-title { font-size: 24px; line-height: 24px; margin-bottom: 12px; }
 .post .post-main .post-content .post-title a { color: #444444; text-decoration: none; }
 .post .post-main .post-content .post-title a:hover { color: #8fbe3e; }
 .post .post-main .post-content .post-info { margin-bottom: 12px; font-size: 14px; line-height: 24px; background-color: #f0f2f0; }
@@ -611,5 +612,6 @@ button + button, a.button + a.button { margin-left: 1em; }
 .post .post-sidebar .widget .widget-title { font-size: 18px; line-height: 24px; }
 .post .post-sidebar .widget .widget-list { margin: 12px 0; padding-left: 0; list-style: none; }
 .post .post-sidebar .widget .widget-list li { padding: 3px 0; }
-@media (min-width: 640px) { .post .post-main { width: 65.95745%; float: left; margin-right: 2.12766%; }
+@media (min-width: 640px) { .post .post-title { font-size: 32px; line-height: 48px; }
+  .post .post-main { width: 65.95745%; float: left; margin-right: 2.12766%; }
   .post .post-sidebar { width: 31.91489%; float: right; margin-right: 0; } }

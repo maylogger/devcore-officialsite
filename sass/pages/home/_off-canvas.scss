@@ -1,7 +1,6 @@
 .wrapper {
 	@include transform-style(preserve-3d);
 	@include perspective(1500px);
-	@include transition(.5s);
 }
 
 .header {
@@ -21,7 +20,7 @@
           display: block;
           @include replace-text-with-svg("open");
           opacity: 1;
-          @include transition(.3s);
+          @include transition(opacity .3s);
         }
 			}
 		}
@@ -58,7 +57,7 @@
 		@include background-size(100% 300%);
 		background-position: 0 200%;
     background-repeat: no-repeat;
-		@include transition(.5s);
+		@include transition( background-position .5s);
 	}
 	.page {
 		@include transform-origin(center, 150%);
@@ -73,7 +72,7 @@
 .off-canvas.model {
   .open-menu-btn {
     opacity: 0 !important;
-    @include transition(0);
+    @include transition(opacity 0);
   }
 	.wrapper {
 		height: 100%;

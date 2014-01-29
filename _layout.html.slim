@@ -6,21 +6,14 @@ html lang="zh-TW" class="no-js "
   body.off-canvas
     .wrapper
 
-      .outside
-        .outside-inner
-          .main-nav data-set="main-nav"
-            ul
-              li: a href="/" Services
-              li: a href="/news" News
-              li: a href="/about" About
-              li: a href="/contact" Contact
+      = render "/partials/outside"
 
       .page
         = render "/partials/header"
         .main
           = yield
-        .off-canvas-mask
         = render "/partials/footer"
+        .off-canvas-mask
 
     = render "/layout_foot"
     = render "/layout_livereload"

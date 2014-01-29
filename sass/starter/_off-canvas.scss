@@ -16,8 +16,7 @@ $off-canvas-main-bg-color: white;
     z-index: 10;
     width: $off-canvas-menu-width;
     height: 100%;
-    -webkit-overflow-scrolling: touch;
-    background-color: white;
+    // background-color: white; for devcore only
   }
 
   .page {
@@ -28,7 +27,6 @@ $off-canvas-main-bg-color: white;
     background-color: $off-canvas-main-bg-color;
     @include transition(transform .3s ease-out, max-width .5s);
     @include backface-visibility(hidden); // 解決 translate 在最後結束時會閃爍的 bug
-    -webkit-overflow-scrolling: touch;
   }
 
   .off-canvas-mask {
@@ -51,6 +49,7 @@ $off-canvas-main-bg-color: white;
     .outside-inner {
       height: 100%;
       overflow: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     .page {
@@ -67,7 +66,7 @@ $off-canvas-main-bg-color: white;
 
     .off-canvas-mask {
       height: 100%;
-      z-index: 9999;
+      z-index: 10001; // for devcore only
     }
 
   }
@@ -88,7 +87,7 @@ $off-canvas-main-bg-color: white;
     }
 
     .outside {
-      display: none;
+      // display: none; for devcore only
     }
 
     .page {
@@ -103,13 +102,13 @@ $off-canvas-main-bg-color: white;
       }
 
       .page {
-        height: auto;
+        // height: auto; for devcore only
         overflow: visible;
         @include translateX(0);
       }
 
       .off-canvas-mask {
-        height: 0;
+        // height: 0; for devcore only
       }
 
     }

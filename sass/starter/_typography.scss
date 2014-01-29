@@ -1,6 +1,7 @@
-%helvetica-light {
-  font-family: "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
+%avenir {
+  font-family: "AvenirNext-DemiBoldItalic", "Avenir-HeavyOblique", "Arial", "STHeitiTC-Light", sans-serif;
   font-weight: 300;
+  font-style: normal;
 }
 
 %subpixel {
@@ -8,7 +9,7 @@
 }
 
 body {
-  @extend %helvetica-light;
+  @extend %avenir;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;

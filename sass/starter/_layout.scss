@@ -28,7 +28,6 @@ html, body {
   background-color: #fff;
   max-width: 1280px;
   margin: 0 auto;
-  // @include transition(max-width 1s);
 }
 
 #{$page-container}, .header-inner, .footer-inner {

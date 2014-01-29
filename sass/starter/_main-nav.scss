@@ -1,22 +1,15 @@
 .main-nav {
   @include reset-box-model;
-  padding: 36px;
   @include pie-clearfix;
-
+  padding: 36px;
   ul {
     @include reset-box-model;
     list-style: none;
   }
-  li {
-
-  }
-  li + li {
-    padding-top: 12px;
-
-  }
   a {
     color: $main-nav-color;
-    font-weight: bold;
+    font-style: italic;
+    @extend %subpixel;
     @include adjust-font-size-to(16px);
     &:hover {
       color: lighten($main-nav-color, 20%);
@@ -24,41 +17,27 @@
     }
   }
 
-  // append-around
-  .header & {
-    display: none;
-  }
-
+  // append-around : devcore no append-around
+  // .header & {
+  //   display: none;
+  // }
 
   @include at-breakpoint($pad) {
     padding: 0 24px;
     text-align: center;
-
-    ul {
-
-    }
     li {
-      display: inline-block;
+      display: block;
+      float: left;
       margin: 0 .5em;
     }
-    li + li {
-      padding-top: 0;
-    }
-    a {
-
-    }
-
-    // append-around
-    .outside & {
-      display: none;
-    }
-    .header & {
-      display: block;
-    }
-
+    // append-around : devcore no append-around
+    // .outside & {
+    //   display: none;
+    // }
+    // .header & {
+    //   display: block;
+    // }
   }
-
-
 }
 
 

@@ -1,21 +1,15 @@
 .header {
   position: relative;
-  background-color: white;
-
   .logo {
     @include adjust-font-size-to(22px, 2);
     font-weight: bold;
-    text-align: center;
     a {
       display: block;
-      margin: 0 auto;
       color: black;
-      @include replace-text-with-dimensions("logo-small.png");
-      background-image: none, image-url("logo-small.svg");
+      @include replace-text-with-svg("logo-small");
       @include at-breakpoint($desktop) {
         margin: auto;
-        @include replace-text-with-dimensions("logo.png");
-        background-image: none, image-url("logo.svg");
+        @include replace-text-with-svg("logo");
       }
       &:hover {
         text-decoration: none;
@@ -23,22 +17,6 @@
       }
     }
   }
-
-  .menu-btn {
-    height: 48px;
-    width: 48px;
-    background-color: #aaa;
-    position: absolute;
-    z-index: 99;
-    top: 0;
-    right: 0;
-    border: none;
-    outline: none;
-    @include adjust-font-size-to(14px, 1);
-  }
-
-
-
 
   @include at-breakpoint($pad) {
     padding: rhythm(.25) 0;
@@ -50,11 +28,6 @@
     .main-nav {
       float: right;
       padding: 12px 0 0 0;
-    }
-
-
-    .menu-btn {
-      display: none;
     }
 
   }

@@ -12,6 +12,7 @@ $page-container: ".container";
 
 // import all things
 @import "compass";
+@import "compass/css3/user-interface"; // Don't know why must add this.
 @import "susy";
 
 @import "normalize";
@@ -19,6 +20,9 @@ $page-container: ".container";
 
 // starter variables
 @import "starter/variables";
+
+// starter mixins
+@import "starter/mixins";
 
 // starter partials
 @import "starter/layout";

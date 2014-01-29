@@ -13,8 +13,7 @@
   }
   .close-menu-btn-wrapper-inner {
     position: relative;
-    max-width: 85%;
-    margin: 0 auto;
+    margin: 0 24px;
   }
   .close-menu-btn {
     @include replace-text-with-svg("close");
@@ -23,8 +22,6 @@
     right: 0;
     @include unstyled-link;
     @include adjust-font-size-to(20px);
-    opacity: 0;
-    @include transition(opacity .3s);
   }
   .main-nav {
     @include reset-box-model;
@@ -32,7 +29,7 @@
     width: 60%;
     float: right;
     padding-right: 15%;
-    margin: 0 auto;
+    margin: 24px auto;
     padding-bottom: 5em;
     text-align: left;
     text-shadow: 0 0 10px #fff,
@@ -73,6 +70,10 @@
   }
 
   @include at-breakpoint($pad) {
+    .close-menu-btn-wrapper-inner {
+      max-width: 85%;
+      margin: 0 auto;
+    }
     .main-nav {
       max-width: 280px;
       float: none;

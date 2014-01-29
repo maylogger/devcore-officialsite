@@ -11,6 +11,7 @@
       line-height: $item-image-height;
       @include trailer(.5);
       float: left;
+      small { @include nowrap; }
     }
   }
 

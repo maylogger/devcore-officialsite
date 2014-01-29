@@ -6,24 +6,20 @@
 	.container
 		.post
 			.post-main
-				.post-switch
-					a.prev href="#" 上一篇文章
-					a.next href="#" 下一篇文章
-				.post-content
-					h1.post-title = zh_lorem_sentence
-					.post-info
-						span.poster = zh_lorem_name
-						span.post-time = lorem_date
-						span.post-category: a href="#" 最新消息
-					- 2.times do
-						h3 = zh_lorem_words 5 + rand(5)
-						p = zh_lorem_paragraphs 4
-						img src="http://hhhhold.com/600x300/#{rand(100)}"
-						p = zh_lorem_paragraphs 3
-					ul
-						- ( rand(3) + 5 ).times do
-							li = zh_lorem_words 5 + rand(5)
-					p = zh_lorem_paragraphs 3
+				- 5.times do
+					.post-content.preview
+						h1.post-title
+							a href="/news/post.html" = zh_lorem_sentence
+						.post-info
+							span.poster = zh_lorem_name
+							span.post-time = lorem_date
+							span.post-category: a href="#" 最新消息
+						.post-preview
+							h3 = zh_lorem_words 5 + rand(5)
+							p = zh_lorem_paragraphs 4
+							img src="http://hhhhold.com/600x300/#{rand(100)}"
+						a.readmore href="/news/post.html" read more →
+				= render "/partials/pagination"
 			.post-sidebar
 				.widget
 					.widget-title 最新網誌文章

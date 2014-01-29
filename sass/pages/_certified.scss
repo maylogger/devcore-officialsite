@@ -1,0 +1,47 @@
+.certified {
+
+  .security-badges {
+    // width: 120px;
+    // height: 120px;
+  }
+  .item-content {
+    padding: 0 5%;
+  }
+  .item-image {
+    @include trailer(.5);
+  }
+  .item-title {
+
+  }
+  .item-text {
+    @include leader(.5);
+  }
+
+  .certified-block {
+    .certified-website-image {
+      img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .certified-list {
+      font-size: 16px;
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+
+    .certified-block {
+      .list {
+        li {
+          @include adjust-font-size-to(16px);
+        }
+      }
+    }
+
+
+  }
+
+
+}

@@ -1,6 +1,7 @@
 button, a.button {
+  @include unstyled-link;
   text-align: center;
-  padding: 0 24px;
+  padding: 1em 24px;
   border: none;
   background-color: #eee;
   background-image: none;
@@ -40,6 +41,9 @@ button, a.button {
     cursor: default;
   }
 
+  & + & {
+    margin-left: 1em;
+  }
 }
 
 

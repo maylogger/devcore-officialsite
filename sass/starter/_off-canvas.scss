@@ -97,8 +97,8 @@ $off-canvas-main-bg-color: white;
 
     &.open-menu {
 
-      .wraper {
-        height: auto;
+      .wrapper {
+        // height: auto; // for devcore only
       }
 
       .page {

@@ -1,7 +1,7 @@
 site-url: "http://localhost:3000"
-site-title: "未命名頁面"
-site-name: "未命名網站"
-site-description: "尚未填寫敘述"
+site-title: "DEVCORE 戴夫寇爾 - 滲透測試、資安事件處理、教育訓練、資安顧問服務"
+site-name: "DEVCORE 戴夫寇爾"
+site-description: "DEVCORE 戴夫寇爾 - 滲透測試、資安事件處理、教育訓練、資安顧問服務"
 
 og-type: "website"
 og-image: "http://localhost:3000/fb.png"

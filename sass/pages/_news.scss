@@ -110,10 +110,10 @@
       @include adjust-font-size-to(32px);
     }
 	  .post-main {
-	  	@include span-columns(8);
+	  	@include span-columns(4);
 	  }
 	  .post-sidebar {
-	  	@include span-columns(4 omega);
+	  	@include span-columns(2 omega);
 	  }
 	}
 }

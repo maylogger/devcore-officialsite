@@ -1,113 +1,21 @@
 .services {
-  .service {
-    padding: rhythm(2) 0 rhythm(1);
-    @include pie-clearfix;
-  }
-  .service + .service {
-    border-top: 1px solid $global-divider;
-  }
-  .service-content {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .service-title {
-    @include adjust-font-size-to(20px, 1);
-    @include trailer(.25);
-    color: $color-darken-black;
-  }
-  .service-sub-title {
-    @include adjust-font-size-to(16px, 1);
-    @include trailer(.25);
-    color: $color-gray;
-  }
-  .service-text {
-    @include adjust-font-size-to(12px, 3/4);
-  }
-  .service-image {
-    text-align: center;
-    margin: 0 auto;
-    @include trailer(1);
-    img {
-
-      margin: 0 auto;
-      display: block;
-    }
-  }
-
-
-
-  @include at-breakpoint($pad) {
-    .service-content {
-      width: columns(5, $total_columns)
-    }
-    .service-title {
-      @include adjust-font-size-to(24px, 1);
-      @include trailer(.5);
-    }
-    .service-sub-title {
-      @include adjust-font-size-to(20px, 1);
-      @include trailer(.5);
-    }
-    .service-text {
-      @include adjust-font-size-to(16px, 1);
-    }
-    .service-image {
-      max-width: none;
-    }
-  }
 
   @include at-breakpoint($desktop) {
-    .service {
-      padding: rhythm(3) 0 rhythm(2);
-    }
-    .service-content {
+    .feature-block-content {
       @include span-columns(6);
       text-align: left;
     }
-    .service-title {
-      @include adjust-font-size-to(24px, 1);
-    }
-    .service-sub-title {
-      @include adjust-font-size-to(20px, 1);
-    }
-    .service-text {
-      @include adjust-font-size-to(16px, 1);
-    }
-    .service-image {
-      @include span-columns(6);
+    .feature-block-image {
+      @include span-columns(5);
       float: left;
       img {
-        // width: 100%;
+        width: 100%;
       }
     }
     .pull-right {
-      @include span-columns(6 omega, $total_columns);
+      @include omega;
     }
   }
 
-
-  // background: #f0f2f0;
-  // .items.title-with-image {
-  //   .item-image {
-  //     width: 48px;
-  //     height: 48px;
-  //   }
-  //   .item-title {
-  //     $item-image-height: 24px;
-  //     font-size: 18px;
-  //     line-height: $item-image-height;
-  //     @include trailer(.5);
-  //     float: left;
-  //     small { @include nowrap; }
-  //   }
-  // }
-
-  // @include at-breakpoint($desktop) {
-  //   .items.title-with-image {
-  //     .item-title {
-  //       font-size: 20px;
-  //     }
-  //   }
-  // }
 
 }

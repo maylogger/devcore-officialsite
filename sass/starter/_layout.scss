@@ -38,13 +38,13 @@ html, body {
 
 @include at-breakpoint($pad) {
   #{$page-container}, .header-inner, .footer-inner {
-    max-width: 78%; // 限制 conntainer 寬度，並且預留左右留白空間
+    max-width: 88%; // 限制 conntainer 寬度，並且預留左右留白空間
   }
 }
 
 @include at-breakpoint($desktop) {
   #{$page-container}, .header-inner, .footer-inner {
-
+    max-width: 78%; // 限制 conntainer 寬度，並且預留左右留白空間
   }
   .container-inner {
   }

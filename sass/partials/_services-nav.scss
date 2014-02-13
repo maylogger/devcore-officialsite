@@ -1,5 +1,7 @@
 .services-nav {
   @include pie-clearfix;
+  @include padding-trailer(.5);
+  background-color: #f9f9f7;
   text-align: center;
   width: 100%;
   overflow: auto;
@@ -35,8 +37,13 @@
     }
   }
 
+
   .services-nav-item-icon {
     @include trailer(.5);
+    margin-right: auto;
+    margin-left: auto;
+    width: 36px;
+    height: 36px;
     img {
       display: block;
       margin: 0 auto;
@@ -50,6 +57,7 @@
 
 
   @include at-breakpoint($pad) {
+    @include padding-trailer(1);
 
     .services-nav-item {
       padding: rhythm(2) rhythm(.75) 0;

@@ -1,6 +1,6 @@
 .page-header
   .container
-    h2.page-header-title 最新消息 <small> News </small>
+    h2.page-header-title 技術專欄 <small> Tech </small>
 
 .page-content
 	.container
@@ -9,7 +9,7 @@
 				- 5.times do
 					.post-content.preview
 						h1.post-title
-							a href="/news/post.html" = zh_lorem_sentence
+							a href="/blog/post.html" = zh_lorem_sentence
 						.post-info
 							span.poster = zh_lorem_name
 							span.post-time = lorem_date
@@ -18,7 +18,7 @@
 							h3 = zh_lorem_words 5 + rand(5)
 							p = zh_lorem_paragraphs 4
 							img src="http://hhhhold.com/600x300/#{rand(100)}"
-						a.readmore href="/news/post.html" read more →
+						a.readmore href="/blog/post.html" read more →
 				= render "/partials/pagination"
 			.post-sidebar
 				.widget
@@ -29,6 +29,6 @@
 				.widget
 					.widget-title 網誌文章分類
 					ul.widget-list
-						li: a href="/news/category/news.html" 最新消息 <span class="count">(24)</span>
-						li: a href="/news/category/tech.html" 技術專欄 <span class="count">(32)</span>
-						li: a href="/news/category/press.html" 媒體報導 <span class="count">(75)</span>
+						li: a href="/blog/category/news.html" 最新消息 <span class="count">(24)</span>
+						li: a href="/blog/category/tech.html" 技術專欄 <span class="count">(32)</span>
+

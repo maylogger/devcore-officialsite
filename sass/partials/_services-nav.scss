@@ -1,45 +1,51 @@
 .services-nav {
   @include pie-clearfix;
-  @include padding-trailer(.5);
-  background-color: #f9f9f7;
+  background-color: $logo-black;
   text-align: center;
-  width: 100%;
   overflow: auto;
   @include nowrap;
-  margin: 0 auto;
+  padding: rhythm(1) 0 rhythm(.75);
+
+  .services-nav-inner {
+    margin: 0 auto;
+  }
 
   .services-nav-item {
     position: relative;
     display: inline-block;
-    padding: rhythm(1) rhythm(.5) 0;
-    color: $global-color;
+    width: 30%;
+    max-width: 120px;
+    color: #eee;
     @extend %subpixel;
-    opacity: .3;
+    @include box-sizing(border-box);
     &:hover {
-      opacity: 1;
       text-decoration: none;
     }
     &.active {
-      opacity: 1;
       cursor: default;
     }
     &.active:before {
       content: '';
       position: absolute;
-      top: 0;
+      bottom: -18px;
       left: 50%;
-      margin-left: -9px;
+      margin-left: -6px;
       width: 0px;
       height: 0px;
       border-style: solid;
-      border-width: 9px 9px 0 9px;
-      border-color: $color-green transparent transparent transparent;
+      border-width: 0 6px 6px 6px;
+      border-color:  transparent transparent white transparent;
     }
+  }
+
+  .services-nav-item + .services-nav-item {
+    border-left: 1px solid lighten($logo-black, 5%);
+
   }
 
 
   .services-nav-item-icon {
-    @include trailer(.5);
+    @include trailer(.25);
     margin-right: auto;
     margin-left: auto;
     width: 36px;
@@ -51,16 +57,17 @@
   }
 
   .services-nav-item-title {
-    @include adjust-font-size-to(12px, 1/2);
+    @include adjust-font-size-to(12px);
   }
 
 
 
   @include at-breakpoint($pad) {
-    @include padding-trailer(1);
+
 
     .services-nav-item {
-      padding: rhythm(2) rhythm(.75) 0;
+      max-width: none;
+      width: 25%;
     }
 
     .services-nav-item-icon {
@@ -68,7 +75,19 @@
     }
 
     .services-nav-item-title {
-      @include adjust-font-size-to(16px);
+      @include adjust-font-size-to(14px);
+    }
+
+  }
+
+
+  @include at-breakpoint($desktop) {
+
+    .services-nav-item {
+      &.active:before {
+        margin-left: -8px;
+        border-width: 0 8px 8px 8px;
+      }
     }
 
   }

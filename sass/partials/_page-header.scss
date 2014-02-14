@@ -20,15 +20,25 @@
     margin: rhythm(.5) auto 0;
   }
 
+  &.page-header-narrow {
+    padding: rhythm(.5) 0;
+  }
+
   @include at-breakpoint($pad) {
     padding: rhythm(2) 0 rhythm(2);
+
     .page-header-title {
       font-size: 24px;
       line-height: 1em;
       @extend %subpixel;
     }
+
     .page-header-text {
       @include adjust-font-size-to(16px);
+    }
+
+    &.page-header-narrow {
+      padding: rhythm(1) 0;
     }
 
   }

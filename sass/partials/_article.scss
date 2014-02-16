@@ -6,13 +6,13 @@
 
   }
   h3 {
-    @include leader(2);
+    @include leader(1);
     @include trailer(1);
   }
   h4 {
   }
 
-  ul {
+  ul, ol {
     padding-left: 24px;
   }
 

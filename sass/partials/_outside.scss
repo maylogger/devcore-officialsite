@@ -8,7 +8,7 @@
     z-index: 20000;
   }
   .close-menu-btn-wrapper {
-    max-width: 1280px;
+    max-width: 1200px; // 為 page 寬度
     margin: 0 auto;
   }
   .close-menu-btn-wrapper-inner {
@@ -71,7 +71,7 @@
 
   @include at-breakpoint($pad) {
     .close-menu-btn-wrapper-inner {
-      max-width: 85%;
+      // max-width: 85%;
       margin: 0 auto;
     }
     .main-nav {

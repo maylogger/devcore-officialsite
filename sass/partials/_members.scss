@@ -1,47 +1,64 @@
 .members {
   @include reset-box-model;
   list-style: none;
-  text-align: justify;
-  font-size: 0;
-  font-size: 12px\9; /* IE6-9 only hack */
+  @include pie-clearfix;
+  // text-align: justify;
+  // font-size: 0;
+  // font-size: 12px\9; /* IE6-9 only hack */
 
-  &:after {
-    content: '';
-    width: 100%;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-  }
+  // &:after {
+  //   content: '';
+  //   width: 100%;
+  //   display: inline-block;
+  //   zoom: 1;
+  //   *display: inline;
+  // }
 
   .member {
-    width: 46%;
-    @include trailer(1);
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
+    margin: 0 auto rhythm(2);
+    max-width: 360px;
+    // display: inline-block;
+    // zoom: 1;
+    // *display: inline;
+    text-align: center;
   }
 
-  .avatar {
+  .member-avatar {
+    @include trailer(.5);
     img {
       display: block;
       margin: 0 auto;
-      width: 100%;
     }
   }
 
   .member-name {
-    @include adjust-font-size-to(14px);
 
+    @include adjust-font-size-to(16px);
   }
   .member-role {
-    @include adjust-font-size-to(12px, 2/3);
+    @include trailer(.25);
+    @include adjust-font-size-to(16px);
     color: $global-muted-color;
+  }
+  .member-intro {
+    @include adjust-font-size-to(14px, 4/5);
   }
 
   @include at-breakpoint($pad) {
     .member {
-      width: 18%;
+      max-width: none;
+      @include span-columns(3, $total_columns);
+      @include nth-omega(2n);
     }
+  }
+
+  @include at-breakpoint($desktop) {
+    .member {
+      @include span-columns(4, $total_columns);
+      @include remove-nth-omega(2n);
+      @include nth-omega(3n);
+    }
+
   }
 
 

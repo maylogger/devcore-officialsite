@@ -2,24 +2,10 @@
   @include reset-box-model;
   list-style: none;
   @include pie-clearfix;
-  // text-align: justify;
-  // font-size: 0;
-  // font-size: 12px\9; /* IE6-9 only hack */
-
-  // &:after {
-  //   content: '';
-  //   width: 100%;
-  //   display: inline-block;
-  //   zoom: 1;
-  //   *display: inline;
-  // }
 
   .member {
     margin: 0 auto rhythm(2);
     max-width: 360px;
-    // display: inline-block;
-    // zoom: 1;
-    // *display: inline;
     text-align: center;
   }
 
@@ -45,18 +31,31 @@
   }
 
   @include at-breakpoint($pad) {
+    text-align: justify;
+    font-size: 0;
+    font-size: 12px\9; /* IE6-9 only hack */
+
+    &:after {
+      content: '';
+      width: 100%;
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+    }
+
     .member {
       max-width: none;
-      @include span-columns(3, $total_columns);
-      @include nth-omega(2n);
+      width: columns(3);
+      vertical-align: top;
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
     }
   }
 
   @include at-breakpoint($desktop) {
     .member {
-      @include span-columns(4, $total_columns);
-      @include remove-nth-omega(2n);
-      @include nth-omega(3n);
+      width: columns(4);
     }
 
   }

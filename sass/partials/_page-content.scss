@@ -97,34 +97,34 @@
     .page-content-sidebar {
       @include span-columns(3);
     }
-    // .page-content-sidebar-affix {
-    //   &.affix-top {
-    //     position: absolute;
-    //   }
-    //   &.affix {
-    //     position: fixed;
-    //     top: rhythm(2);
-    //     z-index: 12;
-    //   }
-    //   &.affix-bottom {
-    //     position: absolute;
-    //   }
-    // }
+    .page-content-sidebar-affix {
+      &.affix-top {
+        position: absolute;
+      }
+      &.affix {
+        position: fixed;
+        top: rhythm(2);
+        z-index: 12;
+      }
+      &.affix-bottom {
+        position: absolute;
+      }
+    }
 
   }
 
-  // @media (max-height: 350px) {
+  @media (max-height: 350px) {
 
-  //   .page-content-sidebar-affix {
-  //     &.affix {
-  //       position: relative;
-  //     }
-  //     &.affix-bottom {
-  //       position: relative;
-  //     }
-  //   }
+    .page-content-sidebar-affix {
+      &.affix {
+        position: relative;
+      }
+      &.affix-bottom {
+        position: relative;
+      }
+    }
 
-  // }
+  }
 
 }
 

@@ -26,7 +26,8 @@ $off-canvas-main-bg-color: white;
     right: 0;
     background-color: $off-canvas-main-bg-color;
     @include transition(transform .3s ease-out, max-width .5s);
-    @include backface-visibility(hidden); // 解決 translate 在最後結束時會閃爍的 bug
+    // position: fixed; 會受 backface-visibility 影響。
+    // @include backface-visibility(hidden); // 解決 translate 在最後結束時會閃爍的 bug
   }
 
   .off-canvas-mask {

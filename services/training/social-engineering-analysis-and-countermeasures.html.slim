@@ -1,21 +1,36 @@
-.page-header
+.page-header.page-header-narrow
   .container
-    h2.page-header-title 電子郵件社交工程剖析及防範
+    h2.page-header-title 服務 <small> services </small>
 
+.services-nav
+  .services-nav-inner
+    a.services-nav-item href="/services/penetration-test.html"
+      .services-nav-item-icon= image_tag lorem_image('48')
+      .services-nav-item-title 滲透測試
+    a.services-nav-item.active href="/services/security-training.html"
+      .services-nav-item-icon= image_tag lorem_image('48')
+      .services-nav-item-title 資安教育訓練
+    a.services-nav-item href="/services/incident-response.html"
+      .services-nav-item-icon= image_tag lorem_image('48')
+      .services-nav-item-title 資安事件處理
+    a.services-nav-item href="/services/security-consulting.html"
+      .services-nav-item-icon= image_tag lorem_image('48')
+      .services-nav-item-title 資安顧問服務
 
 .page-content.penetration-test
   .page-content-article.article
     .container
-      .page-content-inner
-        h3.lead 適合人員
+      .container-inner
+        h3.lead 電子郵件社交工程剖析及防範
+        h4 適合人員
         p 管理階層、主機管理者、一般使用者
-        h3 課程時數
+        h4 課程時數
         p 2 小時
-        h3 課程難度
+        h4 課程難度
         p 初級
-        h3 課程目的
+        h4 課程目的
         p 社交工程是目前駭客攻擊的主要途徑之一,若是不能整掌控電子郵件安全的要訣,公司將門戶洞開。本課程將介紹一般電子郵件以及社交工程攻擊的手法,並且示範駭客如何利用電子郵件入侵使用者電腦竊取資料。除此之外教導正確的電子郵件使用原則及安全設定。
-        h3 課程簡介
+        h4 課程簡介
         ol
           li 電子郵件安全簡介
           li 電子郵件社交工程案例

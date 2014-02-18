@@ -1,21 +1,36 @@
-.page-header
+.page-header.page-header-narrow
   .container
-    h2.page-header-title Linux 伺服器管理及安全實務
+    h2.page-header-title 服務 <small> services </small>
 
+.services-nav
+  .services-nav-inner
+    a.services-nav-item href="/services/penetration-test.html"
+      .services-nav-item-icon= image_tag lorem_image('48')
+      .services-nav-item-title 滲透測試
+    a.services-nav-item.active href="/services/security-training.html"
+      .services-nav-item-icon= image_tag lorem_image('48')
+      .services-nav-item-title 資安教育訓練
+    a.services-nav-item href="/services/incident-response.html"
+      .services-nav-item-icon= image_tag lorem_image('48')
+      .services-nav-item-title 資安事件處理
+    a.services-nav-item href="/services/security-consulting.html"
+      .services-nav-item-icon= image_tag lorem_image('48')
+      .services-nav-item-title 資安顧問服務
 
 .page-content.penetration-test
   .page-content-article.article
     .container
-      .page-content-inner
-        h3.lead 適合人員
+      .container-inner
+        h3.lead Linux 伺服器管理及安全實務
+        h4 適合人員
         p 主機管理者、網站開發者
-        h3 課程時數
+        h4 課程時數
         p 40 小時(需上機實作)
-        h3 課程難度
+        h4 課程難度
         p 中級
-        h3 課程目的
+        h4 課程目的
         p 伺服器安全是資訊安全的根本。如果管理者懂得如何正確的管理伺服器,那後續的開發、維護及安全設定都將事半功倍。本課程透過實務的操作,指導管理者如何正確的建置、架設、管理伺服器,並且針對其安全性進行強化。
-        h3 課程簡介
+        h4 課程簡介
         ol
           li Linux 作業系統概論 ‧Linux 介紹 ‧Linux Distribution
           li 作業系統安裝及概論 ‧Linux 安裝指引 ‧主機及檔案權限 ‧目錄管理 ‧設定檔 ‧系統程序

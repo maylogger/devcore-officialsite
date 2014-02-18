@@ -3,10 +3,10 @@
 
 // 讓服務頁副導覽，可以在第一畫面中顯示現在頁面標示。
 
-// $('.quick-nav-title').on('click', function(event){
-//   $('.quick-nav-list').toggleClass('open');
-//   event.preventDefault()
-// })
+$('.quick-nav-title').on('click', function(event){
+  $('.quick-nav-list').toggleClass('open');
+  event.preventDefault()
+})
 
 if ( $('.services-nav').length != 0 ) {
   $('.services-nav').scrollLeft( $('.services-nav-item.active').offset().left );

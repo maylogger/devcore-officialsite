@@ -7,9 +7,19 @@
   }
   h3 {
     @include leader(1);
+    border-top: 1px solid $global-divider;
+    @include padding-leader(1);
     @include trailer(1);
   }
   h4 {
+
+  }
+
+  h4 + ol {
+    @include leader(0);
+  }
+  h4 + ul {
+    @include leader(0);
   }
 
   ul, ol {
@@ -22,7 +32,9 @@
   }
 
   .lead {
-    margin-top: 0;
+    margin-top: -24px;
+    border-top: none;
+    @include padding-leader(1);
   }
 
 

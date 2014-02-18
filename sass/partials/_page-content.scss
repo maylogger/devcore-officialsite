@@ -3,10 +3,15 @@
   padding: rhythm(1) 0 rhythm(0);
 
   .page-content-main {
-
+    max-width: 35em;
+    margin: 0 auto;
   }
-  .page-content-sidebar {
 
+  .page-content-sidebar {
+    max-width: 35em;
+    margin: 0 auto;
+    @include padding-trailer(1);
+    position: relative;
   }
 
   p {
@@ -61,10 +66,7 @@
     }
   }
 
-  .page-content-sidebar {
-    @include padding-trailer(1);
-    position: relative;
-  }
+
 
 
   @include at-breakpoint($pad) {
@@ -72,6 +74,8 @@
     p {
       @include adjust-font-size-to(16px);
     }
+
+
 
     .page-content-summary {
       p {
@@ -93,11 +97,14 @@
 
     .page-content-main {
       @include span-columns(9 omega);
+      max-width: none;
     }
     .page-content-sidebar {
       @include span-columns(3);
     }
     .page-content-sidebar-affix {
+      min-width: 179px;
+      max-width: 219px;
       &.affix-top {
         position: absolute;
       }
@@ -110,6 +117,7 @@
         position: absolute;
       }
     }
+
 
   }
 

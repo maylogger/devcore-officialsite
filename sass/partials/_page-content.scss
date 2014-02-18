@@ -1,10 +1,12 @@
 .page-content {
+  @include pie-clearfix;
   padding: rhythm(1) 0 rhythm(0);
 
-  .page-content-inner {
-    max-width: 35em;
-    margin-left: auto;
-    margin-right: auto;
+  .page-content-main {
+
+  }
+  .page-content-sidebar {
+
   }
 
   p {
@@ -59,6 +61,12 @@
     }
   }
 
+  .page-content-sidebar {
+    @include padding-trailer(1);
+    position: relative;
+  }
+
+
   @include at-breakpoint($pad) {
     padding: rhythm(2) 0 rhythm(0);
     p {
@@ -80,6 +88,43 @@
       }
     }
   }
+
+  @include at-breakpoint($desktop) {
+
+    .page-content-main {
+      @include span-columns(9 omega);
+    }
+    .page-content-sidebar {
+      @include span-columns(3);
+    }
+    // .page-content-sidebar-affix {
+    //   &.affix-top {
+    //     position: absolute;
+    //   }
+    //   &.affix {
+    //     position: fixed;
+    //     top: rhythm(2);
+    //     z-index: 12;
+    //   }
+    //   &.affix-bottom {
+    //     position: absolute;
+    //   }
+    // }
+
+  }
+
+  // @media (max-height: 350px) {
+
+  //   .page-content-sidebar-affix {
+  //     &.affix {
+  //       position: relative;
+  //     }
+  //     &.affix-bottom {
+  //       position: relative;
+  //     }
+  //   }
+
+  // }
 
 }
 

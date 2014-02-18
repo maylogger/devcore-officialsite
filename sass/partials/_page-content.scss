@@ -106,7 +106,7 @@
       min-width: 179px;
       max-width: 219px;
       &.affix-top {
-        position: absolute;
+        position: static;
       }
       &.affix {
         position: fixed;
@@ -115,6 +115,9 @@
       }
       &.affix-bottom {
         position: absolute;
+        .open-menu & {
+          position: static !important; // fix affix bug
+        }
       }
     }
 

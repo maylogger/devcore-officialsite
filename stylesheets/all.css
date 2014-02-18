@@ -549,9 +549,10 @@ button + button, a.button + a.button { margin-left: 1em; }
 @media (min-width: 980px) { .page-content .page-content-main { width: 74.46809%; float: right; margin-right: 0; max-width: none; }
   .page-content .page-content-sidebar { width: 23.40426%; float: left; margin-right: 2.12766%; }
   .page-content .page-content-sidebar-affix { min-width: 179px; max-width: 219px; }
-  .page-content .page-content-sidebar-affix.affix-top { position: absolute; }
+  .page-content .page-content-sidebar-affix.affix-top { position: static; }
   .page-content .page-content-sidebar-affix.affix { position: fixed; top: 48px; z-index: 12; }
-  .page-content .page-content-sidebar-affix.affix-bottom { position: absolute; } }
+  .page-content .page-content-sidebar-affix.affix-bottom { position: absolute; }
+  .open-menu .page-content .page-content-sidebar-affix.affix-bottom { position: static !important; } }
 @media (max-height: 350px) { .page-content .page-content-sidebar-affix.affix { position: relative; }
   .page-content .page-content-sidebar-affix.affix-bottom { position: relative; } }
 

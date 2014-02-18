@@ -48,6 +48,10 @@
     }
   }
 
+  br {
+    display: none;
+  }
+
   @include at-breakpoint($desktop) {
 
     @include padding-trailer(2);
@@ -66,7 +70,7 @@
     .quick-nav-list {
       display: block;
       background-color: transparent;
-      max-height: 270px;
+      max-height: 290px;
       overflow: auto;
       li {
         padding: rhythm(0);
@@ -74,7 +78,16 @@
       li + li {
         @include padding-leader(.5);
       }
+      .active {
+        a {
+          color: $color-green;
+        }
+      }
 
+    }
+
+    br {
+      display: block;
     }
 
   }

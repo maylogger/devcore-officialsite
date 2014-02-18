@@ -38,7 +38,9 @@
     }
 
     &.page-header-narrow {
-      padding: rhythm(1) 0;
+      .page-header-title {
+        @include adjust-font-size-to(20px);
+      }
     }
 
   }

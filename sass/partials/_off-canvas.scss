@@ -28,7 +28,7 @@
 	@include at-breakpoint($pad) {
 		.main-nav {
 			margin: 0;
-			padding-top: rhythm(.6);
+			padding-top: rhythm(5/6);
 		  li {
 				display: inline-block;
 			}

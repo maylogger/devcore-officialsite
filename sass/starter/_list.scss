@@ -17,6 +17,12 @@
 
   }
 
+  // add list-style
+  &.has-list-style {
+    list-style: inherit;
+    padding-left: 1em;
+  }
+
   &.has-divider {
     li {
       @include trailer(0);

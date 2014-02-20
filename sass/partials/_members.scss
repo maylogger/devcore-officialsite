@@ -4,6 +4,8 @@
   @include pie-clearfix;
 
   .member {
+    @include box-sizing(border-box);
+    padding: 0 rhythm(.25);
     margin: 0 auto rhythm(2);
     max-width: 360px;
     text-align: center;
@@ -31,31 +33,33 @@
   }
 
   @include at-breakpoint($pad) {
-    text-align: justify;
-    font-size: 0;
-    font-size: 12px\9; /* IE6-9 only hack */
 
-    &:after {
-      content: '';
-      width: 100%;
-      display: inline-block;
-      zoom: 1;
-      *display: inline;
-    }
 
     .member {
       max-width: none;
-      width: columns(3);
-      vertical-align: top;
-      display: inline-block;
-      zoom: 1;
-      *display: inline;
+      @include span-columns(3);
+      @include nth-omega(2n);
+      &:nth-child(2n+1) {
+        clear: both;
+      }
     }
+
   }
 
+
   @include at-breakpoint($desktop) {
+
     .member {
-      width: columns(4);
+      max-width: none;
+      @include span-columns(4);
+      @include remove-nth-omega(2n);
+      &:nth-child(2n+1) {
+        clear: none;
+      }
+      @include nth-omega(3n);
+      &:nth-child(3n+1) {
+        clear: both;
+      }
     }
 
   }

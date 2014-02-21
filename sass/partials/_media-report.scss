@@ -34,6 +34,9 @@
           clear: both;
         }
       }
+      .title {
+        // @include ellipsis;
+      }
 
     }
 
@@ -44,6 +47,8 @@
     .media-report-list {
 
       li {
+        margin: 32px 0 24px;
+
         @include span-columns(4);
         @include remove-nth-omega(2n);
         &:nth-child(2n+1) {

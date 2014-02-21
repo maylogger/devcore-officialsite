@@ -12,15 +12,15 @@ if ( $('.services-nav').length != 0 ) {
   $('.services-nav').scrollLeft( $('.services-nav-item.active').offset().left );
 }
 
-if ( $('.services-nav').length != 0 ) {
+if ( $('.page-content-sidebar-affix').length != 0 ) {
   jQuery(window).load(function() {
     setTimeout(function () {
       var $sideBar = $('.page-content-sidebar-affix')
       $sideBar.affix({
         offset: {
         top: function () {
-                  console.log($('.page-content-sidebar-affix').offset().top -48);
-                  return (this.top = $('.page-content-sidebar-affix').offset().top -48)
+                  console.log($('.page-content-sidebar-affix').offset().top -24);
+                  return (this.top = $('.page-content-sidebar-affix').offset().top -24)
                 },
         bottom: function () {
                   console.log($('.footer').outerHeight(true));

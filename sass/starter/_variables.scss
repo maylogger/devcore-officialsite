@@ -22,7 +22,7 @@ $global-color: $color-black;
 $global-muted-color: lighten($global-color, 50%);
 
 $global-link-color: $color-green-dark;
-$global-link-hover-color: darken($color-blue, 20%);
+$global-link-hover-color: $color-green;
 
 // background & border
 $global-background: white;
@@ -50,8 +50,8 @@ $main-nav-color: $global-color;
 // footer
 $footer-bg-color: $color-black;
 $footer-title-color: invert($color-darken-black);
-$footer-color: invert($global-color);
-$footer-divider-color: #515151;
+$footer-color: #ccc;
+$footer-divider-color: #666;
 
 
 

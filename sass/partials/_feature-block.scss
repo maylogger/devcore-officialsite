@@ -71,7 +71,8 @@
     }
     .feature-block-text {
       @include trailer(.5);
-      @include adjust-font-size-to(16px, 1);
+      // @include adjust-font-size-to(16px, 1);
+      @include adjust-font-size-to(15px, 1);
     }
     .read-more {
       @include adjust-font-size-to(16px);
@@ -94,7 +95,7 @@
       @include adjust-font-size-to(20px, 1);
     }
     .feature-block-text {
-      @include adjust-font-size-to(16px, 1);
+      // @include adjust-font-size-to(13px, 5/6);
     }
   }
 

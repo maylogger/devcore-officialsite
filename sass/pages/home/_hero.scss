@@ -33,7 +33,7 @@
     }
   }
   @include at-breakpoint($desktop) {
-    padding: rhythm(2) 0 rhythm(2);
+    padding: rhythm(3) 0 rhythm(2);
     .headline {
       text-align: center;
       h2 {

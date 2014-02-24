@@ -1,5 +1,5 @@
 .wrapper {
-	@include transform-style(preserve-3d);
+	// @include transform-style(preserve-3d); //fire-fox bug
 	@include perspective(1500px);
 }
 
@@ -40,7 +40,6 @@
 .off-canvas {
 	.outside-inner {
 		width: 100%;
-		max-width: 1280px;
 		margin: 0 auto;
 	}
 	.outside {

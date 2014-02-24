@@ -5,30 +5,50 @@
 .page-content
   .container
     .post
+      /! 文章列表
       .post-main
         - 5.times do
+          /! 文章內容簡介
           .post-content.preview
+            /! 文章標題
             h1.post-title
               a href="/blog/post.html" = zh_lorem_sentence
+            /! 文章標題 end
+            /! 文章其他資訊（作者、日期、分類、標簽）
             .post-info
+              span.post-category: a href="#" 最新消息
               span.poster = zh_lorem_name
               span.post-time = lorem_date
-              span.post-category: a href="#" 最新消息
+              - ( rand(3)+2 ).times do
+                span.post-tag: a href="#" = zh_lorem_words(rand(2)+2)
+
+
+            /! 文章其他資訊（作者、日期、分類、標簽）end
+            /! 文章內容
             .post-preview
               h3 = zh_lorem_words 5 + rand(5)
               p = zh_lorem_paragraphs 4
               img src="http://hhhhold.com/600x300/#{rand(100)}"
+            /! 文章內容 end
             a.readmore href="/blog/post.html" read more →
+          /! 文章內容簡介 end
+        /! 換頁區塊
         = render "/partials/pagination"
+        /! 換頁區塊 end
+      /! 文章列表 end
+
+      /! 側邊欄
       .post-sidebar
 
+        /! 文章分類
         .widget
           .widget-title 文章分類
           ul.widget-list
             li: a href="/blog/category/news.html" 最新消息 <span class="count">(24)</span>
             li: a href="/blog/category/tech.html" 技術專欄 <span class="count">(32)</span>
+        /! 文章分類 end
 
-
+        /! 最新文章
         .widget
           .widget-title 最新文章
           ul.widget-list
@@ -36,9 +56,15 @@
               li: a href="#"
                 .widget-list-title= zh_lorem_words( rand(10) + 15 )
                 .widget-list-date= lorem_date
+        /! 最新文章 end
 
+        /! 文章標簽
         .widget
           .widget-title 文章標簽
           ul.widget-tags
             - (rand(4)+10).times do
               li: a href="#"= zh_lorem_words(rand(2)+2)
+        /! 文章標簽 end
+
+      /! 側邊欄 end
+

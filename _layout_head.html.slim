@@ -1,10 +1,15 @@
 meta charset="utf-8"
-meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
-link rel="icon" size="32x32" href="/images/favicon.png"
+
 - if (yield :title)
   = yield :title
 - else
   title= data["site-title"]
+
+link rel="icon" size="32x32" href="/images/favicon.png"
+meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
+meta name="application-name" content="DEVCORE 戴夫寇爾"
+meta name="keywords" content="滲透測試,資安教育訓練,資安事件處理,資安顧問服務"
+meta itemprop="image" content=""
 
 = stylesheet_link_tag "all"
 /[if IE]

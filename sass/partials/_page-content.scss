@@ -14,6 +14,13 @@
     @include padding-trailer(1);
     position: relative;
   }
+  .page-content-sidebar-affix {
+    opacity: 1;
+    @include transition(opacity .3s);
+    &.mobile-hide {
+      opacity: 0;
+    }
+  }
 
   p {
     @include adjust-font-size-to(14px, 4/5);

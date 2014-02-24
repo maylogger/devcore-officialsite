@@ -58,6 +58,14 @@
 				.poster, .post-time, .post-category {
 					padding: 0 6px;
 				}
+        .post-tag {
+          font-style: italic;
+        }
+        .post-tag + .post-tag:before {
+          content: ',';
+          margin: 0 .25em;
+          color: $global-muted-color;
+        }
 			}
 			h1 {
 				@include adjust-font-size-to(28px);
@@ -91,17 +99,36 @@
 			@include trailer(2);
 			.widget-title {
 				@include adjust-font-size-to(18px);
+        font-weight: bold;
 			}
 			.widget-list {
-				margin: 12px 0;
+				margin: 6px 0 12px;
 				padding-left: 0;
 				list-style: none;
 				li {
-					padding: 3px 0;
+          @include adjust-font-size-to(14px, 3/4);
+					padding: 4px 0;
 				}
-				.count {
-				}
+				a {
+          color: lighten($global-color, 15%);
+        }
+        .widget-list-title {
+          color: $global-color;
+        }
+        .widget-list-date {
+          color: $global-muted-color;
+        }
 			}
+      .widget-tags {
+        margin: 12px 0;
+        padding-left: 0;
+        list-style: none;
+        li {
+          @include adjust-font-size-to(14px, 3/4);
+          display: inline-block;
+          margin-right: .5em;
+        }
+      }
 		}
 	}
 

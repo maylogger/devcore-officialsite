@@ -3,32 +3,42 @@
     h2.page-header-title 最新消息 <small> News </small>
 
 .page-content
-	.container
-		.post
-			.post-main
-				- 5.times do
-					.post-content.preview
-						h1.post-title
-							a href="/blog/post.html" = zh_lorem_sentence
-						.post-info
-							span.poster = zh_lorem_name
-							span.post-time = lorem_date
-							span.post-category: a href="#" 最新消息
-						.post-preview
-							h3 = zh_lorem_words 5 + rand(5)
-							p = zh_lorem_paragraphs 4
-							img src="http://hhhhold.com/600x300/#{rand(100)}"
-						a.readmore href="/blog/post.html" read more →
-				= render "/partials/pagination"
-			.post-sidebar
-				.widget
-					.widget-title 最新網誌文章
-					ul.widget-list
-						- 5.times do
-							li: a href="#" #{zh_lorem_words(rand(8)+5)}，#{zh_lorem_words(rand(8)+5)}。
-				.widget
-					.widget-title 網誌文章分類
-					ul.widget-list
-						li: a href="/blog/category/news.html" 最新消息 <span class="count">(24)</span>
-						li: a href="/blog/category/tech.html" 技術專欄 <span class="count">(32)</span>
+  .container
+    .post
+      .post-main
+        - 5.times do
+          .post-content.preview
+            h1.post-title
+              a href="/blog/post.html" = zh_lorem_sentence
+            .post-info
+              span.poster = zh_lorem_name
+              span.post-time = lorem_date
+              span.post-category: a href="#" 最新消息
+            .post-preview
+              h3 = zh_lorem_words 5 + rand(5)
+              p = zh_lorem_paragraphs 4
+              img src="http://hhhhold.com/600x300/#{rand(100)}"
+            a.readmore href="/blog/post.html" read more →
+        = render "/partials/pagination"
+      .post-sidebar
 
+        .widget
+          .widget-title 文章分類
+          ul.widget-list
+            li: a href="/blog/category/news.html" 最新消息 <span class="count">(24)</span>
+            li: a href="/blog/category/tech.html" 技術專欄 <span class="count">(32)</span>
+
+
+        .widget
+          .widget-title 最新文章
+          ul.widget-list
+            - 5.times do
+              li: a href="#"
+                .widget-list-title= zh_lorem_words( rand(10) + 15 )
+                .widget-list-date= lorem_date
+
+        .widget
+          .widget-title 文章標簽
+          ul.widget-tags
+            - (rand(4)+10).times do
+              li: a href="#"= zh_lorem_words(rand(2)+2)

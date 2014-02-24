@@ -79,16 +79,25 @@
 
   .link-group {
     @include trailer(1);
+    @include adjust-font-size-to(14px);
+    .link-group-label {
+      color: lighten($global-color,30%);
+    }
     a {
       display: inline-block;
       @include unstyled-link;
       cursor: pointer;
       @include link-colors($color-green, $global-muted-color);
     }
+    a + a:before {
+      content: ',';
+      margin-right: .5em;
+    }
   }
 
   .lead-link {
     @include adjust-font-size-to(14px);
+
     &:after {
       content: '»';
       color: $global-muted-color;

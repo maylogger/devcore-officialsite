@@ -39,6 +39,7 @@
     > li {
       padding: 0 rhythm(.5);
       margin: rhythm(.5) 0;
+      @include ellipsis;
     }
     a {
       @include unstyled-link;
@@ -57,7 +58,7 @@
         @include adjust-font-size-to(12px, 3/4);
         padding-left: rhythm(.75);
         margin: rhythm(.5) 0;
-
+        @include ellipsis;
       }
       > .active {
         border-left: 1px solid $color-green;

@@ -115,6 +115,22 @@
     }
   }
 
+  .icon-box {
+    @include pie-clearfix;
+    .icon-box-icon {
+      float: left;
+      margin-right: 1em;
+      @include trailer(1);
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .icon-box-content {
+      overflow: hidden;
+    }
+  }
+
 
 
   @include at-breakpoint($pad) {

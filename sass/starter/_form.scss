@@ -97,7 +97,7 @@
 
   &.success {
     .form-group-label {
-      color: $color-green;
+      color: $color-green-dark;
     }
     input, textarea {
       border-color: $color-green rgba($color-green, .4) rgba($color-green, .35) rgba($color-green, .35);

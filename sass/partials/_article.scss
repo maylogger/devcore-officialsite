@@ -7,9 +7,13 @@
   }
   h3 {
     @include leader(1);
-    border-top: 1px solid $global-divider;
     @include padding-leader(1);
     @include trailer(1);
+    &:before {
+      content: '';
+      border-left: 5px solid $color-green;
+      padding-left: .5em;
+    }
   }
   h4 {
 
@@ -43,8 +47,10 @@
 
   .lead {
     margin-top: -24px;
-    border-top: none;
     @include padding-leader(1);
+    border-top: none;
+    border-left: 0;
+    padding-left: 0;
   }
 
 
@@ -87,7 +93,7 @@
       display: inline-block;
       @include unstyled-link;
       cursor: pointer;
-      @include link-colors($color-green, $global-muted-color);
+      @include link-colors($color-green-dark, $global-muted-color);
     }
     a + a:before {
       content: ',';

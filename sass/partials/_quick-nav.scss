@@ -47,7 +47,7 @@
     }
     > .active {
       > a {
-        color: $color-green;
+        color: $color-green-dark;
         font-weight: bold;
       }
     }
@@ -63,7 +63,7 @@
       > .active {
         border-left: 1px solid $color-green;
         > a {
-          color: $color-green;
+          color: $color-green-dark;
         }
       }
     }

@@ -77,7 +77,27 @@
 
   }
 
+  .link-group {
+    @include trailer(1);
+    a {
+      display: inline-block;
+      @include unstyled-link;
+      cursor: pointer;
+      @include link-colors($color-green, $global-muted-color);
+    }
+  }
 
+  .lead-link {
+    @include adjust-font-size-to(14px);
+    &:after {
+      content: '»';
+      color: $global-muted-color;
+      margin-left: .25em;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
 
 

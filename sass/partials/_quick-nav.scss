@@ -36,12 +36,35 @@
     background-color: #f6f6f6;
     @include adjust-font-size-to(14px, 3/4);
 
-    li {
-      padding: rhythm(.25) rhythm(.5);
+    > li {
+      padding: 0 rhythm(.5);
+      margin: rhythm(.5) 0;
     }
     a {
       @include unstyled-link;
       @include link-colors($global-color, lighten($global-color,20%) );
+    }
+    > .active {
+      > a {
+        color: $color-green;
+        font-weight: bold;
+      }
+    }
+    .sub-nav {
+      list-style: none;
+      padding-left: 0;
+      li {
+        @include adjust-font-size-to(12px, 3/4);
+        padding-left: rhythm(.75);
+        margin: rhythm(.5) 0;
+
+      }
+      > .active {
+        border-left: 1px solid $color-green;
+        > a {
+          color: $color-green;
+        }
+      }
     }
     &.open {
       display: block;
@@ -60,7 +83,6 @@
       @include adjust-font-size-to(18px);
       font-weight: bold;
       padding: 0;
-      @include trailer(.5);
       background-color: transparent;
       &:before {
         display: none;
@@ -70,20 +92,10 @@
     .quick-nav-list {
       display: block;
       background-color: transparent;
-      max-height: 290px;
-      overflow: auto;
-      li {
-        padding: rhythm(0);
+      // max-height: 290px;
+      > li {
+        padding-left: 0;
       }
-      li + li {
-        @include padding-leader(.5);
-      }
-      .active {
-        a {
-          color: $color-green;
-        }
-      }
-
     }
 
     br {

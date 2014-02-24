@@ -3,6 +3,6 @@ site-title: "DEVCORE 戴夫寇爾 - 滲透測試、資安事件處理、教育�
 site-name: "DEVCORE 戴夫寇爾"
 site-description: "戴夫寇爾從駭客思維出發，模擬攻擊者的手法爲企業執行滲透測試；提供資安教育訓練讓開發者從攻擊中瞭解如何防禦；協助企業處理重大資安事件。爲企業的資安防護做最嚴格的把關。"
 
-og-type: "website"
+og-type: "article"
 og-image: "http://devco.re/images/logo.png"
 fb-admins: "123456"

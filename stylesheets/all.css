@@ -556,8 +556,7 @@ button + button, a.button + a.button { margin-left: 1em; }
 .page-content:after { content: ""; display: table; clear: both; }
 .page-content .page-content-main { max-width: 35em; margin: 0 auto; min-height: 1000px; }
 .page-content .page-content-sidebar { max-width: 35em; margin: 0 auto; padding-bottom: 24px; position: relative; }
-.page-content .page-content-sidebar-affix { opacity: 1; -webkit-transition: opacity 0.3s; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; transition: opacity 0.3s; }
-.page-content .page-content-sidebar-affix.mobile-hide { opacity: 0; }
+@media (max-width: 979px) { .page-content .page-content-sidebar-affix { top: 0 !important; } }
 .page-content p { font-size: 14px; line-height: 19px; }
 .page-content .page-content-summary { padding-bottom: 24px; }
 .page-content .page-content-summary p { font-size: 14px; line-height: 24px; }

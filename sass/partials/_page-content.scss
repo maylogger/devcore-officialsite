@@ -15,10 +15,9 @@
     position: relative;
   }
   .page-content-sidebar-affix {
-    opacity: 1;
-    @include transition(opacity .3s);
-    &.mobile-hide {
-      opacity: 0;
+    // fix off-canvas + affix potision bugs
+    @media ( max-width: 979px ) {
+      top: 0 !important;
     }
   }
 

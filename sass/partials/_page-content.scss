@@ -5,7 +5,6 @@
   .page-content-main {
     max-width: 35em;
     margin: 0 auto;
-    min-height: 1000px;
   }
 
   .page-content-sidebar {
@@ -22,7 +21,7 @@
   }
 
   p {
-    @include adjust-font-size-to(14px, 4/5);
+    @include adjust-font-size-to(13px, 5/6);
   }
 
   .page-content-summary {
@@ -105,17 +104,17 @@
     .page-content-main {
       @include span-columns(9 omega);
       max-width: none;
+      min-height: 1000px;
     }
     .page-content-sidebar {
       @include span-columns(3);
     }
     .page-content-sidebar-affix {
-      min-width: 179px;
-      max-width: 219px;
       &.affix-top {
         position: static;
       }
       &.affix {
+        max-width: 219px;
         position: fixed;
         top: rhythm(1);
         z-index: 12;

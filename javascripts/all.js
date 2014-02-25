@@ -9,7 +9,8 @@ $('.quick-nav-title').on('click', function(event){
 })
 
 if ( $('.services-nav').length != 0 ) {
-  $('.services-nav').scrollLeft( $('.services-nav-item.active').offset().left );
+  var activeItem = $('.services-nav-item.active');
+  $('.services-nav').scrollLeft( activeItem.offset().left - activeItem.width() / 2 );
 }
 
 if ( $('.page-content-sidebar-affix').length != 0 ) {

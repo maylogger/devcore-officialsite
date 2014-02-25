@@ -5,21 +5,17 @@
 
 .service-icon-penetration-test {
   @include replace-text-with-svg("services/penetration-test");
-
-
+  @include background-size(cover);
 }
 .service-icon-security-training {
   @include replace-text-with-svg("services/security-training");
-
-
+  @include background-size(cover);
 }
 .service-icon-incident-response {
   @include replace-text-with-svg("services/incident-response");
-
-
+  @include background-size(cover);
 }
 .service-icon-security-consulting {
   @include replace-text-with-svg("services/security-consulting");
-
-
+  @include background-size(cover);
 }

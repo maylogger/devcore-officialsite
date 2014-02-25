@@ -2,9 +2,14 @@
   @include pie-clearfix;
   background-color: #eee;
   text-align: center;
+  // ie9 overflow: auto bug;
   overflow: auto;
   @include nowrap;
 
+  // ios overflow bug
+  @media (max-width: 567px) {
+    -webkit-overflow-scrolling: touch;
+  }
   .services-nav-inner {
     margin: 0 auto;
   }
@@ -64,15 +69,13 @@
     margin-right: auto;
     margin-left: auto;
     @include transition(opacity .3s);
-
-    img {
-      display: block;
-      margin: 0 auto;
-    }
+    width: 60px;
+    height: 48px;
   }
 
   .services-nav-item-title {
-    @include adjust-font-size-to(12px);
+    @include adjust-font-size-to(13px , .5);
+    @include margin-leader(.125);
   }
 
 
@@ -87,10 +90,13 @@
 
     .services-nav-item-icon {
       // @include trailer(.5);
+      width: 120px;
+      height: 96px;
     }
 
     .services-nav-item-title {
       @include adjust-font-size-to(14px);
+      @include margin-leader(0);
     }
 
   }

@@ -21,15 +21,15 @@
   }
 
   .footer-service-title {
-    @include adjust-font-size-to(14px);
+    @include adjust-font-size-to(12px);
     line-height: 1em;
+    @include leader(.25);
     @include trailer(1);
     color: $footer-color;
     @extend %subpixel;
   }
 
   .footer-service-icon {
-    @include trailer(.25);
     img {
       display: block;
       margin: 0 auto;
@@ -95,6 +95,11 @@
 
     .footer-service + .footer-service {
       border-left: 1px solid lighten($footer-bg-color, 4%);
+    }
+
+    .footer-service-title {
+      @include adjust-font-size-to(14px);
+      @include leader(0);
     }
 
     .footer-links-group {

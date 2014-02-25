@@ -19,12 +19,27 @@
 
 .page-content
   .container
-    .container-inner
+
+    .page-content-sidebar
+      .page-content-sidebar-affix.bs-affix
+        .quick-nav
+          h3: a.quick-nav-title href="#" 目錄
+          ul.quick-nav-list.nav
+            li.active: a href="#title1" 什麼是緊急事件處理 (ERS)？
+            li: a href="#title2"  為什麼我們需要 ERS 服務？
+            li: a href="#title3"  ERS 是如何進行？
+            li: a href="#title4"  執行人員資格
+            li: a href="#title5"  執行時程
+
+    .page-content-main
       .page-content-article.article
+        #title1.first-title
         h3.lead 什麼是緊急事件處理 (ERS)？
         p ERS 是透過專業的資安團隊，針對企業所發生的資安緊急事件進行處理，例如企業遭到駭客大規模阻斷攻擊、個人資料外洩、資料遭到惡意銷毀等。專業資安團隊在 ERS 會分析事件起源，界定受害範圍，以減少企業的損失及縮短回復時間，重建客戶對企業的信賴。
+        #title2
         h3 為什麼我們需要 ERS 服務？
         p 一個攻擊事件的發起成因相當複雜，如果有專業團隊可以從駭客的思維出發，剖析入侵手法、分析惡意程式、調查系統記錄，才能快速針對危機進行有效的應變處理。
+        #title3
         h3 ERS 是如何進行？
         h4 1. 事件概觀分析
         p 針對整個事件的概觀進行分析，例如清點受害主機、發生時間、主機異常行為等。
@@ -36,11 +51,13 @@
         p 藉由攻擊者的入侵手法、惡意程式的行為，界定企業受害的範圍，以減少企業的損失，縮短災後回復時間。
         h4 5. 修補及復原輔導
         p 針對事件中的入侵手法、企業被攻擊的弱點給予全盤的建議，並且輔導企業進行災後復原。
+        #title4
         h3 執行人員資格
         ul
           li 熟悉駭客入侵手法
           li 具備事件處理經驗
           li 熟悉各種作業系統及伺服器建置方式
+        #title5
         h3 執行時程
         p 根據事件規模及受害範圍而定，通常事件調查需要 2~4 個小時，並在分析完畢後提供報告及災後的修復建議，以時間計費。
 

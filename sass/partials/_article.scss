@@ -6,14 +6,10 @@
 
   }
   h3 {
-    @include leader(1);
-    @include padding-leader(1);
+    @include leader(2);
     @include trailer(1);
-    &:before {
-      content: '';
-      border-left: 5px solid $color-green;
-      padding-left: .5em;
-    }
+    border-left: 5px solid $color-green;
+    padding: rhythm(0) 0 0 .75em;
   }
   h4 {
 
@@ -28,11 +24,11 @@
 
   ul, ol {
     padding-left: 24px;
+    @include adjust-font-size-to(13px, 5/6);
   }
 
   p {
-    font-size: 14px;
-    line-height: 1.5em;
+    @include adjust-font-size-to(13px, 5/6);
   }
 
   img {
@@ -45,12 +41,16 @@
     @include adjust-font-size-to(14px);
   }
 
+  .url {
+    @include word-break(break-all);
+  }
+
   .lead {
+    @include leader(0);
+  }
+  .first-title {
     margin-top: -24px;
-    @include padding-leader(1);
-    border-top: none;
-    border-left: 0;
-    padding-left: 0;
+    padding-top: 24px;
   }
 
 
@@ -70,7 +70,7 @@
       margin: rhythm(.25) 0 rhythm(1);
     }
     li {
-      @include adjust-font-size-to(14px, 4/5);
+      @include adjust-font-size-to(13px, 5/6);
       @include trailer(.25);
     }
     .label {
@@ -98,6 +98,7 @@
     a + a:before {
       content: ',';
       margin-right: .5em;
+      margin-left: .125em;
     }
   }
 
@@ -135,8 +136,12 @@
 
   @include at-breakpoint($pad) {
 
+    ul, ol {
+      @include adjust-font-size-to(15px);
+    }
+
     p {
-      @include adjust-font-size-to(16px);
+      @include adjust-font-size-to(15px);
     }
 
     & .lead {

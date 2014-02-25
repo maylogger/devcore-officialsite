@@ -1,0 +1,43 @@
+.page-header.page-header-narrow
+  .container
+    h2.page-header-title 服務 <small> services </small>
+
+.services-nav
+  .services-nav-inner
+    a.services-nav-item href="/services/penetration-test.html"
+      .services-nav-item-icon.service-icon-penetration-test
+      .services-nav-item-title 滲透測試
+    a.services-nav-item.active href="/services/security-training.html"
+      .services-nav-item-icon.service-icon-security-training
+      .services-nav-item-title 資安教育訓練
+    a.services-nav-item href="/services/incident-response.html"
+      .services-nav-item-icon.service-icon-incident-response
+      .services-nav-item-title 資安事件處理
+    a.services-nav-item href="/services/security-consulting.html"
+      .services-nav-item-icon.service-icon-security-consulting
+      .services-nav-item-title 資安顧問服務
+
+
+
+.page-content
+  .container
+    .page-content-sidebar
+      = render '/partials/training-side-bar'
+    .page-content-main
+      .page-content-article.article
+        a.lead-link href="/services/security-training#paragraph5"  課程列表
+        h3.lead 資安趨勢及最新攻擊案例
+        h4 適合人員
+        p 管理階層、主機管理者、進階使用者、一般使用者
+        h4 課程時數
+        p 1 小時
+        h4 課程難度
+        p 初級
+        h4 課程目的
+        p 透過講解最新的資安趨勢、駭客入侵手法以及漏洞的展示,讓學員了解駭客常見的入侵手法,以及各種常見漏洞的危害,提醒學員對資安及弱點修補的重視。
+        h4 課程簡介
+        ol
+          li 資安趨勢剖析
+          li 常見駭客攻擊手法剖析
+          li 常見駭客工具展示
+          li 漏洞攻擊展示

@@ -1,0 +1,148 @@
+.page-content {
+  @include pie-clearfix;
+  padding: rhythm(1) 0 rhythm(0);
+
+  .page-content-main {
+    max-width: 35em;
+    margin: 0 auto;
+    min-height: 1000px;
+  }
+
+  .page-content-sidebar {
+    max-width: 35em;
+    margin: 0 auto;
+    @include padding-trailer(1);
+    position: relative;
+  }
+  .page-content-sidebar-affix {
+    // fix off-canvas + affix potision bugs
+    @media ( max-width: 979px ) {
+      top: 0 !important;
+    }
+  }
+
+  p {
+    @include adjust-font-size-to(14px, 4/5);
+  }
+
+  .page-content-summary {
+    @include padding-trailer(1);
+    p {
+      @include adjust-font-size-to(14px);
+    }
+
+  }
+
+  .page-content-article {
+    @include padding-trailer(1);
+  }
+
+  .page-content-title {
+    position: relative;
+    @include trailer(1);
+    @include adjust-font-size-to(20px);
+    color: $color-darken-black;
+  }
+
+  .page-content-title-with-line {
+    text-align: center;
+    span {
+      position: relative;
+      padding: 0 .5em;
+      background-color: #fff;
+      z-index: 1;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: darken($global-divider, 10%);
+      height: 1px;
+      width: 100%;
+    }
+  }
+
+  .page-content-list {
+    @include reset-box-model;
+    list-style: none;
+    margin: rhythm(.25) 0 rhythm(0);
+    @include adjust-font-size-to(14px, 3/4);
+    li + li {
+      @include leader(.25);
+    }
+  }
+
+
+
+
+  @include at-breakpoint($pad) {
+    padding: rhythm(2) 0 rhythm(0);
+    p {
+      @include adjust-font-size-to(16px);
+    }
+
+
+
+    .page-content-summary {
+      p {
+        @include adjust-font-size-to(16px, 1.25);
+      }
+    }
+
+    .page-content-title {
+      @include adjust-font-size-to(24px, 1);
+    }
+    .page-content-title-with-line {
+      span {
+        padding: 0 1em;
+      }
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+
+    .page-content-main {
+      @include span-columns(9 omega);
+      max-width: none;
+    }
+    .page-content-sidebar {
+      @include span-columns(3);
+    }
+    .page-content-sidebar-affix {
+      min-width: 179px;
+      max-width: 219px;
+      &.affix-top {
+        position: static;
+      }
+      &.affix {
+        position: fixed;
+        top: rhythm(1);
+        z-index: 12;
+      }
+      &.affix-bottom {
+        position: absolute;
+        .open-menu & {
+          position: static !important; // fix affix bug
+        }
+      }
+    }
+
+
+  }
+
+  @media (max-height: 350px) {
+
+    .page-content-sidebar-affix {
+      &.affix {
+        position: static;
+      }
+      &.affix-bottom {
+        position: static;
+      }
+    }
+
+  }
+
+}
+

@@ -1,0 +1,70 @@
+.media-report {
+
+  .media-report-list {
+
+    @include pie-clearfix;
+    @include reset-box-model;
+    @include trailer(1);
+    list-style: none;
+
+    li {
+      @include box-sizing(border-box);
+      padding: 0 rhythm(.25);
+      @include trailer(1);
+      @include adjust-font-size-to(14px, 3/4);
+
+    }
+    .date {
+      @include trailer(.125);
+    }
+    .title {
+      color: lighten($global-color, 15%);
+      @include trailer(.125);
+    }
+  }
+
+  @include at-breakpoint($pad) {
+
+    .media-report-list {
+
+      li {
+        @include span-columns(3);
+        @include nth-omega(2n);
+        &:nth-child(2n+1) {
+          clear: both;
+        }
+      }
+      .title {
+        // @include ellipsis;
+      }
+
+    }
+
+  }
+
+  @include at-breakpoint($desktop) {
+
+    .media-report-list {
+
+      li {
+        margin: 32px 0 24px;
+
+        @include span-columns(4);
+        @include remove-nth-omega(2n);
+        &:nth-child(2n+1) {
+          clear: none;
+        }
+        @include nth-omega(3n);
+        &:nth-child(3n+1) {
+          clear: both;
+        }
+      }
+
+    }
+
+  }
+
+
+
+
+}

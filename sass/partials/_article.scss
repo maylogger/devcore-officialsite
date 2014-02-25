@@ -1,0 +1,156 @@
+.article {
+
+  h3, h4 {
+    color: $color-darken-black;
+    font-weight: bold;
+
+  }
+  h3 {
+    @include leader(1);
+    @include padding-leader(1);
+    @include trailer(1);
+    &:before {
+      content: '';
+      border-left: 5px solid $color-green;
+      padding-left: .5em;
+    }
+  }
+  h4 {
+
+  }
+
+  h4 + ol {
+    @include leader(0);
+  }
+  h4 + ul {
+    @include leader(0);
+  }
+
+  ul, ol {
+    padding-left: 24px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+
+  img {
+    margin: 0 auto rhythm(1);
+    display: block;
+  }
+
+  .img-description {
+    text-align: center;
+    @include adjust-font-size-to(14px);
+  }
+
+  .lead {
+    margin-top: -24px;
+    @include padding-leader(1);
+    border-top: none;
+    border-left: 0;
+    padding-left: 0;
+  }
+
+
+  .special-list-group {
+    @include pie-clearfix;
+    background-color: $color-lighten-green;
+    padding: rhythm(1) 0 0;
+    @include trailer(1);
+  }
+
+  .special-list {
+
+    padding: 0 rhythm(.5);
+    ul {
+      @include reset-box-model;
+      list-style: none;
+      margin: rhythm(.25) 0 rhythm(1);
+    }
+    li {
+      @include adjust-font-size-to(14px, 4/5);
+      @include trailer(.25);
+    }
+    .label {
+      font-weight: bold;
+      color: $color-darken-black;
+    }
+    .content {
+      color: lighten($global-color, 15%);
+    }
+
+  }
+
+  .link-group {
+    @include trailer(1);
+    @include adjust-font-size-to(14px);
+    .link-group-label {
+      color: lighten($global-color,30%);
+    }
+    a {
+      display: inline-block;
+      @include unstyled-link;
+      cursor: pointer;
+      @include link-colors($color-green-dark, $global-muted-color);
+    }
+    a + a:before {
+      content: ',';
+      margin-right: .5em;
+    }
+  }
+
+  .lead-link {
+    @include adjust-font-size-to(14px);
+
+    &:after {
+      content: '»';
+      color: $global-muted-color;
+      margin-left: .25em;
+      font-family: arial, sans-serif;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .icon-box {
+    @include pie-clearfix;
+    .icon-box-icon {
+      float: left;
+      margin-right: 1em;
+      @include trailer(1);
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .icon-box-content {
+      overflow: hidden;
+    }
+  }
+
+
+
+  @include at-breakpoint($pad) {
+
+    p {
+      @include adjust-font-size-to(16px);
+    }
+
+    & .lead {
+      p {
+        @include adjust-font-size-to(18px);
+      }
+    }
+
+    .special-list {
+      width: 45%;
+      padding: 0 2.5%;
+      float: left;
+    }
+
+  }
+
+}

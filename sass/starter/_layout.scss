@@ -1,0 +1,55 @@
+// 基本設定
+$total-columns  : 4;
+$column-width   : 72px;
+$gutter-width   : 24px;
+$grid-padding   : $gutter-width;
+
+// add media
+$pad-columns  : 6;
+$pad-break    : 640px;
+$pad: $pad-break $pad-columns;
+
+$desktop-columns  : 12;
+$desktop-break    : 980px;
+$desktop: $desktop-break $desktop-columns;
+
+// debug
+// @import "layout-debug";
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  background-color: #ddd;
+}
+
+.page {
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#{$page-container}, .header-inner, .footer-inner {
+  $container-style: fluid;
+  @include container();
+}
+
+.container-inner {
+  max-width: 35em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@include at-breakpoint($pad) {
+  #{$page-container}, .header-inner, .footer-inner, .services-nav-inner, .close-menu-btn-wrapper-inner {
+    max-width: 88%; // 限制 conntainer 寬度，並且預留左右留白空間
+  }
+}
+
+@include at-breakpoint($desktop) {
+  #{$page-container}, .header-inner, .footer-inner, .services-nav-inner, .close-menu-btn-wrapper-inner {
+    max-width: 78%; // 限制 conntainer 寬度，並且預留左右留白空間
+  }
+}

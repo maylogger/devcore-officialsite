@@ -1,0 +1,65 @@
+.page-header
+  .container
+    h2.page-header-title 聯絡 <small> Contact </small>
+
+.page-content.contact-page
+  .container
+    .grid-1-2-2
+      .col
+        h3.page-content-title 填寫表單
+        p 您可以直接來信 contact [at] devco.re 或是利用下方的表單聯絡我們。
+        form
+          .form-group
+            label.form-group-label 姓名 Name <span class="required">(必填)<span>
+            .form-group-content: input.full-width type="text"
+          .form-group
+            label.form-group-label 公司 Company
+            .form-group-content: input.full-width type="text"
+          .form-group
+            label.form-group-label 職稱 Title
+            .form-group-content: input.full-width type="text"
+          .form-group
+            label.form-group-label 電子郵件 Email Address <span class="required">(必填)<span>
+            .form-group-content: input.full-width type="email"
+          .form-group
+            label.form-group-label 電話 Phone
+            .form-group-content: input.full-width type="text"
+          .form-group
+            label.form-group-label 主旨 Subject <span class="required">(必填)<span>
+            .form-group-content: input.full-width type="text"
+          .form-group
+            label.form-group-label 需求 I am interested in <span class="required">(必填)<span>
+            .form-group-content
+              select
+                option value="顧問服務 Security Consulting" 顧問服務 Security Consulting
+                option value="滲透測試 Penetration Test" 滲透測試 Penetration Test
+                option value="教育訓練 Training" 教育訓練 Training
+                option value="其他 Others" 其他 Others
+          .form-group
+            label.form-group-label 預算 Budget <span class="required">(必填)<span>
+            .form-group-content
+              select
+                option value="&lt; 100,000" < 100,000
+                option value="100,000 ~ 200,000" 100,000 ~ 200,000
+                option value="200,000 ~ 500,000" 200,000 ~ 500,000
+                option value="500,000 ~ 1,000,000" 500,000 ~ 1,000,000
+                option value="&gt; 1,000,000" > 1,000,000
+            p.note 新台幣 NTD
+          .form-group
+            label.form-group-label 留言 Message <span class="required">(必填)<span>
+            .form-group-content
+              textarea.full-width
+
+          .form-action
+            button.action type="submit" 送出
+
+      .col
+        p 本公司專精於滲透測試、資安事件處理、教育訓練、資訊安全顧問服務等項目，若您對本公司的服務有興趣，歡迎來信洽詢。
+        h3.page-content-title 聯絡資訊
+        ul.page-content-list
+          li 地址：台北市內湖區瑞光路583巷32號
+          li 電話：02-8751-6287
+          li email：contact@devco.re
+        .google-map
+          iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.62170063913!2d121.56837099999996!3d25.080808000000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac6e54ae64cf%3A0x23e45cb7f150b739!2zMTE05Y-w5YyX5biC5YWn5rmW5Y2A55Ge5YWJ6LevNTgz5be3MzLomZ8!5e0!3m2!1szh-TW!2stw!4v1392389181839" width="600" height="450" frameborder="0" style="border:0">
+

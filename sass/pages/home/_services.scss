@@ -1,0 +1,21 @@
+.services {
+
+  @include at-breakpoint($desktop) {
+    .feature-block-content {
+      @include span-columns(6);
+      text-align: left;
+    }
+    .feature-block-image {
+      @include span-columns(5);
+      float: left;
+      img {
+        width: 100%;
+      }
+    }
+    .pull-right {
+      @include omega;
+    }
+  }
+
+
+}

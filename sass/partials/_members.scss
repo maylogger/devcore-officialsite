@@ -1,0 +1,68 @@
+.members {
+  @include reset-box-model;
+  list-style: none;
+  @include pie-clearfix;
+
+  .member {
+    @include box-sizing(border-box);
+    padding: 0 rhythm(.25);
+    margin: 0 auto rhythm(2);
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .member-avatar {
+    @include trailer(.5);
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .member-name {
+
+    @include adjust-font-size-to(16px);
+  }
+  .member-role {
+    @include trailer(.25);
+    @include adjust-font-size-to(16px);
+    color: $global-muted-color;
+  }
+  .member-intro {
+    @include adjust-font-size-to(14px, 4/5);
+  }
+
+  @include at-breakpoint($pad) {
+
+
+    .member {
+      max-width: none;
+      @include span-columns(3);
+      @include nth-omega(2n);
+      &:nth-child(2n+1) {
+        clear: both;
+      }
+    }
+
+  }
+
+
+  @include at-breakpoint($desktop) {
+
+    .member {
+      max-width: none;
+      @include span-columns(4);
+      @include remove-nth-omega(2n);
+      &:nth-child(2n+1) {
+        clear: none;
+      }
+      @include nth-omega(3n);
+      &:nth-child(3n+1) {
+        clear: both;
+      }
+    }
+
+  }
+
+
+}

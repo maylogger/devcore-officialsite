@@ -1,39 +1,25 @@
-// vertical rhythm
-$base-font-size: 16px;
-$base-line-height: 24px;
-$relative-font-sizing: false;
+@import "starter";
 
-// compass
-$legacy-support-for-ie: false;
-$grid-background-baseline-height: $base-line-height;
+// style for special partials
+@import "partials/off-canvas";
+@import "partials/article";
+@import "partials/outside";
+@import "partials/page-header";
+@import "partials/page-content";
+@import "partials/feature-block";
+@import "partials/members";
+@import "partials/message";
+@import "partials/services-nav";
+@import "partials/quick-nav";
+@import "partials/media-report";
+@import "partials/certified-block";
+@import "partials/service-icon";
 
-// class variable
-$page-container: ".page";
-
-// import all things
-@import "compass";
-@import "susy";
-
-@import "normalize";
-@include establish-baseline;
-
-@import "variables";
-@import "typography";
-@import "layout";
-@import "partials";
-@import "pages";
+// @import "partials/table";
 
 
-// append-around
-.header .main-nav {
-  display: none;
-}
-
-@include at-breakpoint($pad) {
-  .outside .main-nav {
-    display: none;
-  }
-  .header .main-nav {
-    display: block;
-  }
-}
+// style for special pages
+@import "pages/home";
+@import "pages/contact";
+@import "pages/penetration-test";
+@import "pages/blog";

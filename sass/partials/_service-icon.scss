@@ -1,0 +1,25 @@
+.service-icon {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.service-icon-penetration-test {
+  @include replace-text-with-svg("services/penetration-test");
+
+
+}
+.service-icon-security-training {
+  @include replace-text-with-svg("services/security-training");
+
+
+}
+.service-icon-incident-response {
+  @include replace-text-with-svg("services/incident-response");
+
+
+}
+.service-icon-security-consulting {
+  @include replace-text-with-svg("services/security-consulting");
+
+
+}

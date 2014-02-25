@@ -1,0 +1,112 @@
+.quick-nav {
+  position: relative;
+
+
+  .quick-nav-title {
+    display: block;
+    @include adjust-font-size-to(14px);
+    background-color: #e3e3e3;
+    padding: rhythm(.125) rhythm(.5);
+    position: relative;
+    color: $global-color;
+    &:hover {
+      color: $global-color;
+      text-decoration: none;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: rhythm(.5);
+      margin-top: - 3px;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 6px 6px 0 6px;
+      border-color: $global-color transparent transparent transparent;
+    }
+  }
+
+  .quick-nav-list {
+    display: none;
+    @include reset-box-model;
+    list-style: none;
+    @include trailer(0);
+    padding: rhythm(.25) 0;
+    background-color: #f6f6f6;
+    @include adjust-font-size-to(14px, 3/4);
+
+    > li {
+      padding: 0 rhythm(.5);
+      margin: rhythm(.5) 0;
+      @include ellipsis;
+    }
+    a {
+      @include unstyled-link;
+      @include link-colors($global-color, lighten($global-color,20%) );
+    }
+    > .active {
+      > a {
+        color: $color-green-dark;
+        font-weight: bold;
+      }
+    }
+    .sub-nav {
+      list-style: none;
+      padding-left: 0;
+      li {
+        @include adjust-font-size-to(12px, 3/4);
+        padding-left: rhythm(.75);
+        margin: rhythm(.5) 0;
+        @include ellipsis;
+      }
+      > .active {
+        border-left: 1px solid $color-green;
+        > a {
+          color: $color-green-dark;
+        }
+      }
+    }
+    &.open {
+      display: block;
+    }
+  }
+
+  br {
+    display: none;
+  }
+
+  @include at-breakpoint($desktop) {
+
+    @include padding-trailer(2);
+
+    .quick-nav-title {
+      @include adjust-font-size-to(18px);
+      font-weight: bold;
+      padding: 0;
+      background-color: transparent;
+      &:before {
+        display: none;
+      }
+    }
+
+    .quick-nav-list {
+      display: block;
+      background-color: transparent;
+      // max-height: 290px;
+      > li {
+        padding-left: 0;
+      }
+    }
+
+    br {
+      display: block;
+    }
+
+  }
+
+
+
+
+
+}

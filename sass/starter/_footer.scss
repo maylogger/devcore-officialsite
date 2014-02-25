@@ -1,0 +1,118 @@
+.footer {
+  background-color: $footer-bg-color;
+  padding: rhythm(1.5) 0;
+  text-align: center;
+
+  .footer-services {
+    @include pie-clearfix;
+    margin: 0 auto;
+    max-width: 320px;
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .footer-service {
+    display: block;
+    @include trailer(1);
+    width: 50%;
+    float: left;
+    @include box-sizing(border-box);
+  }
+
+  .footer-service-title {
+    @include adjust-font-size-to(14px);
+    line-height: 1em;
+    @include trailer(1);
+    color: $footer-color;
+    @extend %subpixel;
+  }
+
+  .footer-service-icon {
+    @include trailer(.25);
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .footer-bottom {
+    @include pie-clearfix;
+    @include padding-leader(1.75);
+    border-top: 1px solid $footer-divider-color;
+    position: relative;
+  }
+
+  .footer-links-group {
+    @include trailer(1);
+  }
+  .footer-links {
+    @include reset-box-model;
+    list-style: none;
+    @include pie-clearfix;
+    text-align: center;
+    li {
+      @include adjust-font-size-to(13px);
+      display: inline-block;
+      margin: 0 .5em;
+    }
+    a {
+      color: darken($footer-color, 25%);
+      &:hover {
+        text-decoration: none;
+        color: lighten($footer-color, 25%);
+      }
+    }
+  }
+
+  .footer-info {
+    @include reset-box-model;
+    list-style: none;
+    color: $footer-color;
+    text-align: center;
+    @include adjust-font-size-to(13px, 1/2);
+    li {
+      @include trailer(.25);
+    }
+    a {
+      color: $footer-color;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+
+  @include at-breakpoint($pad) {
+
+    .footer-services {
+      max-width: none;
+    }
+
+    .footer-service {
+      width: 25%;
+    }
+
+    .footer-service + .footer-service {
+      border-left: 1px solid lighten($footer-bg-color, 4%);
+    }
+
+    .footer-links-group {
+      @include trailer(.75);
+    }
+
+    .footer-links {
+      display: inline-block;
+    }
+
+    .footer-info {
+      li {
+        display: inline-block;
+        margin: 0 .5em rhythm(.25);
+      }
+    }
+
+  }
+
+
+}

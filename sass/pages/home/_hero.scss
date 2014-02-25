@@ -1,0 +1,52 @@
+.hero {
+  min-height: 90%;
+  border-top: 1px solid #eee;
+  padding: rhythm(1.5) 0 0;
+  background-color: $color-lighten-green;
+  .headline {
+    margin-bottom: 0;
+    text-align: center;
+    h2 {
+      font-weight: bold;
+      color: black;
+      margin-bottom: .5em;
+    }
+    p {
+      color: darken($color-lighter-gray, 30%);
+      margin: 0;
+      margin-bottom: .5em;
+    }
+  }
+  .summary {
+    margin-left: auto;
+    margin-right: auto;
+    @include adjust-font-size-to(13px);
+  }
+  @include at-breakpoint($pad) {
+    padding: rhythm(2) 0 rhythm(1);
+    .headline {
+      p { font-size: 18px; }
+    }
+    .summary {
+      text-align: center;
+      max-width: 30em;
+      @include adjust-font-size-to(15px);
+    }
+  }
+  @include at-breakpoint($desktop) {
+    padding: rhythm(3) 0 rhythm(2);
+    .headline {
+      text-align: center;
+      h2 {
+        @include adjust-font-size-to(40px);
+        margin: 0;
+      }
+      p {
+        @include adjust-font-size-to(24px);
+      }
+    }
+    .summary {
+      @include adjust-font-size-to(16px, 1.25);
+    }
+  }
+}

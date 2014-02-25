@@ -1,0 +1,101 @@
+.certified-block {
+  @include pie-clearfix;
+  @include padding-trailer(1);
+
+  .certified-block-content {
+  }
+
+  .certified-block-title {
+    @include adjust-font-size-to(20px);
+    @include trailer(1);
+  }
+
+  .certified-block-list {
+    @include reset-box-model;
+    @include trailer(1);
+    list-style: none;
+    @include adjust-font-size-to(14px, 4/5);
+    li {
+      @include pie-clearfix;
+      @include trailer(.5);
+    }
+    .label {
+      display: block;
+      color: $color-darken-black;
+      font-weight: bold;
+    }
+    .content {
+      color: lighten($color-black, 15%);
+      a {
+        word-wrap: break-word;
+      }
+    }
+  }
+
+  .certified-block-image-block {
+    position: relative;
+    @include trailer(1);
+  }
+  .certified-website-image {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 75%;
+    background-color: #eee;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .certified-image {
+    position: absolute;
+    right: -12px;
+    bottom: -12px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .certified-block-disclaimer {
+    @include padding-leader(1);
+    clear: both;
+    .list li {
+      @include trailer(.5);
+    }
+  }
+
+  @include at-breakpoint($pad) {
+
+    .certified-block-content {
+      float: left;
+      width: 40%;
+      margin-right: 5%;
+    }
+
+    .certified-block-image-block {
+      float: right;
+      width: 55%;
+    }
+
+  }
+
+  @include at-breakpoint($desktop) {
+
+    .certified-block-title {
+      @include adjust-font-size-to(24px, 1.25);
+      @include trailer(1);
+    }
+
+    .certified-block-list {
+      @include adjust-font-size-to(16px);
+    }
+
+  }
+
+}

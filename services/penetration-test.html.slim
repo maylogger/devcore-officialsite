@@ -25,33 +25,37 @@
         .quick-nav
           h3: a.quick-nav-title href="#" 目錄
           ul.quick-nav-list.nav
-            li.active: a href="#title1" 滲透測試是什麼？
-            li: a href="#title2" 為什麼需要做滲透測試？
-            li: a href="#title3" 滲透測試與弱點掃描的差異？
-            li: a href="#title4" 自動測試與人工測試的差異？
-            li: a href="#title5" 滲透測試有無相關規範？
-            li: a href="#title6" 滲透測試執行流程有哪些？
-            li: a href="#title7" 滲透測試執行結果是什麼？
-            li: a href="#title8" 其他滲透測試常見問題
+            li.active: a href="#what-is-penetration-test" 滲透測試是什麼？
+            li: a href="#why-enterprise-need-penetration-test" 為何企業需要做滲透測試？
+            li: a href="#the-difference-between-penetration-test-and-vulnerability-assessment" 滲透測試與弱點掃描有何差異？
+            li: a href="#the-difference-between-automatic-test-and-manual-test" 自動測試與人工測試有何差異？
+            li: a href="#the-standard-of-penetration-test" 滲透測試有無相關規範？
+            li: a href="#the-workflow-of-penetration-test" 滲透測試執行流程有哪些？
+            li: a href="#the-result-of-penetration-test" 滲透測試執行結果是什麼？
+            li: a href="#the-faq-of-penetration-test" 其他滲透測試常見問題
 
 
     .page-content-main
       .page-content-article.article
         /! 錨點必需添加的 id 與 class name
-        #title1.first-title
+        #what-is-penetration-test.first-title
         /! 錨點必需添加的 id 與 class name
         h3.lead 滲透測試是什麼？
-        p 滲透測試（Penetration Test）是委請受信任的第三方專業資安團隊，以駭客思維出發，模擬駭客的思考方式對企業進行各種入侵攻擊測試。
-        p 滲透測試會嘗試入侵該企業的網站、網路系統、儲存設備等軟硬體，找出各種潛在的漏洞，以驗證企業的設備與資料是否可被破壞或竊取，同時也評估資訊系統與硬體的全盤架構，確認其安全性是否有待加強。滲透測試結束後，專家會列出詳細的攻擊手法與步驟，提供完整的修補建議並輔導開發者修補漏洞，讓企業能儘速免於遭受入侵的風險。開發者修補完畢後，資安團隊會再次確認是否可使用其他手法繞過，以確保企業不會因為同樣的問題遭受損失。
+        p 滲透測試（Penetration Test）是委請受信任的第三方專業資安團隊，從駭客的角度出發，模擬攻擊者的思考方式對企業進行各種入侵攻擊測試。
+        p 滲滲透測試執行期間，資安專家會以駭客思維嘗試入侵該企業的網站、網路系統、儲存設備等軟硬體，找出各種潛在的漏洞，以驗證企業的設備與資料是否可被破壞或竊取，同時也評估資訊系統與硬體的全盤架構，確認其安全性是否有待加強。
+        p 滲透測試結束後，專家會列出詳細的攻擊手法與步驟，提供完整的修補建議並輔導開發者修補漏洞，讓企業能儘速降低遭受入侵的風險。開發者修補完畢後，資安團隊會再次確認是否可使用其他手法繞過防護，以確保企業不會因為同樣的問題遭受損失。
 
-        #title2
-        h3 為什麼需要做滲透測試？
-        p 駭客攻擊就像生活中的病毒，隨時隨地都有可能接觸到並且遭受感染。而滲透測試如同健康檢查，若企業能定時執行深層的資安健檢，面對各種攻擊時即可提高存活的機率。若您的企業、網站有機密外洩、個資外洩等疑慮，或是開發完畢的新系統需要上線，又或者開發中的系統需要做局部安全的測試，都適合導入滲透測試進行安全檢測。在面對網路上的眾多駭客之前先行做好防禦措施，才能保證系統的每個環節都經得起駭客的挑戰，進而鞏固客戶對企業的信賴。
+        #why-enterprise-need-penetration-test
+        h3 為何企業需要做滲透測試？
+        p 駭客攻擊就像生活中的病毒，隨時隨地都有可能接觸到並且遭受感染。而滲透測試如同健康檢查，若企業能定時執行深層的資安健檢，面對各種攻擊時即可提高存活的機率。
+        p 若您的企業、網站有機密外洩、個資外洩等疑慮，或是開發完畢的新系統需要上線，又或者開發中的系統需要做局部安全測試，都適合導入滲透測試進行安全檢測。
+        p 在面對網路上的眾多駭客之前，先行做好防禦措施，才能保證系統的每個環節都經得起駭客的挑戰，進而鞏固客戶對企業的信賴。
 
-        #title3
-        h3 滲透測試與弱點掃描的差異？
-        p 滲透測試需由經驗豐富的資安專家手動執行，測試過程中專家會利用不同的弱點進行組合式攻擊，驗證是否有任何方式可突破當前網站的防禦。滲透測試為求仔細，通常需要費時多天才能完成，因此耗費的人力成本較高。弱點掃描可由自動化掃描軟體在較短的時間內執行完畢，因此時間與金錢成本相對較低。但是弱點掃描僅能檢測既有的漏洞，無法及時檢測出最新的資安漏洞並給予修補建議，同時對於弱點的誤判率也較高。目前滲透測試為求完整，通常已將弱點掃描包含在內。詳細的關係圖與比較表如下所示：
-        img alt="" title="" src="/images/penetration-test-vs-vulnerability-ssessment.png"
+        #the-difference-between-penetration-test-and-vulnerability-assessment
+        h3 滲透測試與弱點掃描有何差異？
+        p 滲透測試需由經驗豐富的資安專家手動進行，測試過程中專家會利用不同的弱點進行組合式攻擊，驗證是否有任何方式可突破當前網站的防禦。滲透測試為求仔細，通常需要費時多天才能完成，因此耗費的人力成本較高。
+        p 弱點掃描可由自動化掃描軟體在較短的時間內執行完畢，因此時間與金錢成本相對較低。但是弱點掃描僅能檢測既有的漏洞，無法及時檢測出最新的資安漏洞並給予修補建議，同時對於弱點的誤判率也較高。目前滲透測試為求完整，通常已將弱點掃描包含在內。詳細的關係圖與比較表如下所示：
+        img alt="滲透測試與弱點掃描" title="滲透測試與弱點掃描" src="/images/penetration-test-vs-vulnerability-ssessment.png"
 
         .special-list-group
           .special-list
@@ -104,8 +108,8 @@
                 .label 成本
                 .content 低，有低價的商業工具或免費工具
 
-        #title4
-        h3 自動測試與人工測試的差異？
+        #the-difference-between-automatic-test-and-manual-test
+        h3 自動測試與人工測試有何差異？
         p 自動測試與人工測試的差異主要有下列幾項：
         h4 即時性
         p 自動測試的檢測規則需要定期更新，若軟體尚未更新或已過期，就無法檢測出最新的漏洞。在專家的人工測試之下，則不會有此狀況發生。
@@ -119,13 +123,11 @@
         h4 商業邏輯判斷
         p 程式無法判斷邏輯漏洞。以下圖內容為例，網站會員在查詢自己的個人資料時，網址可能會帶有與帳號相關的參數（如圖 1），然而攻擊者可能會將網址的 id=101 改成圖 2 的 id=102，觀察網站是否會顯示其他使用者的個人資料。若能成功看到其他使用者的資料，則代表有邏輯漏洞。這類型的邏輯漏洞，只能靠人工的方式找出，而無法用自動化工具掃描。
         .img-description 圖 1：原始會員資料
-        img alt="" title="" src="/images/account.png"
+        img alt="原始會員資料" title="原始會員資料" src="/images/account.png"
         .img-description 圖 2：駭客篡改 id 後得到其他使用者的個人資料
-        img alt="" title="" src="/images/revise-account.png"
+        img alt="駭客篡改 id 後得到其他使用者的個人資料" title="駭客篡改 id 後得到其他使用者的個人資料" src="/images/revise-account.png"
 
-
-
-        #title5
+        #the-standard-of-penetration-test
         h3 滲透測試有無相關規範？
         p 檢測的服務項目會包括網路掃描、弱點掃描、滲透測試三大層面，並且遵循下列國際標準：
         ul
@@ -149,7 +151,7 @@
               |美國國家標準與技術研究院 - 資訊安全測試與評估指南 <br>
               a.url href="http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf" http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf
 
-        #title6
+        #the-workflow-of-penetration-test
         h3 滲透測試執行流程有哪些？
         h4 確認專案需求
         ol
@@ -212,13 +214,13 @@
 
 
 
-        #title7
+        #the-result-of-penetration-test
         h3 滲透測試執行結果是什麼？
         p 初次滲透測試執行完畢後，資安專家會依照所發現的漏洞評估災情，根據嚴重程度分級，詳細列出攻擊步驟，並給予完整的修復建議，輔導企業修補漏洞。待企業修補完畢後，資安專家會再次驗證該漏洞是否已正確修復，若發現能利用其他手法再次繞過，則會回報給企業，請開發者再次進行修補。執行結果報告內容可參考此下圖：
-        img alt="" title="" src="/images/pt-report-sample.png"
+        img alt="滲透測試報告範本" title="滲透測試報告範本" src="/images/pt-report-sample.png"
         p 若需要詳細的滲透測試報告範本，歡迎您來信索取。
 
-        #title8
+        #the-faq-of-penetration-test
         h3 其他滲透測試常見問答
         h4 滲透測試有什麼前置作業嗎？
         p 戴夫寇爾與委託者會溝通測試執行時間，基本上以上班時間為準，以便發現重大漏洞時可請企業開發人員及時修補。同時也會告知測試來源 IP，以便企業分辨測試來源是否合法，避免同時遭到入侵攻擊而未發覺。

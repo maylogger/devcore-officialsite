@@ -190,14 +190,14 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
 .off-canvas.open-menu .page { height: 100%; overflow: hidden; -webkit-transform: translateX(-260px); -moz-transform: translateX(-260px); -ms-transform: translateX(-260px); -o-transform: translateX(-260px); transform: translateX(-260px); }
 .off-canvas.open-menu .header { position: relative; z-index: 10000; }
 .off-canvas.open-menu .off-canvas-mask { height: 100%; z-index: 10001; }
-.no-csstransforms3d .off-canvas.open-menu .page { left: 260px; }
+.no-csstransforms3d .off-canvas.open-menu .page { right: 260px; }
 @media (min-width: 640px) { .off-canvas.open-menu .page { overflow: visible; -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); }
   .no-csstransforms3d .off-canvas.open-menu .page { left: 0; } }
 
 .header { position: relative; }
 .header .logo { font-size: 22px; line-height: 48px; font-weight: bold; }
 .header .logo a { display: block; color: black; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo-small.png?1391689397'); background-repeat: no-repeat; background-position: 50% 50%; width: 122px; height: 48px; background-image: none, url('/images/logo-small.svg?1391689397'); }
-@media (min-width: 980px) { .header .logo a { margin: auto; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1392986900'); background-repeat: no-repeat; background-position: 50% 50%; width: 280px; height: 48px; background-image: none, url('/images/logo.svg?1392986900'); } }
+@media (min-width: 980px) { .header .logo a { margin: auto; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1393828393'); background-repeat: no-repeat; background-position: 50% 50%; width: 280px; height: 48px; background-image: none, url('/images/logo.svg?1393828393'); } }
 .header .logo a:hover { text-decoration: none; color: #333; }
 @media (min-width: 640px) { .header { padding: 6px 0; }
   .header .logo { float: left; }
@@ -605,13 +605,11 @@ button + button, a.button + a.button { margin-left: 1em; }
   .feature-block .read-more { font-size: 16px; line-height: 24px; }
   .feature-block .feature-block-image { max-width: none; } }
 @media (min-width: 980px) { .feature-block { padding: 96px 0 72px; }
-  .feature-block .feature-block-content { width: 65.95745%; }
-  .feature-block .feature-block-title { font-size: 24px; line-height: 24px; }
-  .feature-block .feature-block-sub-title { font-size: 20px; line-height: 24px; } }
+  .feature-block .feature-block-content { width: 65.95745%; } }
 
 .members { margin: 0; padding: 0; border: 0; list-style: none; }
 .members:after { content: ""; display: table; clear: both; }
-.members .member { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 6px; margin: 0 auto 48px; max-width: 360px; text-align: center; }
+.members .member { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: block; padding: 0 6px; margin: 0 auto 48px; max-width: 360px; text-align: center; }
 .members .member-avatar { margin-bottom: 12px; }
 .members .member-avatar img { display: block; margin: 0 auto; }
 .members .member-name { font-size: 16px; line-height: 24px; }
@@ -707,13 +705,28 @@ button + button, a.button + a.button { margin-left: 1em; }
 
 .service-icon { margin-right: auto; margin-left: auto; }
 
-.service-icon-penetration-test { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/services/penetration-test.png?1393263841'); background-repeat: no-repeat; background-position: 50% 50%; width: 120px; height: 96px; background-image: none, url('/images/services/penetration-test.svg?1393263841'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.service-icon-penetration-test { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/services/penetration-test.png?1393828394'); background-repeat: no-repeat; background-position: 50% 50%; width: 120px; height: 96px; background-image: none, url('/images/services/penetration-test.svg?1393828394'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.service-icon-security-training { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/services/security-training.png?1393263841'); background-repeat: no-repeat; background-position: 50% 50%; width: 120px; height: 96px; background-image: none, url('/images/services/security-training.svg?1393263841'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.service-icon-security-training { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/services/security-training.png?1393828394'); background-repeat: no-repeat; background-position: 50% 50%; width: 120px; height: 96px; background-image: none, url('/images/services/security-training.svg?1393828394'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.service-icon-incident-response { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/services/incident-response.png?1393263841'); background-repeat: no-repeat; background-position: 50% 50%; width: 120px; height: 96px; background-image: none, url('/images/services/incident-response.svg?1393263841'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.service-icon-incident-response { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/services/incident-response.png?1393828394'); background-repeat: no-repeat; background-position: 50% 50%; width: 120px; height: 96px; background-image: none, url('/images/services/incident-response.svg?1393828394'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.service-icon-security-consulting { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/services/security-consulting.png?1393263841'); background-repeat: no-repeat; background-position: 50% 50%; width: 120px; height: 96px; background-image: none, url('/images/services/security-consulting.svg?1393263841'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.service-icon-security-consulting { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/services/security-consulting.png?1393828394'); background-repeat: no-repeat; background-position: 50% 50%; width: 120px; height: 96px; background-image: none, url('/images/services/security-consulting.svg?1393828394'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+.gallery { margin-bottom: 24px; }
+.gallery:after { content: ""; display: table; clear: both; }
+.gallery .gallery-item { display: block; padding: 6px 6px 0; background-color: #eee; margin: 0px auto 24px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; max-width: 360px; color: #252525; }
+.gallery .gallery-item:hover { text-decoration: none; }
+.gallery .gallery-item-image img { display: block; width: 100%; margin: 0 auto; }
+.gallery .gallery-item-title { padding: 6px 0 6px; font-size: 16px; line-height: 24px; text-align: center; font-weight: bold; }
+@media (min-width: 640px) { .gallery .gallery-item { max-width: none; width: 47.82609%; float: left; margin-right: 4.34783%; }
+  .gallery .gallery-item:nth-child(2n) { float: right; margin-right: 0; }
+  .gallery .gallery-item:nth-child(2n+1) { clear: both; } }
+@media (min-width: 980px) { .gallery .gallery-item { width: 31.91489%; float: left; margin-right: 2.12766%; }
+  .gallery .gallery-item:nth-child(2n) { float: left; margin-right: 2.12766%; }
+  .gallery .gallery-item:nth-child(2n+1) { clear: none; }
+  .gallery .gallery-item:nth-child(3n) { float: right; margin-right: 0; }
+  .gallery .gallery-item:nth-child(3n+1) { clear: both; } }
 
 .hero { min-height: 90%; border-top: 1px solid #eee; padding: 36px 0 0; background-color: #f9f9f7; }
 .hero .headline { margin-bottom: 0; text-align: center; }

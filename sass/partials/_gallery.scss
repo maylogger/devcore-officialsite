@@ -1,42 +1,37 @@
-.members {
-  @include reset-box-model;
-  list-style: none;
+.gallery {
   @include pie-clearfix;
+  @include trailer(1);
 
-  .member {
-    @include box-sizing(border-box);
+  .gallery-item {
     display: block;
-    padding: 0 rhythm(.25);
-    margin: 0 auto rhythm(2);
+    padding: rhythm(.25) rhythm(.25) 0;
+    background-color: #eee;
+    margin: rhythm(0) auto rhythm(1);
+    @include box-sizing(border-box);
     max-width: 360px;
-    text-align: center;
+    color: $color-darken-black;
+    &:hover {
+      text-decoration: none;
+    }
   }
 
-  .member-avatar {
-    @include trailer(.5);
+  .gallery-item-image {
     img {
       display: block;
+      width: 100%;
       margin: 0 auto;
     }
   }
 
-  .member-name {
-
+  .gallery-item-title {
+    padding: rhythm(.25) 0 rhythm(.25);
     @include adjust-font-size-to(16px);
-  }
-  .member-role {
-    @include trailer(.25);
-    @include adjust-font-size-to(16px);
-    color: $global-muted-color;
-  }
-  .member-intro {
-    @include adjust-font-size-to(14px, 4/5);
+    text-align: center;
+    font-weight: bold;
   }
 
   @include at-breakpoint($pad) {
-
-
-    .member {
+    .gallery-item {
       max-width: none;
       @include span-columns(3);
       @include nth-omega(2n);
@@ -49,9 +44,7 @@
 
 
   @include at-breakpoint($desktop) {
-
-    .member {
-      max-width: none;
+    .gallery-item {
       @include span-columns(4);
       @include remove-nth-omega(2n);
       &:nth-child(2n+1) {
@@ -62,7 +55,6 @@
         clear: both;
       }
     }
-
   }
 
 

@@ -81,7 +81,8 @@
     @include padding-trailer(2);
 
     .quick-nav-title {
-      @include adjust-font-size-to(18px);
+      @include adjust-font-size-to(20px);
+      @include trailer(.35);
       font-weight: bold;
       padding: 0;
       background-color: transparent;

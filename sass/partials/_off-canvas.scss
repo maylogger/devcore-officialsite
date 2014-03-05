@@ -90,6 +90,10 @@
   .outside li {
     @include translateX(0px);
   }
+  // hack ==> 解決開啓 / 關閉 menu 時，affix 跳動問題。
+  .affix, .affix-bottom {
+    position: static !important;
+  }
 }
 
 // animate
@@ -120,4 +124,6 @@
 	.off-canvas-mask {
 		// background-color: rgba($color-lighter-gray,.7);
 	}
+
+
 }

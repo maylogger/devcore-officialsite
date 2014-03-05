@@ -114,8 +114,9 @@
         position: static;
       }
       &.affix {
-        max-width: 219px;
-        width: 18%;
+        // min-width: 180px;
+        // max-width: 219px;
+        // width: 18%;
         position: fixed;
         top: rhythm(1);
         z-index: 12;

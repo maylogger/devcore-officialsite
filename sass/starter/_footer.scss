@@ -18,6 +18,11 @@
     width: 50%;
     float: left;
     @include box-sizing(border-box);
+    &:hover {
+      .footer-service-title {
+        color: lighten($footer-color, 20%);
+      }
+    }
   }
 
   .footer-service-title {

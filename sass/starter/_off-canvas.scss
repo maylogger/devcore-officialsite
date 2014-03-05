@@ -75,7 +75,7 @@ $off-canvas-main-bg-color: white;
   // 不支援 transform 的情況下，打開外側欄改成使用 left 移動
   .no-csstransforms3d &.open-menu {
     .page {
-      left: $off-canvas-menu-width;
+      right: $off-canvas-menu-width;
     }
   }
 

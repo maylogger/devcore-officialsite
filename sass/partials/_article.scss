@@ -118,6 +118,7 @@
 
   .icon-box {
     @include pie-clearfix;
+    @include trailer(.5);
     .icon-box-icon {
       float: left;
       margin-right: 1em;

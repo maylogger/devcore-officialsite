@@ -91,10 +91,10 @@
       width: columns(8, $total_columns)
     }
     .feature-block-title {
-      @include adjust-font-size-to(24px, 1);
+      // @include adjust-font-size-to(24px, 1);
     }
     .feature-block-sub-title {
-      @include adjust-font-size-to(20px, 1);
+      // @include adjust-font-size-to(20px, 1);
     }
     .feature-block-text {
       // @include adjust-font-size-to(13px, 5/6);

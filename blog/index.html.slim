@@ -15,14 +15,7 @@
               a href="/blog/post.html" = zh_lorem_sentence
             /! 文章標題 end
             /! 文章其他資訊（作者、日期、分類、標簽）
-            .post-info
-              span.post-category: a href="#" 最新消息
-              span.poster = zh_lorem_name
-              span.post-time = lorem_date
-              - ( rand(3)+2 ).times do
-                span.post-tag: a href="#" = zh_lorem_words(rand(2)+2)
-
-
+            = render "/blog/info"
             /! 文章其他資訊（作者、日期、分類、標簽）end
             /! 文章內容
             .post-preview

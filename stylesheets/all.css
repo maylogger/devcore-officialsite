@@ -125,9 +125,10 @@ html { font-size: 16px; line-height: 24px; }
 
 html, body { height: 100%; }
 
-.wrapper { background-color: #ddd; }
+body { background-color: #ddd; }
 
 .page { background-color: #fff; max-width: 1200px; margin: 0 auto; }
+@media (min-width: 1280px) { .page { -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125); -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125); box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125); } }
 
 .container, .header-inner, .footer-inner { padding-left: 24px; padding-right: 24px; margin-left: auto; margin-right: auto; }
 .container:after, .header-inner:after, .footer-inner:after { content: ""; display: table; clear: both; }
@@ -203,7 +204,8 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #f0f
   .header .logo { float: left; }
   .header .main-nav { float: right; padding: 12px 0 0 0; } }
 @media (min-width: 980px) { .header { padding: 24px 0; }
-  .header .logo { padding: 0; font-size: 28px; line-height: 48px; } }
+  .header .logo { padding: 0; font-size: 28px; line-height: 48px; }
+  .header .main-nav { letter-spacing: 1px; } }
 
 .footer { background-color: #444444; padding: 36px 0; text-align: center; }
 .footer .footer-services { margin: 0 auto; max-width: 320px; }
@@ -731,7 +733,7 @@ button + button, a.button + a.button { margin-left: 1em; }
   .gallery .gallery-item:nth-child(3n) { float: right; margin-right: 0; }
   .gallery .gallery-item:nth-child(3n+1) { clear: both; } }
 
-.hero { min-height: 90%; border-top: 1px solid #eee; padding: 36px 0 0; background-color: #f9f9f7; }
+.hero { min-height: 90%; border-top: 1px solid #eee; padding: 36px 0 0; background-color: #f9f9f7; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eaeae3), color-stop(100%, #f5f5f1)); background: -webkit-linear-gradient(#eaeae3, #f5f5f1); background: -moz-linear-gradient(#eaeae3, #f5f5f1); background: -o-linear-gradient(#eaeae3, #f5f5f1); background: linear-gradient(#eaeae3, #f5f5f1); }
 .hero .headline { margin-bottom: 0; text-align: center; }
 .hero .headline h2 { font-weight: bold; color: black; margin-bottom: .5em; }
 .hero .headline p { color: #9eab9e; margin: 0; margin-bottom: .5em; }

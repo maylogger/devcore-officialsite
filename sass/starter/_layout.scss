@@ -20,14 +20,18 @@ html, body {
   height: 100%;
 }
 
-.wrapper {
+body {
   background-color: #ddd;
+  // @include background( linear-gradient( lighten(desaturate(#90bc47, 45%), 30%) 0%, white 100%) repeat-x);
 }
 
 .page {
   background-color: #fff;
   max-width: 1200px;
   margin: 0 auto;
+  @include at-breakpoint(1280px) {
+    @include box-shadow(0px 0px 10px rgba(black,.125));
+  }
 }
 
 #{$page-container}, .header-inner, .footer-inner {

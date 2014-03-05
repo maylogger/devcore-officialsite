@@ -38,6 +38,9 @@
       padding: 0;
       @include adjust-font-size-to(28px);
     }
+    .main-nav {
+      letter-spacing: 1px;
+    }
   }
 
 }

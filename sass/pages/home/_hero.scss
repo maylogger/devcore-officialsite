@@ -2,7 +2,8 @@
   min-height: 90%;
   border-top: 1px solid #eee;
   padding: rhythm(1.5) 0 0;
-  background-color: $color-lighten-green;
+  background-color: $color-lighten-gray;
+  @include background( linear-gradient( darken($color-lighten-gray, 7%), darken($color-lighten-gray, 2%) ) );
   .headline {
     margin-bottom: 0;
     text-align: center;

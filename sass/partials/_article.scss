@@ -56,7 +56,7 @@
 
   .special-list-group {
     @include pie-clearfix;
-    background-color: $color-lighten-green;
+    background-color: $color-lighten-gray;
     padding: rhythm(1) 0 0;
     @include trailer(1);
   }

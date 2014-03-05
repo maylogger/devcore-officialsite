@@ -18,10 +18,7 @@
           h1.post-title: a href="/blog/post.html"= zh_lorem_sentence
           /! 文章標題 end
           /! 文章其他屬性區
-          .post-info
-            span.poster = zh_lorem_name
-            span.post-time = lorem_date
-            span.post-category: a href="#" 最新消息
+          = render "/blog/info"
           /! 文章其他屬性區 end
           /! 文章內容
           - 2.times do

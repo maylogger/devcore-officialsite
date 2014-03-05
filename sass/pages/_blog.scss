@@ -44,19 +44,26 @@
 				@include adjust-font-size-to(24px, 1);
 				@include trailer(.5);
 				a {
-					color: $color-black;
+					color: $color-green-dark;
 					text-decoration: none;
 					&:hover {
-						color: $color-green-dark;
+						text-decoration: underline;
 					}
 				}
 			}
 			.post-info {
-				@include trailer(.5);
-				@include adjust-font-size-to(14px);
+        font-family: arial, sans-serif;
+        font-style: normal;
+        padding: 3px 6px;
+        margin-bottom: 6px;
+				@include adjust-font-size-to(13px);
+        color: #aaa;
 				background-color: $color-lighter-gray;
+        a {
+          @include link-colors(#666);
+        }
 				.poster, .post-time, .post-category {
-					padding: 0 6px;
+					padding-right: 6px;
 				}
         .post-tag {
           font-style: italic;
@@ -67,6 +74,18 @@
           color: $global-muted-color;
         }
 			}
+      .post-tag {
+        font-family: arial, sans-serif;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 1.1;
+        color: #aaa;
+        padding: 0 2px;
+        @include trailer(1);
+        a {
+          // @include link-colors(#aaa);
+        }
+      }
 			h1 {
 				@include adjust-font-size-to(28px);
 			}

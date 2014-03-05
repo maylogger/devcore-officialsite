@@ -1,7 +1,7 @@
 .feature-block {
 
   display: block;
-  padding: rhythm(2) 0 rhythm(1);
+  padding: rhythm(6.5) 0 rhythm(1);
   @include pie-clearfix;
   margin: 0 auto;
   // .feature-block:nth-child(2n+1) {
@@ -15,6 +15,8 @@
     display: block;
     text-align: center;
     margin: 0 auto;
+    @include padding-leader(3);
+    @include background( transparent linear-gradient( rgba(white,0), rgba(white,.95) 70px ) );
   }
   .feature-block-title {
     @include adjust-font-size-to(20px, 1);
@@ -23,11 +25,11 @@
   }
   .feature-block-sub-title {
     @include adjust-font-size-to(16px, 1);
-    @include trailer(.25);
+    @include trailer(1);
     color: $color-gray;
   }
   .feature-block-text {
-    @include adjust-font-size-to(12px, 3/4);
+    @include adjust-font-size-to(13px);
     color: $global-color;
     @include trailer(.25);
   }
@@ -43,7 +45,6 @@
     display: block;
     text-align: center;
     margin: 0 auto;
-    @include trailer(1);
     img {
       margin: 0 auto;
       display: block;
@@ -86,7 +87,8 @@
     $padding-space: 4;
     padding: rhythm($padding-space) 0 rhythm($padding-space - 1);
     .feature-block-content {
-      width: columns(8, $total_columns);
+      @include padding-leader(0);
+      width: columns(8, $total_columns)
     }
     .feature-block-title {
       // @include adjust-font-size-to(24px, 1);

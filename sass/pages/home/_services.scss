@@ -16,6 +16,45 @@
       @include omega;
     }
   }
+}
 
 
+%service-background {
+  background-repeat: no-repeat;
+  background-position: center top;
+  @include background-size(300px auto);
+  @include at-breakpoint($desktop) {
+    background-position: right 48px;
+    @include background-size(50% auto);
+  }
+}
+
+.penetration-test-background {
+  background-image: image-url("services/penetration-test.png");
+  background-image: none, image-url("services/penetration-test.svg");
+  @extend %service-background;
+}
+
+.security-training-background {
+  background-image: image-url("services/security-training.png");
+  background-image: none, image-url("services/security-training.svg");
+  @extend %service-background;
+  @include at-breakpoint($desktop) {
+    background-position: left 48px;
+  }
+}
+
+.incident-response-background {
+  background-image: image-url("services/incident-response.png");
+  background-image: none, image-url("services/incident-response.svg");
+  @extend %service-background;
+}
+
+.security-consulting-background {
+  background-image: image-url("services/security-consulting.png");
+  background-image: none, image-url("services/security-consulting.svg");
+  @extend %service-background;
+  @include at-breakpoint($desktop) {
+    background-position: left 48px;
+  }
 }

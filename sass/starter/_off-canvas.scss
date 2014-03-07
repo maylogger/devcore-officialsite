@@ -41,7 +41,8 @@ $off-canvas-main-bg-color: white;
 
   // 打開外側選單時的狀態
   &.open-menu {
-    overflow: hidden;
+    // firefox 無動畫特效 bug
+    // overflow: hidden;
 
     .wrapper {
       height: 100%;

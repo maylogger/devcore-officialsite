@@ -21,7 +21,7 @@
   }
 
   p {
-    @include adjust-font-size-to(13px, 5/6);
+    @include adjust-font-size-to(15px, 1);
   }
 
   .page-content-summary {

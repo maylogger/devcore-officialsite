@@ -1,7 +1,7 @@
 .feature-block {
 
   display: block;
-  padding: rhythm(6.5) 0 rhythm(1);
+  padding: rhythm(7) 0 rhythm(1);
   @include pie-clearfix;
   margin: 0 auto;
   // .feature-block:nth-child(2n+1) {
@@ -15,8 +15,8 @@
     display: block;
     text-align: center;
     margin: 0 auto;
-    @include padding-leader(3);
-    @include background( transparent linear-gradient( rgba(white,0), rgba(white,.95) 70px ) );
+    // @include padding-leader(3);
+    // @include background( transparent linear-gradient( rgba(white,0), rgba(white,.95) 70px ) );
   }
   .feature-block-title {
     @include adjust-font-size-to(20px, 1);
@@ -25,11 +25,11 @@
   }
   .feature-block-sub-title {
     @include adjust-font-size-to(16px, 1);
-    @include trailer(1);
+    @include trailer(1.5);
     color: $color-gray;
   }
   .feature-block-text {
-    @include adjust-font-size-to(13px);
+    @include adjust-font-size-to(15px);
     color: $global-color;
     @include trailer(.25);
   }

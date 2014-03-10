@@ -21,8 +21,8 @@
 
 %service-background {
   background-repeat: no-repeat;
-  background-position: center top;
-  @include background-size(300px auto);
+  background-position: center 2em;
+  @include background-size(170px auto);
   @include at-breakpoint($desktop) {
     background-position: right 48px;
     @include background-size(50% auto);

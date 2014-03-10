@@ -1,7 +1,6 @@
 .security-seal {
   background-color: $color-lighten-gray;
   .feature-block {
-    @include padding-leader(2);
     .feature-block-content {
       @include padding-leader(1);
       background: transparent;

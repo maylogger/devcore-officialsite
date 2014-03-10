@@ -13,15 +13,17 @@
       margin-bottom: .5em;
     }
     p {
-      color: darken($color-lighter-gray, 30%);
+     color: $color-gray;
       margin: 0;
       margin-bottom: .5em;
+      @include adjust-font-size-to(15px);
+      @include trailer(1);
     }
   }
   .summary {
     margin-left: auto;
     margin-right: auto;
-    @include adjust-font-size-to(13px);
+    @include adjust-font-size-to(14px);
   }
   @include at-breakpoint($pad) {
     padding: rhythm(2) 0 rhythm(1);

@@ -765,6 +765,8 @@ button + button, a.button + a.button { margin-left: 1em; }
 @media (min-width: 980px) { .security-consulting-background { background-position: left 48px; } }
 
 .security-seal { background-color: #f9f9f7; }
+.security-seal .feature-block { padding-top: 48px; }
+@media (min-width: 980px) { .security-seal .feature-block { padding-top: 96px; } }
 .security-seal .feature-block .feature-block-content { padding-top: 24px; background: transparent; }
 
 .contact-us { background-color: #8fbe3e; }

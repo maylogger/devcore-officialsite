@@ -73,30 +73,30 @@ pre {
     @include leader(1);
     @include trailer(1);
     padding: rhythm(.25) rhythm(.5);
-    background-color: $color-lighter-gray;
     color: #333;
     font-size:  $base-font-size * 0.75;
     line-height: 1.6;
     overflow: auto;
     white-space: pre;
     -webkit-overflow-scrolling: touch;
-    // background:/* Shadows */ -webkit-radial-gradient(50% 0%, closest-side,
-    // rgba(0,0,0,.2),
-    // rgba(0,0,0,0)), -webkit-radial-gradient(50% 100%,farthest-side,
-    // rgba(0,0,0,.2),
-    // rgba(0,0,0,0)) 0 100%;
-    // background: /* Shadow covers */ -webkit-linear-gradient(
-    // white 30%,
-    // rgba(255,255,255,0)), -webkit-linear-gradient(
-    // rgba(255,255,255,0),
-    // white 70%) 0 100%, /* Shadows */ -webkit-radial-gradient(farthest-side at 50% 0,
-    // rgba(0,0,0,.2),
-    // rgba(0,0,0,0)), -webkit-radial-gradient(farthest-side at 50% 100%,
-    // rgba(0,0,0,.2),
-    // rgba(0,0,0,0)) 0 100%;
-    // background-repeat: no-repeat;
-    // background-size: 100% 80px, 100% 40px, 100% 14px, 100% 14px;
-    // background-attachment: local, local, scroll, scroll;
+    background:
+      /* Shadow covers */
+      linear-gradient(to right, white 30%, rgba(255,255,255,0)),
+      linear-gradient(to right, rgba(255,255,255,0), white 70%) 100% 0,
+      /* Shadows */
+      radial-gradient(0 50%, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)),
+      radial-gradient(100% 50%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 100% 0;
+    background:
+      /* Shadow covers */
+      linear-gradient(to right, $color-lighter-gray 30%, rgba(255,255,255,0)),
+      linear-gradient(to right, rgba(255,255,255,0), $color-lighter-gray 70%) 100% 0,
+      /* Shadows */
+      radial-gradient(farthest-side at 0 50%,  rgba(0,0,0, .2), rgba(0,0,0,0)),
+      radial-gradient(farthest-side at 100% 50%,  rgba(0,0,0,.2), rgba(0,0,0,0)) 100% 0;
+    background-repeat: no-repeat;
+    background-color: $color-lighter-gray;
+    background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+    background-attachment: local, local, scroll, scroll;
   }
 }
 

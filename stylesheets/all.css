@@ -163,7 +163,7 @@ blockquote { margin: 0; padding: 0; border: 0; margin-top: 24px; margin-bottom: 
 blockquote cite { display: block; color: #c4c4c4; }
 blockquote cite:before { content: '\2014 \00A0'; }
 
-pre code { font-family: "Anonymous Pro", "Inconsolata", "Consolas Regular Font", "Monaco", "Courier New" ,MonoSpace; display: block; margin-top: 24px; margin-bottom: 24px; padding: 6px 12px; background-color: #f0f2f0; color: #333; font-size: 12px; line-height: 1.6; overflow: auto; white-space: pre; -webkit-overflow-scrolling: touch; }
+pre code { font-family: "Anonymous Pro", "Inconsolata", "Consolas Regular Font", "Monaco", "Courier New" ,MonoSpace; display: block; margin-top: 24px; margin-bottom: 24px; padding: 6px 12px; color: #333; font-size: 12px; line-height: 1.6; overflow: auto; white-space: pre; -webkit-overflow-scrolling: touch; background: linear-gradient(to right, #ffffff 30%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff 70%) 100% 0, radial-gradient(0 50%, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(100% 50%, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 100% 0; background: linear-gradient(to right, #f0f2f0 30%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), #f0f2f0 70%) 100% 0, radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 100% 0; background-repeat: no-repeat; background-color: #f0f2f0; background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%; background-attachment: local, local, scroll, scroll; }
 
 ol, ul { margin-top: 24px; margin-bottom: 24px; }
 ol ol, ol ul, ul ol, ul ul { margin: 0; }

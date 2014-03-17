@@ -68,14 +68,17 @@ blockquote {
 // code 示範區
 pre {
   code {
-    font-family: "Monaco", MonoSpace, sans-serif;
+    font-family: "Anonymous Pro", "Inconsolata", "Consolas Regular Font", "Monaco", "Courier New" ,MonoSpace;
     display: block;
     @include leader(1);
     @include trailer(1);
-    border: 1px solid $global-divider;
+    border: 1px solid #e1e1e1;
     padding: rhythm(1);
-    background-color: $global-spectail-block;
+    background-color: #eeeeea;
+    color: #333;
     @include adjust-font-size-to( $base-font-size * 0.75 );
+    overflow: auto;
+    white-space: pre;
   }
 }
 

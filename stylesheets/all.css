@@ -163,7 +163,7 @@ blockquote { margin: 0; padding: 0; border: 0; margin-top: 24px; margin-bottom: 
 blockquote cite { display: block; color: #c4c4c4; }
 blockquote cite:before { content: '\2014 \00A0'; }
 
-pre code { font-family: "Anonymous Pro", "Inconsolata", "Consolas Regular Font", "Monaco", "Courier New" ,MonoSpace; display: block; margin-top: 24px; margin-bottom: 24px; border: 1px solid #e1e1e1; padding: 24px; background-color: #eeeeea; color: #333; font-size: 12px; line-height: 24px; overflow: auto; white-space: pre; }
+pre code { font-family: "Anonymous Pro", "Inconsolata", "Consolas Regular Font", "Monaco", "Courier New" ,MonoSpace; display: block; margin-top: 24px; margin-bottom: 24px; padding: 6px 12px; background-color: #f0f2f0; color: #333; font-size: 12px; line-height: 1.6; overflow: auto; white-space: pre; -webkit-overflow-scrolling: touch; }
 
 ol, ul { margin-top: 24px; margin-bottom: 24px; }
 ol ol, ol ul, ul ol, ul ul { margin: 0; }

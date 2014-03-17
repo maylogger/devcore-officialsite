@@ -72,13 +72,35 @@ pre {
     display: block;
     @include leader(1);
     @include trailer(1);
-    border: 1px solid #e1e1e1;
-    padding: rhythm(1);
-    background-color: #eeeeea;
+    padding: rhythm(.25) rhythm(.5);
+    background-color: $color-lighter-gray;
     color: #333;
-    @include adjust-font-size-to( $base-font-size * 0.75 );
+    font-size:  $base-font-size * 0.75;
+    line-height: 1.6;
     overflow: auto;
     white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    // background: /* Shadow covers */ -webkit-linear-gradient(
+    // white 30%,
+    // rgba(255,255,255,0)), -webkit-linear-gradient(
+    // rgba(255,255,255,0),
+    // white 70%) 0 100%, /* Shadows */ -webkit-radial-gradient(50% 0, farthest-side,
+    // rgba(0,0,0,.2),
+    // rgba(0,0,0,0)), -webkit-radial-gradient(50% 100%,farthest-side,
+    // rgba(0,0,0,.2),
+    // rgba(0,0,0,0)) 0 100%;
+    // background: /* Shadow covers */ -webkit-linear-gradient(
+    // white 30%,
+    // rgba(255,255,255,0)), -webkit-linear-gradient(
+    // rgba(255,255,255,0),
+    // white 70%) 0 100%, /* Shadows */ -webkit-radial-gradient(farthest-side at 50% 0,
+    // rgba(0,0,0,.2),
+    // rgba(0,0,0,0)), -webkit-radial-gradient(farthest-side at 50% 100%,
+    // rgba(0,0,0,.2),
+    // rgba(0,0,0,0)) 0 100%;
+    // background-repeat: no-repeat;
+    // background-size: 100% 80px, 100% 40px, 100% 14px, 100% 14px;
+    // background-attachment: local, local, scroll, scroll;
   }
 }
 

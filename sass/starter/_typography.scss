@@ -81,15 +81,15 @@ pre {
     -webkit-overflow-scrolling: touch;
     background:
       /* Shadow covers */
-      linear-gradient(to right, white 30%, rgba(255,255,255,0)),
-      linear-gradient(to right, rgba(255,255,255,0), white 70%) 100% 0,
+      linear-gradient(to right, $color-lighter-gray 30%, rgba($color-lighter-gray,0)),
+      linear-gradient(to right, rgba($color-lighter-gray ,0), $color-lighter-gray 70%) 100% 0,
       /* Shadows */
       radial-gradient(0 50%, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)),
       radial-gradient(100% 50%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 100% 0;
     background:
       /* Shadow covers */
-      linear-gradient(to right, $color-lighter-gray 30%, rgba(255,255,255,0)),
-      linear-gradient(to right, rgba(255,255,255,0), $color-lighter-gray 70%) 100% 0,
+      linear-gradient(to right, $color-lighter-gray 30%, rgba($color-lighter-gray,0)),
+      linear-gradient(to right, rgba($color-lighter-gray ,0), $color-lighter-gray 70%) 100% 0,
       /* Shadows */
       radial-gradient(farthest-side at 0 50%,  rgba(0,0,0, .2), rgba(0,0,0,0)),
       radial-gradient(farthest-side at 100% 50%,  rgba(0,0,0,.2), rgba(0,0,0,0)) 100% 0;

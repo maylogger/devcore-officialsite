@@ -80,11 +80,7 @@ pre {
     overflow: auto;
     white-space: pre;
     -webkit-overflow-scrolling: touch;
-    // background: /* Shadow covers */ -webkit-linear-gradient(
-    // white 30%,
-    // rgba(255,255,255,0)), -webkit-linear-gradient(
-    // rgba(255,255,255,0),
-    // white 70%) 0 100%, /* Shadows */ -webkit-radial-gradient(50% 0, farthest-side,
+    // background:/* Shadows */ -webkit-radial-gradient(50% 0%, closest-side,
     // rgba(0,0,0,.2),
     // rgba(0,0,0,0)), -webkit-radial-gradient(50% 100%,farthest-side,
     // rgba(0,0,0,.2),

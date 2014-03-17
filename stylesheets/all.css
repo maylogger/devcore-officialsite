@@ -979,6 +979,8 @@ button + button, a.button + a.button { margin-left: 1em; }
 .post .post-main .post-content .post-title a:hover { text-decoration: underline; }
 .post .post-main .post-content .post-info { font-family: arial, sans-serif; font-style: normal; padding: 3px 6px; margin-bottom: 6px; font-size: 13px; line-height: 24px; color: #aaa; background-color: #f0f2f0; }
 .post .post-main .post-content .post-info a { color: #666666; }
+.post .post-main .post-content .post-info .posted { display: none; }
+@media (min-width: 640px) { .post .post-main .post-content .post-info .posted { display: inline; } }
 .post .post-main .post-content .post-info .poster, .post .post-main .post-content .post-info .post-time, .post .post-main .post-content .post-info .post-category { padding-right: 6px; }
 .post .post-main .post-content .post-info .post-tag { font-style: italic; }
 .post .post-main .post-content .post-info .post-tag + .post-tag:before { content: ','; margin: 0 .25em; color: #c4c4c4; }

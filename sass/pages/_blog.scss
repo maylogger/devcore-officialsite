@@ -62,6 +62,12 @@
         a {
           @include link-colors(#666);
         }
+        .posted {
+          display: none;
+          @include at-breakpoint($pad) {
+            display: inline;
+          }
+        }
 				.poster, .post-time, .post-category {
 					padding-right: 6px;
 				}

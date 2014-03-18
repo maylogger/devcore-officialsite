@@ -53,6 +53,22 @@
     padding-top: 24px;
   }
 
+  .prev {
+    display: block;
+    @include adjust-font-size-to(15px);
+    @include trailer(1);
+    &:hover {
+      text-decoration: none;
+    }
+    &:before {
+      content: '«';
+      font-family: arial, sans-serif;
+      color: #ccc;
+      margin-right: 0.25em;
+    }
+
+  }
+
 
   .special-list-group {
     @include pie-clearfix;

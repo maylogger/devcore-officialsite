@@ -72,31 +72,38 @@ pre {
     display: block;
     @include leader(1);
     @include trailer(1);
-    padding: rhythm(.25) rhythm(.5);
+    padding: rhythm(.75);
     color: #333;
     font-size:  $base-font-size * 0.75;
     line-height: 1.6;
     overflow: auto;
     white-space: pre;
     -webkit-overflow-scrolling: touch;
-    background:
+    $background-color: $color-lighter-gray;
+    $shadow-color: #999;
+    $cover-size: 80px;
+    $cover-position: 12.5%;
+    $shadow-size: $cover-size * ($cover-position/100%);
+    $shadow-weight: .3;
+    background-image:
       /* Shadow covers */
-      linear-gradient(to right, $color-lighter-gray 30%, rgba($color-lighter-gray,0)),
-      linear-gradient(to right, rgba($color-lighter-gray ,0), $color-lighter-gray 70%) 100% 0,
+      linear-gradient(to right, $background-color $cover-position, rgba($background-color, 0) ),
+      linear-gradient(to right, rgba($background-color, 0),  $background-color ( 100% - $cover-position ) ),
       /* Shadows */
-      radial-gradient(0 50%, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)),
-      radial-gradient(100% 50%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 100% 0;
-    background:
+      radial-gradient(0 50%, farthest-side, rgba($shadow-color, $shadow-weight), rgba($shadow-color, 0) ),
+      radial-gradient(100% 50%,farthest-side, rgba($shadow-color, $shadow-weight), rgba($shadow-color, 0) );
+    background-image:
       /* Shadow covers */
-      linear-gradient(to right, $color-lighter-gray 30%, rgba($color-lighter-gray,0)),
-      linear-gradient(to right, rgba($color-lighter-gray ,0), $color-lighter-gray 70%) 100% 0,
+      linear-gradient(to right, $background-color $cover-position, rgba($background-color, 0) ),
+      linear-gradient(to right, rgba($background-color, 0),  $background-color ( 100% - $cover-position ) ),
       /* Shadows */
-      radial-gradient(farthest-side at 0 50%,  rgba(0,0,0, .2), rgba(0,0,0,0)),
-      radial-gradient(farthest-side at 100% 50%,  rgba(0,0,0,.2), rgba(0,0,0,0)) 100% 0;
+      radial-gradient(farthest-side at 0 50%,  rgba($shadow-color, $shadow-weight), rgba( $shadow-color, 0) ),
+      radial-gradient(farthest-side at 100% 50%,  rgba($shadow-color, $shadow-weight), rgba( $shadow-color, 0) );
     background-repeat: no-repeat;
-    background-color: $color-lighter-gray;
-    background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+    background-color: $background-color;
+    background-size: $cover-size 100%, $cover-size 100%, $shadow-size 110%, $shadow-size 110%;
     background-attachment: local, local, scroll, scroll;
+    background-position: left center, right center, left center, right center;
   }
 }
 

@@ -1,0 +1,58 @@
+@import "compass";
+@import "susy";
+
+// 基本設定
+$total-columns  : 4;
+$column-width   : 72px;
+$gutter-width   : 24px;
+$grid-padding   : $gutter-width;
+
+// add media
+$pad-columns  : 6;
+$pad-break    : 640px;
+$pad: $pad-break $pad-columns;
+
+$desktop-columns  : 12;
+$desktop-break    : 980px;
+$desktop: $desktop-break $desktop-columns;
+
+
+@mixin replace-text-with-svg($image-name) {
+  @include replace-text-with-dimensions("#{$image-name}.png");
+  background-image: none, image-url("#{$image-name}.svg");
+}
+
+// ==== layout ====
+// .container, .header-inner, .footer-inner, .services-nav-inner, .close-menu-btn-wrapper-inner {
+//   max-width: 984px; // 限制 conntainer 寬度，並且預留左右留白空間
+// }
+// .page {
+//   max-width: none;
+// }
+
+
+
+// ==== off-canvas ====
+.wrapper {
+  @include perspective(none);
+}
+
+.off-canvas.open-menu {
+  .page {
+    @include filter(none);
+  }
+  .outside {
+    background-color: rgba(white, 0.95);
+  }
+
+}
+
+
+// ==== header ====
+.header {
+  // 修復無法重複點選 menu-btn bug
+  .menu-button {
+    z-index: 10000;
+  }
+
+}

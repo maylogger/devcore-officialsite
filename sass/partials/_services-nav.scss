@@ -2,8 +2,8 @@
   @include pie-clearfix;
   background-color: #eee;
   text-align: center;
-  // ie9 overflow: auto bug;
   overflow: auto;
+  margin: 0 auto; // fixed ie9 overflow: auto; hover 會增加高度 bug
   @include nowrap;
 
   // ios overflow bug

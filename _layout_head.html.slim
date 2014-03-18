@@ -12,7 +12,8 @@ meta name="keywords" content="滲透測試,資安教育訓練,資安事件處理
 meta itemprop="image" content=""
 
 = stylesheet_link_tag "all"
+/[if IE 9]
+  = stylesheet_link_tag "ie9"
 /[if lt IE 9]
   = stylesheet_link_tag "ie8"
-/[if lt IE 9]
   = javascript_include_tag "//html5shim.googlecode.com/svn/trunk/html5.js"

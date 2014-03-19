@@ -1,8 +1,7 @@
 .feature-block {
-
+  @include pie-clearfix;
   display: block;
   padding: rhythm(7) 0 rhythm(1);
-  @include pie-clearfix;
   margin: 0 auto;
   // .feature-block:nth-child(2n+1) {
   //   background-color: $color-lighten-gray;

@@ -7,6 +7,10 @@
 
 
 // ==== layout ====
+.wrapper {
+  overflow: visible !important;
+  min-width: 960px;
+}
 .container, .header-inner, .footer-inner, .services-nav-inner, .close-menu-btn-wrapper-inner {
   max-width: 984px; // 限制 conntainer 寬度，並且預留左右留白空間
 }
@@ -415,6 +419,7 @@
 
 // ==== page ====
 
+// ---- home ----
 .services {
   .feature-block-content {
     @include span-columns(6);
@@ -431,12 +436,34 @@
     @include omega;
   }
 
+  .penetration-test-background {
+    background-position: right 48px;
+    background-image: image-url("services/penetration-test-big.png");
+  }
+
+  .security-training-background {
+    background-image: image-url("services/security-training-big.png");
+    background-position: left 48px;
+  }
+
+  .incident-response-background {
+    background-position: right 48px;
+    background-image: image-url("services/incident-response-big.png");
+  }
+
+  .security-consulting-background {
+    background-image: image-url("services/security-consulting-big.png");
+    background-position: left 48px;
+  }
+
+
 }
 
 
-// ---- home ----
 .security-seal {
-  background-color: #f9f9f7;
+  .feature-block {
+    @include padding-leader(4);
+  }
 }
 
 
@@ -468,6 +495,11 @@
 
 // ---- blog ----
 .post {
+  .post-info {
+    .posted {
+      display: inline !important;
+    }
+  }
   .post-title {
     @include adjust-font-size-to(32px);
   }

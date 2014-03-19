@@ -1,3 +1,5 @@
+.wrapper { overflow: visible !important; min-width: 960px; }
+
 .container, .header-inner, .footer-inner, .services-nav-inner, .close-menu-btn-wrapper-inner { max-width: 984px; }
 
 .page { max-width: none; }
@@ -100,14 +102,19 @@
 .services .feature-block-image { width: 40.67797%; float: left; margin-right: 1.69492%; display: inline; float: left; }
 .services .feature-block-image img { width: 100%; }
 .services .pull-right { float: right; margin-right: 0; *margin-left: -1em; display: inline; }
+.services .penetration-test-background { background-position: right 48px; background-image: url('/images/services/penetration-test-big.png?1395213186'); }
+.services .security-training-background { background-image: url('/images/services/security-training-big.png?1395213239'); background-position: left 48px; }
+.services .incident-response-background { background-position: right 48px; background-image: url('/images/services/incident-response-big.png?1395213147'); }
+.services .security-consulting-background { background-image: url('/images/services/security-consulting-big.png?1395213217'); background-position: left 48px; }
 
-.security-seal { background-color: #f9f9f7; }
+.security-seal .feature-block { padding-top: 6em; }
 
 .contact-page .grid-1-2-2 { padding-bottom: 1.5em; }
 .contact-page .grid-1-2-2 .col { padding-bottom: 1.5em; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 45.76271%; float: right; margin-right: 0; *margin-left: -1em; display: inline; }
 .contact-page .grid-1-2-2 .col:first-child { padding-top: 0em; border-top: none; width: 45.76271%; float: left; margin-right: 1.69492%; display: inline; }
 .contact-page .google-map { margin: 1.5em 0 0; }
 
+.post .post-info .posted { display: inline !important; }
 .post .post-title { font-size: 2em; line-height: 1.5em; }
 .post .post-main { width: 66.10169%; float: left; margin-right: 1.69492%; display: inline; }
 .post .post-sidebar { width: 32.20339%; float: right; margin-right: 0; *margin-left: -1em; display: inline; }

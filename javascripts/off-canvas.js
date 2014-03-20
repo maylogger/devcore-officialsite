@@ -23,8 +23,4 @@ var off_canvas = function (){
 };
 
 off_canvas();
-// $( window ).resize(function() {
-//   $('body').removeClass('open-menu');
-// });
-
 

@@ -58,11 +58,11 @@
 .certified-block .certified-block-title { font-size: 1.5em; line-height: 1.25em; margin-bottom: 1.5em; }
 .certified-block .certified-block-list { font-size: 1em; line-height: 1.5em; }
 
-.media-report .media-report-list { text-align: center; }
-.media-report .media-report-list li { text-align: left; display: inline-block; margin: 32px 1% 24px; width: 30%; vertical-align: top; }
+.media-report .media-report-list { text-align: left; }
+.media-report .media-report-list li { text-align: left; display: inline-block; margin: 32px 1.5% 24px; width: 30%; vertical-align: top; }
 
-.members { text-align: center; margin-bottom: 1.5em; }
-.members .member { max-width: none; display: inline-block; margin: 0px 1% 24px; width: 30%; vertical-align: top; }
+.members { text-align: left; margin-bottom: 1.5em; }
+.members .member { max-width: none; display: inline-block; margin: 0px 1.5% 24px; width: 30%; vertical-align: top; }
 
 .message { padding: 6em 0 3em; }
 
@@ -95,8 +95,8 @@
 .services-nav .services-nav-item-icon { width: 120px; height: 96px; }
 .services-nav .services-nav-item-title { font-size: 0.875em; line-height: 1.71429em; margin-top: 0em; }
 
-.gallery { text-align: center; }
-.gallery .gallery-item { max-width: none; display: inline-block; margin: 0px 1% 24px; width: 30%; vertical-align: top; }
+.gallery { text-align: left; }
+.gallery .gallery-item { max-width: none; display: inline-block; margin: 0px 1.5% 24px; width: 30%; vertical-align: top; }
 
 .services .feature-block-content { width: 49.15254%; float: left; margin-right: 1.69492%; display: inline; text-align: left; }
 .services .feature-block-image { width: 40.67797%; float: left; margin-right: 1.69492%; display: inline; float: left; }

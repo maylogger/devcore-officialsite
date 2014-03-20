@@ -243,11 +243,11 @@
 .media-report {
 
   .media-report-list {
-    text-align: center;
+    text-align: left;
     li {
       text-align: left;
       display: inline-block;
-      margin: 32px 1% 24px;
+      margin: 32px 1.5% 24px;
       width: 30%;
       vertical-align: top;
     }
@@ -258,12 +258,12 @@
 
 // ---- members ----
 .members {
-  text-align: center;
+  text-align: left;
   @include trailer(1);
   .member {
     max-width: none;
     display: inline-block;
-    margin: 0px 1% 24px;
+    margin: 0px 1.5% 24px;
     width: 30%;
     vertical-align: top;
   }
@@ -405,11 +405,11 @@
 
 // ---- gallery ----
 .gallery {
-  text-align: center;
+  text-align: left;
   .gallery-item {
     max-width: none;
     display: inline-block;
-    margin: 0px 1% 24px;
+    margin: 0px 1.5% 24px;
     width: 30%;
     vertical-align: top;
   }

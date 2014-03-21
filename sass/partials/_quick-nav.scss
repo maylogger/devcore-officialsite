@@ -32,6 +32,7 @@
     @include reset-box-model;
     list-style: none;
     @include trailer(0);
+    padding-bottom: 1px;
     @include adjust-font-size-to(13px, 3/4);
 
     > li {

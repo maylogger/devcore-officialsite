@@ -1,3 +1,12 @@
+// vertical rhythm
+$base-font-size: 16px;
+$base-line-height: 24px;
+$relative-font-sizing: false;
+
+// compass
+$legacy-support-for-ie: false;
+$grid-background-baseline-height: $base-line-height;
+
 @import "compass";
 @import "susy";
 @mixin replace-text-with-svg($image-name) {
@@ -20,6 +29,7 @@
 
 
 // ==== starter ====
+
 .action-bar {
   width: 70%;
   margin: 0 auto;
@@ -355,29 +365,37 @@
 
 // ---- quick-nav ----
 .quick-nav {
+    background-color: transparent;
     @include padding-trailer(2);
-  .quick-nav-title {
-    @include adjust-font-size-to(20px);
-    @include trailer(.35);
-    font-weight: bold;
-    padding: 0;
-    background-color: transparent;
-    &:before {
-      display: none;
-    }
-  }
 
-  .quick-nav-list {
-    display: block;
-    background-color: transparent;
-    // max-height: 290px;
-    > li {
-      padding-left: 0;
+    .quick-nav-title {
+      @include adjust-font-size-to(20px);
+      @include trailer(1);
+      font-weight: bold;
+      padding: 0;
+      background-color: transparent;
+      &:before {
+        display: none;
+      }
     }
-  }
-  br {
-    display: block;
-  }
+
+    .quick-nav-list {
+      display: block;
+      background-color: transparent;
+      padding: 0;
+      @include adjust-font-size-to(13px, 3/4);
+      > li {
+        margin: 0;
+        padding: rhythm(.125) 0;
+      }
+      .sub-nav li {
+        margin: rhythm(.25) 0;
+      }
+    }
+
+    br {
+      display: block;
+    }
 }
 
 
@@ -460,11 +478,24 @@
 }
 
 
+// 安全標章區塊
 .security-seal {
   .feature-block {
     @include padding-leader(4);
   }
 }
+
+
+// contact-us-bar
+.contact-us {
+  .action-bar {
+      max-width: 410px;
+      margin: 0 auto;
+      width: 70%;
+  }
+}
+
+
 
 
 

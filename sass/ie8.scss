@@ -18,7 +18,8 @@ $grid-background-baseline-height: $base-line-height;
 // ==== layout ====
 .wrapper {
   overflow: visible !important;
-  min-width: 960px;
+  min-width: 1024px;
+  position: relative;
 }
 .container, .header-inner, .footer-inner, .services-nav-inner, .close-menu-btn-wrapper-inner {
   max-width: 984px; // 限制 conntainer 寬度，並且預留左右留白空間
@@ -56,13 +57,12 @@ $grid-background-baseline-height: $base-line-height;
 }
 .off-canvas {
   .outside {
-    position: fixed;
+    position: absolute;
     right: 0;
     width: 260px;
   }
   .close-menu-btn {
-
-    position: fixed;
+    position: absolute;
     top: 36px;
     right: 24px;
   }
@@ -80,6 +80,9 @@ $grid-background-baseline-height: $base-line-height;
 
 // ---- outside ----
 .outside {
+  .page-width {
+    position: absolute;
+  }
   .main-nav {
     padding-right: 0;
     width: 100%;

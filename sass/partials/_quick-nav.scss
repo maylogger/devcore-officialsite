@@ -1,6 +1,6 @@
 .quick-nav {
   position: relative;
-
+  background-color: #f6f6f6;
 
   .quick-nav-title {
     display: block;
@@ -32,13 +32,10 @@
     @include reset-box-model;
     list-style: none;
     @include trailer(0);
-    padding: rhythm(.25) 0;
-    background-color: #f6f6f6;
-    @include adjust-font-size-to(14px, 3/4);
+    @include adjust-font-size-to(13px, 3/4);
 
     > li {
-      padding: 0 rhythm(.5);
-      margin: rhythm(.5) 0;
+      margin: rhythm(.5);
       @include ellipsis;
     }
     a {
@@ -77,12 +74,12 @@
   }
 
   @include at-breakpoint($desktop) {
-
+    background-color: transparent;
     @include padding-trailer(2);
 
     .quick-nav-title {
       @include adjust-font-size-to(20px);
-      @include trailer(.35);
+      @include trailer(1);
       font-weight: bold;
       padding: 0;
       background-color: transparent;
@@ -94,9 +91,14 @@
     .quick-nav-list {
       display: block;
       background-color: transparent;
-      // max-height: 290px;
+      padding: 0;
+      @include adjust-font-size-to(13px, 3/4);
       > li {
-        padding-left: 0;
+        margin: 0;
+        padding: rhythm(.125) 0;
+      }
+      .sub-nav li {
+        margin: rhythm(.25) 0;
       }
     }
 
@@ -105,9 +107,4 @@
     }
 
   }
-
-
-
-
-
 }

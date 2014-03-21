@@ -1,4 +1,4 @@
-.wrapper { overflow: visible !important; min-width: 960px; }
+.wrapper { overflow: visible !important; min-width: 1024px; position: relative; }
 
 .container, .header-inner, .footer-inner, .services-nav-inner, .close-menu-btn-wrapper-inner { max-width: 984px; }
 
@@ -12,11 +12,12 @@
 
 .wrapper { -webkit-perspective: none; -moz-perspective: none; -ms-perspective: none; -o-perspective: none; perspective: none; }
 
-.off-canvas .outside { position: fixed; right: 0; width: 260px; }
-.off-canvas .close-menu-btn { position: fixed; top: 36px; right: 24px; }
+.off-canvas .outside { position: absolute; right: 0; width: 260px; }
+.off-canvas .close-menu-btn { position: absolute; top: 36px; right: 24px; }
 
 .off-canvas.open-menu .page { -webkit-filter: none; -moz-filter: none; filter: none; }
 
+.outside .page-width { position: absolute; }
 .outside .main-nav { padding-right: 0; width: 100%; }
 .outside .main-nav ul { padding-top: 24px; padding-left: 24px; }
 

@@ -838,7 +838,7 @@ button + button, a.button + a.button { margin-left: 1em; }
 .quick-nav .quick-nav-title { display: block; font-size: 14px; line-height: 24px; background-color: #e3e3e3; padding: 3px 12px; position: relative; color: #444444; }
 .quick-nav .quick-nav-title:hover { color: #444444; text-decoration: none; }
 .quick-nav .quick-nav-title:before { content: ''; position: absolute; top: 50%; right: 12px; margin-top: -3px; width: 0px; height: 0px; border-style: solid; border-width: 6px 6px 0 6px; border-color: #444444 transparent transparent transparent; }
-.quick-nav .quick-nav-list { display: none; margin: 0; padding: 0; border: 0; list-style: none; margin-bottom: 0px; font-size: 13px; line-height: 18px; }
+.quick-nav .quick-nav-list { display: none; margin: 0; padding: 0; border: 0; list-style: none; margin-bottom: 0px; padding-bottom: 1px; font-size: 13px; line-height: 18px; }
 .quick-nav .quick-nav-list > li { margin: 12px; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 .quick-nav .quick-nav-list a { color: inherit; text-decoration: inherit; cursor: inherit; color: #444444; }
 .quick-nav .quick-nav-list a:active, .quick-nav .quick-nav-list a:focus { outline: none; }
@@ -1009,3 +1009,16 @@ button + button, a.button + a.button { margin-left: 1em; }
 @media (min-width: 640px) { .post .post-title { font-size: 32px; line-height: 48px; }
   .post .post-main { width: 65.21739%; float: left; margin-right: 4.34783%; }
   .post .post-sidebar { width: 30.43478%; float: right; margin-right: 0; } }
+
+.twitter-share-button { width: 80px !important; }
+
+@media print { body { font: 12pt; }
+  h1 { font-size: 18pt; }
+  h2 { font-size: 16pt; color: #DDD; } }
+/* Youtube width Hack */
+.videowrapper { float: none; clear: both; width: 100%; position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0; }
+
+.videowrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* Change padding of Google Custom Search Engine */
+.gsc-control-cse { padding: 0 !important; width: auto; }

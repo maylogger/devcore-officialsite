@@ -2,6 +2,7 @@
   background-color: $color-green;
   .action-bar {
     @include at-breakpoint($pad) {
+      max-width: 410px;
       width: 90%;
       margin: 0 auto;
     }

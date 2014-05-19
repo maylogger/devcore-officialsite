@@ -22,8 +22,8 @@
           /! 文章其他屬性區 end
           /! 文章內容
           - 2.times do
-            h3 = zh_lorem_words 5 + rand(5)
-            p = zh_lorem_paragraphs 1
+            h3 = lorem_words 5 + rand(5)
+            p = "<i>Bold</i> #{lorem_paragraph} <strong>Strong</strong>"
             = render "/partials/code.erb"
             h4 = zh_lorem_words 5 + rand(5)
             p = zh_lorem_paragraphs 1

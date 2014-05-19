@@ -100,17 +100,17 @@
 			h2 {
 				@include adjust-font-size-to(24px, 1);
         font-weight: bold;
-        @include trailer(1);
+        @include trailer(.5);
 			}
 			h3 {
-				@include adjust-font-size-to(20px, 1);
+				@include adjust-font-size-to(24px, 1);
         font-weight: bold;
         @include trailer(.5);
         border-left: 5px solid $color-green;
         padding: rhythm(0) 0 0 .75em;
 			}
 			h4 {
-				@include adjust-font-size-to(16px, 1);
+				@include adjust-font-size-to(20px, 1);
         font-weight: bold;
         @include trailer(.5);
 			}

@@ -41,10 +41,6 @@
     @include adjust-font-size-to(14px);
   }
 
-  .url {
-    @include word-break(break-all);
-  }
-
   .lead {
     @include leader(0);
   }

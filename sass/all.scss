@@ -3,6 +3,7 @@
 // style for special partials
 @import "partials/off-canvas";
 @import "partials/article";
+@import "partials/code-color";
 @import "partials/outside";
 @import "partials/page-header";
 @import "partials/page-content";
@@ -24,3 +25,34 @@
 @import "pages/contact";
 @import "pages/penetration-test";
 @import "pages/blog";
+
+
+
+
+
+
+
+// 哈比追加樣式
+.twitter-share-button { width: 80px !important; }
+@media print { body { font: 12pt; }
+  h1 { font-size: 18pt; }
+  h2 { font-size: 16pt; color: #DDD; } }
+/* Youtube width Hack */
+.videowrapper {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+.videowrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Change padding of Google Custom Search Engine */
+.gsc-control-cse { padding: 0 !important; width: auto; }

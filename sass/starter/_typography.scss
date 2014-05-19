@@ -4,6 +4,24 @@
   font-style: normal;
 }
 
+%post-avenir {
+  font-family: "AvenirNext-DemiBold", "Avenir-Heavy", "Arial", "STHeitiTC-Light", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+%post-avenir-bold {
+  font-family: "AvenirNext-Bold", "Avenir-Black", "Arial", "STHeitiTC-Light", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+%post-avenir-italic {
+  font-family: "AvenirNext-BoldItalic", "Avenir-BlackOblique", "Arial", "STHeitiTC-Light", sans-serif;
+  font-weight: normal;
+  font-style: italic;
+}
+
 %subpixel {
   -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -14,6 +32,13 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: $global-color;
+}
+
+// for blog post
+.post {
+  @extend %post-avenir;
+  #{headings()}, b, strong { @extend %post-avenir-bold; }
+  i, cite   { @extend %post-avenir-italic; }
 }
 
 // heading
@@ -46,7 +71,6 @@ p {
   @include adjust-font-size-to($base-font-size);
 }
 
-
 // 引用他處文獻
 blockquote {
   @include reset-box-model;
@@ -68,14 +92,42 @@ blockquote {
 // code 示範區
 pre {
   code {
-    font-family: "Monaco", MonoSpace, sans-serif;
+    font-family: "Anonymous Pro", "Inconsolata", "Consolas Regular Font", "Monaco", "Courier New" ,MonoSpace;
     display: block;
     @include leader(1);
     @include trailer(1);
-    border: 1px solid $global-divider;
-    padding: rhythm(1);
-    background-color: $global-spectail-block;
-    @include adjust-font-size-to( $base-font-size * 0.75 );
+    padding: rhythm(.75);
+    color: #333;
+    font-size:  $base-font-size * 0.75;
+    line-height: 1.6;
+    overflow: auto;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    $background-color: $color-lighter-gray;
+    $shadow-color: #999;
+    $cover-size: 80px;
+    $cover-position: 12.5%;
+    $shadow-size: $cover-size * ($cover-position/100%);
+    $shadow-weight: .3;
+    background-image:
+      /* Shadow covers */
+      linear-gradient(to right, $background-color $cover-position, rgba($background-color, 0) ),
+      linear-gradient(to right, rgba($background-color, 0),  $background-color ( 100% - $cover-position ) ),
+      /* Shadows */
+      radial-gradient(0 50%, farthest-side, rgba($shadow-color, $shadow-weight), rgba($shadow-color, 0) ),
+      radial-gradient(100% 50%,farthest-side, rgba($shadow-color, $shadow-weight), rgba($shadow-color, 0) );
+    background-image:
+      /* Shadow covers */
+      linear-gradient(to right, $background-color $cover-position, rgba($background-color, 0) ),
+      linear-gradient(to right, rgba($background-color, 0),  $background-color ( 100% - $cover-position ) ),
+      /* Shadows */
+      radial-gradient(farthest-side at 0 50%,  rgba($shadow-color, $shadow-weight), rgba( $shadow-color, 0) ),
+      radial-gradient(farthest-side at 100% 50%,  rgba($shadow-color, $shadow-weight), rgba( $shadow-color, 0) );
+    background-repeat: no-repeat;
+    background-color: $background-color;
+    background-size: $cover-size 100%, $cover-size 100%, $shadow-size 110%, $shadow-size 110%;
+    background-attachment: local, local, scroll, scroll;
+    background-position: left center, right center, left center, right center;
   }
 }
 
@@ -111,6 +163,10 @@ a {
   }
 }
 
+.url {
+  @include word-break(break-all);
+}
+
 img {
   max-width: 100%;
   @include trailer(1);
@@ -122,3 +178,4 @@ hr, .divider {
   @include trailer(1);
   border-top: 1px solid $global-divider;
 }
+

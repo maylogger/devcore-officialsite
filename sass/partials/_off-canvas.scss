@@ -1,6 +1,5 @@
 .wrapper {
 	// @include transform-style(preserve-3d); //fire-fox bug
-	@include perspective(1500px);
 }
 
 .header {
@@ -78,6 +77,7 @@
     @include transition(opacity 0);
   }
 	.wrapper {
+    @include perspective(1500px);
 		height: 100%;
 	}
 	.page {

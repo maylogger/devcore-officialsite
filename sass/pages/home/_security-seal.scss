@@ -2,6 +2,9 @@
   background-color: $color-lighten-gray;
   .feature-block {
     @include padding-leader(2);
+    @include at-breakpoint($desktop) {
+      @include padding-leader(4);
+    }
     .feature-block-content {
       @include padding-leader(1);
       background: transparent;

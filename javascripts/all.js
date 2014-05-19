@@ -28,11 +28,9 @@ if ( $('.page-content-sidebar-affix').length != 0 ) {
       $sideBar.affix({
         offset: {
         top: function () {
-                  console.log($('.page-content-sidebar-affix').offset().top -24);
                   return (this.top = $('.page-content-sidebar-affix').offset().top -24)
                 },
         bottom: function () {
-                  console.log($('.footer').outerHeight(true));
                   return (this.bottom = $('.footer').outerHeight(true) )
                 }
         }
@@ -43,7 +41,6 @@ if ( $('.page-content-sidebar-affix').length != 0 ) {
     // 控制 fixed 時，有個固定寬度
     $('.page-content-sidebar-affix').width($('.page-content-sidebar').width());
     // fix resize don't work bug
-    // _sidebar.data('bs.affix').options.offset.top = $('.page-content-sidebar-affix').offset().top -48,
     _sidebar.data('bs.affix').options.offset.bottom = $('.footer').outerHeight(true)
   })
 }

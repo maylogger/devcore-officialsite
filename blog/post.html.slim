@@ -22,8 +22,15 @@
           /! 文章其他屬性區 end
           /! 文章內容
           - 2.times do
-            h3 = zh_lorem_words 5 + rand(5)
-            p = zh_lorem_paragraphs 4
+            h3 = lorem_words 5 + rand(5)
+            p = "<i>Bold</i> #{lorem_paragraph} <strong>Strong</strong>"
+            = render "/partials/code.erb"
+            h4 = zh_lorem_words 5 + rand(5)
+            p = zh_lorem_paragraphs 1
+            h2 = zh_lorem_words 5 + rand(5)
+            p = zh_lorem_paragraphs 1
+            h1 = zh_lorem_words 5 + rand(5)
+            p = zh_lorem_paragraphs 1
             img alt="" title="" src="http://hhhhold.com/600x300/#{rand(100)}"
             p = zh_lorem_paragraphs 3
           ul
@@ -32,6 +39,11 @@
           p = zh_lorem_paragraphs 3
           /! 文章內容 end
         /! 文章內容區塊 end
+        /! 切換頁面
+        .post-switch
+          a.prev href="#" 上一篇文章
+          a.next href="#" 下一篇文章
+        /! 切換頁面 end
       /! 主要內容放置區 end
 
 

@@ -166,6 +166,9 @@ a {
 .url {
   @include word-break(break-all);
 }
+.word-break-all {
+  @include word-break(break-all);
+}
 
 img {
   max-width: 100%;
